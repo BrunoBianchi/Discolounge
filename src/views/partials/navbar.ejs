@@ -5,30 +5,30 @@
 <nav translate="no"  class="navbar navbar-expand-lg navbar-dark navbar-default sticky-top">
   
     <div  class="container-fluid">
-      <a translate="no" class="navbar-brand" href="<%if(!locals._locals.path_url.includes('bot')){ %> / <%}else{%> /bots <%}%>" style="font-size:30px;text-transform: uppercase;
+      <a translate="no" class="navbar-brand" href="<%if(!locals._locals.path_url.includes('bot')){ %> /<%=locals.user_lang%> <%}else{%> /<%=locals.user_lang%>/bots <%}%>" style="font-size:30px;text-transform: uppercase;
       font-weight: 1000;">Discolounge</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
        <span class="navbar-toggler-icon"></span>
        </button> 
-       
+
        <div class="collapse navbar-collapse" id="navbarsExample09">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="<%if(locals._locals.path_url.includes('bot')){ %>/bots/search <%}else{%>/servers/search <%}%>">Discover</a>
+            <a class="nav-link" href="<%if(locals._locals.path_url.includes('bot')){ %>/bots/search <%}else{%>/<%=locals.user_lang%>/servers/search <%}%>"><%=locals.language.navbar.search%></a>
           </li>
           <li class="nav-item active">
             <a class="nav-link" href="/premium">Premium <small style="color:gold;"><sup><i class="fa-regular fa-star"></i></sup></small></a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="<%if(locals._locals.path_url.includes('bot')){ %> / <%}else{%> /bots <%}%>"><%if(locals._locals.path_url.includes('bot')){ %> Servers <%}else{%> Bots <sup style="color:white;padding:4px;background-color:#c772da;border-radius:5px;">Beta!</sup> <%}%></a>
+            <a class="nav-link" href="<%if(locals._locals.path_url.includes('bot')){ %>/<%=locals.user_lang%> <%}else{%>/<%=locals.user_lang%>/bots <%}%>"><%if(locals._locals.path_url.includes('bot')){ %> Servers <%}else{%> Bots <sup style="color:white;padding:4px;background-color:#c772da;border-radius:5px;">Beta!</sup> <%}%></a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              More
+              <%=locals.language.navbar.more%>
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="/events">Events</a>
-              <a class="dropdown-item" href="/market">Market </a>
+              <a class="dropdown-item" href="/events"><%=locals.language.navbar.more_dropdown.events%></a>
+              <a class="dropdown-item" href="/market"><%=locals.language.navbar.more_dropdown.market%></a>
               <a class="dropdown-item" href="/market">Api </a>
 
             </div>
@@ -44,7 +44,7 @@
           <%if(!locals.user) {%>
             <li   id="drop" class="nav-item dropdown" style="display: initial;">
               <a style="font-size:15px;" id="login" href="/login?uri=<%=encodeURIComponent(`${locals.url.slice(1)}`)%>">
-                Login with Discord
+                <%=locals.language.navbar.login%>
              </a>   
             </li>
 

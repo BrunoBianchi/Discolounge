@@ -1,13 +1,14 @@
 <link rel="stylesheet" href="<%=locals.path_ur%>/form-search-bar.css">
 
-<div translate="no"  class="container"> 
-        <h1><%if(locals._locals.path_url.includes('bots')){ %> Discord Bots <%}else{%> Discord Servers <%}%></h1>
-        <label for="search">Explorer millions of Discord <%if(locals._locals.path_url.includes('bots')){ %> Bots <%}else{%> Discord Servers <%}%> </label>
+<div translate="no"  class="container">            
+
+        <h1><%if(locals._locals.path_url.includes('bots')){ %> <%=locals.language.search.bots.title%> <%}else{%><%=locals.language.search.servers.title%> <%}%></h1>
+        <label for="search"><%if(locals._locals.path_url.includes('bot')){ %>  <%=locals.language.search.bots.description%> <%}else{%> <%=locals.language.search.servers.description%> <%}%> </label>
       <div class=" height d-flex  align-items-center">
           <div class="form-front-search">
             <i class="fa fa-search"></i>
-            <form action="<%if(locals._locals.path_url.includes('bots')){ %>/bots/search/ <%}else{%>/servers/search/ <%}%>">
-                <input name='name' type="text" class="form-control form-input" placeholder="Search for Discord <%if(locals._locals.path_url.includes('bots')){ %> Bots <%}else{%> Servers <%}%>...">
+            <form action="<%if(locals._locals.path_url.includes('bots')){ %>/<%=locals.user_lang%>/bots/search/ <%}else{%>/<%=locals.user_lang%>/servers/search/ <%}%>">
+                <input name='name' type="text" class="form-control form-input" placeholder=" <%if(locals._locals.path_url.includes('bots')){ %> <%=locals.language.search.bots.search%> <%}else{%> <%=locals.language.search.servers.search%> <%}%>">
 
             </form>
           </div>

@@ -4,7 +4,7 @@ var functions = require(`${__dirname.split('src')[0]}/src/functions/functions`);
 
 module.exports= function(app,url,client,nodecache) {
 
-    app.get("/server/:id",async (req,res)=>{
+    app.get("/:lang/server/:id",functions.languages,async (req,res)=>{
         var id = req.params.id
         if(isNaN(id)) {
             Server.findOne({custom_url:id},async (err,result)=>{  

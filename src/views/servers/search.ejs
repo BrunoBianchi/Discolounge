@@ -54,14 +54,14 @@
 <div  class="container"> 
     <div  class="dropdown">
       <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-         <%if(locals.url.split('filter=')[1]){%>Sorted by <%=locals.url.split('filter=')[1]%> <%}else{%>Select a filter<%}%>
+         <%if(locals.url.split('filter=')[1]){%><%=locals.language.search.filter.shorted%> <%=locals.url.split('filter=')[1]%> <%}else{%><%=locals.language.search.filter.title%><%}%>
       </button>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="<%=locals.url.replace( /\bfilter\=[^&]+&?/,'').replace( /\bpage\=[^&]+&?/,'')%>page=<%=page%>&filter=votes">Top Voted</a>
-        <a class="dropdown-item" href="<%=locals.url.replace( /\bfilter\=[^&]+&?/,'').replace( /\bpage\=[^&]+&?/,'')%>page=<%=page%>&filter=createdAt">Recently Added</a>
-        <a class="dropdown-item" href="<%=locals.url.replace( /\bfilter\=[^&]+&?/,'').replace( /\bpage\=[^&]+&?/,'')%>page=<%=page%>&filter=lastBump">Recently Bumped</a>
-        <a class="dropdown-item" href="<%=locals.url.replace( /\bfilter\=[^&]+&?/,'').replace( /\bpage\=[^&]+&?/,'')%>page=<%=page%>&filter=memberCount">Member Count </a>
-        <a class="dropdown-item" href="<%=locals.url.replace( /\bfilter\=[^&]+&?/,'').replace( /\bpage\=[^&]+&?/,'')%>page=<%=page%>&filter=reviews">Reviews </a>
+        <a class="dropdown-item" href="<%=locals.url.replace( /\bfilter\=[^&]+&?/,'').replace( /\bpage\=[^&]+&?/,'')%>page=<%=page%>&filter=votes"><%=locals.language.search.filter.dropdown.voted%></a>
+        <a class="dropdown-item" href="<%=locals.url.replace( /\bfilter\=[^&]+&?/,'').replace( /\bpage\=[^&]+&?/,'')%>page=<%=page%>&filter=createdAt"><%=locals.language.search.filter.dropdown.new%></a>
+        <a class="dropdown-item" href="<%=locals.url.replace( /\bfilter\=[^&]+&?/,'').replace( /\bpage\=[^&]+&?/,'')%>page=<%=page%>&filter=lastBump"><%=locals.language.search.filter.dropdown.bumped%></a>
+        <a class="dropdown-item" href="<%=locals.url.replace( /\bfilter\=[^&]+&?/,'').replace( /\bpage\=[^&]+&?/,'')%>page=<%=page%>&filter=memberCount"><%=locals.language.search.filter.dropdown.members%> </a>
+        <a class="dropdown-item" href="<%=locals.url.replace( /\bfilter\=[^&]+&?/,'').replace( /\bpage\=[^&]+&?/,'')%>page=<%=page%>&filter=reviews"><%=locals.language.search.filter.dropdown.reviews%> </a>
 
       </div>
     </div>
@@ -90,15 +90,19 @@
                           <div class="col-md-10 px-3">
                             <div class="card-block px-3">
                               
-                              <h4 class="card-title"><a translate="no" href="/server/<%=server.id%>"><%=server.name.slice(0,12)%> </a>   <%if(server.premium === true) {%><a href="/premium"><sup> <small id="premium">premium </small></sup></a><%}%> <%if(server.partner === true) {%><a href="/partners"><sup><small id="partner">partner </small></sup></a><%}%>
-                                <a href="/server/<%=server.id%>/join" style="float:right" class="btn btn-primary">Join Server</a>
-                              <a href="/server/<%=server.id%>#vote" style="float:right" class="btn btn-primary"><i class="fa-solid fa-caret-up"></i> Votes (<%=server.votes%>)</a>
+                              <h4 class="card-title">
+                                <a translate="no" href="/<%=locals.user_lang%>/server/<%=server.id%>"
+                                  ><%=server.name.slice(0,12)%> <%if(server.premium === true){%><i data-toggle="tooltip" data-html="true" data-placement="top" title="<strong>Premium Server</strong> "  style="font-size:17px;color:#d6b929" class="far fa-gem"></i><%}%>
+                                  <%if(server.partner === true){%><i data-toggle="tooltip" data-html="true" data-placement="top" title="<strong>Partner Server</strong> "  style="font-size:17px;color:rgb(41, 139, 214)" class="fas fa-handshake"></i><%}%>
+                                </a>
+                                <a href="/server/<%=server.id%>/join" style="float:right;margin-top:4px;" class="btn btn-primary"><%=locals.language.home.body.card.join%></a>
+                              <a href="/<%=locals.user_lang%>/server/<%=server.id%>#vote" style="float:right;margin-top:4px;" class="btn btn-primary"><i class="fa-solid fa-caret-up"></i> <%=locals.language.home.body.card.votes%> (<%=server.votes%>)</a>
                             </h4>
                             <span translate="no" class="card-info"><i class="fas fa-users"></i>  <%=server.memberCount %> | Bumped <%=moment(server.lastBump, "YYYYMMDD").fromNow()%> | <%if(server.reviews.rates.length >= 1){%><span style="color:#d6a529" data-toggle="tooltip" data-html="true" data-placement="top" title="<div class='container text-centered'><p>Based in <strong><%=server.reviews.rates.length%></strong> reviews </p></div>" href="/server/<%=server.id%>"><i class="fas fa-star"></i> <%=(server.reviews.
                               averageStars / server.reviews.rates.length
                                ).toFixed(1)%> </span> | <%}%>
                               <%server.tags.slice(0,2).forEach(tag=>{%>
-                                <a translate="no" href="/servers/search?tags=<%=tag.name.toLowerCase()%>" class="card-tags"><%=tag.name%></a>
+                                <a translate="no" href="/<%=locals.user_lang%>/servers/search?tags=<%=tag.name.toLowerCase()%>" class="card-tags"><%=tag.name%></a>
                                 <%})%>
                                 <%if(server.tags.length >=3){%>
                                    <a translate="no" data-toggle="tooltip" data-placement="top" title="<%server.tags.slice(2,server.tags.length).forEach(tag=>{%> <%=tag.name%>, <%})%>" href="/server/<%=server.id%>" class="card-tags">+<%=parseInt(server.tags.length) - 2%></a>
@@ -133,33 +137,52 @@
               </div>
               </div>
               <div  class="col-md-4">
-                <div style="z-index: 1"  class="side-menu sticky-top">
-                  <form method="get" action="/servers/search/">
+                <div style="z-index: 1;margin-top:-100px;" class="side-menu sticky-top">
+                  <form method="get" action="/<%=locals.user_lang%>/servers/search/">
                     <div class="container-slide">
-                      <h1 >Filters</h1>
+                      <h1><%=locals.language.home.body.filter.filters%></h1>
                       <div class="length range__slider" data-min="1" data-max="500">
-                        <div class="length__title field-title" data-length='1'>Server Members</div>
-                        <input name="memberCount" id="slider" type="range" min="1" max="500" value="1" />
+                        <div class="length__title field-title" data-length="1">
+                          <%=locals.language.home.body.filter.memberCount%>
+                        </div>
+                        <input
+                          name="memberCount"
+                          id="slider"
+                          type="range"
+                          min="1"
+                          max="500"
+                          value="1"
+                        />
                       </div>
-                    
+      
                       <div class="settings">
-                        <span class="settings__title field-title">settings</span>
+                        <span class="settings__title field-title"><%=locals.language.home.body.filter.settings%></span>
                         <div class="setting">
-                          <input name="premium" type="checkbox" value="<%if(locals.url.split('premium=')[1]){%><%if(locals.url.split('premium=')[1].split('&')[0] === 'true'){%>true<%}else{%>false<%}%><%}else{%>false<%}%>" onClick="if(this.value === 'false') {this.value = true}else {this.value =false}" id="uppercase" <%if(locals.url.split('premium=')[1]){%><%if(locals.url.split('premium=')[1].split('&')[0] === 'true'){%> checked <%}%> <%}%> />
+                          <input
+                            name="premium"
+                            type="checkbox"
+                            id="uppercase"
+                            value="false"
+                            onClick="if(this.value === 'false') {this.value = true}else {this.value =false}"
+                          />
                           <label for="uppercase">Premium</label>
                         </div>
                         <div class="setting">
-
-                          <input name="NSFW" type="checkbox" value="<%if(locals.url.split('NSFW=')[1]){%><%if(locals.url.split('NSFW=')[1].split('&')[0] === 'true'){%>true<%}else{%>false<%}%><%}%>" onClick="if(this.value === 'false') {this.value = true}else {this.value =false}" id="symbol"<%if(locals.url.split('NSFW=')[1]){%><%if(locals.url.split('NSFW=')[1].split('&')[0] === 'false'){%> checked <%}%> <%}%> />
-
-                          
+                          <input
+                            name="NSFW"
+                            type="checkbox"
+                            value="false"
+                            onClick="if(this.value === 'false') {this.value = true}else {this.value =false}"
+                            id="symbol"
+                            checked
+                          />
+      
                           <label for="symbol">SFW</label>
                         </div>
                       </div>
-                    
-                      <button class="btn generate" id="generate">Filter</button>
+      
+                      <button class="btn generate" id="generate"><%=locals.language.home.body.filter.filter_btn%></button>
                     </div>
-
                   </form>
                 </div>
             </div>

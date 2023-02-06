@@ -2,7 +2,7 @@ const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch
 const { EmbedBuilder, WebhookClient, CommandInteractionOptionResolver } = require('discord.js');
 const Server = require("../modals/server");
 var paypal = require('paypal-rest-sdk');
-
+var fs = require('fs')
 module.exports = {
   ensureAuthenticated(req, res, next) {
     if (req.cookies.token &&  res.locals.user) {
@@ -12,6 +12,20 @@ module.exports = {
       return res.redirect(`/login?uri=${encodeURI(req.path.slice(1))}`);
     } else if (req.method === "POST")
       return res.json({ icon: `error`, content: `you need to be logged in!` });
+  },
+  languages(req, res, next) {
+    var lang = req.params.lang
+    if(!lang) {
+      return res.redirect(`/en${req.url}`)
+    }else {
+      fs.readFile(`./src/languages/${lang}.json`,(err,data)=>{
+        if(err) return res.redirect(`/en${req.url.split(lang)[1]}`)
+        res.locals.language = JSON.parse(data)
+        res.locals.user_lang = lang
+        return next()
+      })
+    }
+
   },
   sendWebHook(id,user) {
     return new Promise( (resolution, rejection) => {

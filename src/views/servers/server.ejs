@@ -116,22 +116,22 @@ $("#rate-server").rate(options);
  
   <ul class="nav nav-tabs" role="tablist">
    <li class="nav-item">
-     <a class="nav-link active" href="#Overview" role="tab" data-toggle="tab">Overview</a>
+     <a class="nav-link active" href="#Overview" role="tab" data-toggle="tab"><%=locals.language.server.overview%></a>
    </li>
    <li class="nav-item">
-    <a class="nav-link " href="#Reviews" role="tab" data-toggle="tab">Reviews</a>
+    <a class="nav-link " href="#Reviews" role="tab" data-toggle="tab"><%=locals.language.server.reviews.title%></a>
   </li>
    <li class="nav-item">
-     <a class="nav-link" href="#Insights" role="tab" data-toggle="tab">Insights</a>
+     <a class="nav-link" href="#Insights" role="tab" data-toggle="tab"><%=locals.language.server.insights%></a>
    </li>
    <li class="nav-item">
-     <a class="nav-link" href="#News" role="tab" data-toggle="tab">News <span class="count"><%=guild.posts.length%></span></a>
+     <a class="nav-link" href="#News" role="tab" data-toggle="tab"><%=locals.language.server.news.title%> <span class="count"><%=guild.posts.length%></span></a>
    </li>
    <li class="nav-item">
-    <a class="nav-link" href="#Events" role="tab" data-toggle="tab">Events <span class="count"><%if(guild.events|| guild.events.length <= 0){%> <%= guild.events.length%><%}else{%>0<%}%></span></a>
+    <a class="nav-link" href="#Events" role="tab" data-toggle="tab"><%=locals.language.server.events.title%> <span class="count"><%if(guild.events|| guild.events.length <= 0){%> <%= guild.events.length%><%}else{%>0<%}%></span></a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#Share" role="tab" data-toggle="tab">Share </a>
+    <a class="nav-link" href="#Share" role="tab" data-toggle="tab"><%=locals.language.server.share.title%> </a>
   </li>
  </ul>
  <br>
@@ -195,13 +195,13 @@ $("#rate-server").rate(options);
           </div>
             <%})%>
             <%}else{%>
-              <h4 style="text-align:center;margin-top:10px;">Server did not add a news yet!</h4>
+              <h4 style="text-align:center;margin-top:10px;"><%=locals.language.server.news.warning%> </h4>
               <%}%>
 
         </div>
         <div class="tab-pane fade" id="Events" role="tabpanel" aria-labelledby="contact-tab">
           <%if(!guild.events|| guild.events.length <= 0){%> 
-          <h4 style="text-align:center;margin-top:10px;">Server did not add an event yet!</h4>
+          <h4 style="text-align:center;margin-top:10px;"><%=locals.language.server.events.warning%> </h4>
 
           <%}else{%>
             <%guild.events.sort((a,b)=>{return (new Date(b.createdAt) -  new Date(a.createdAt))}).slice(0,4).forEach(event=>{%>
@@ -234,7 +234,7 @@ $("#rate-server").rate(options);
         </div>
         <div class="tab-pane fade" id="Share" role="tabpanel" aria-labelledby="contact-tab">
             <div class="share">
-              <label>Direct Link</label>
+              <label><%=locals.language.server.share.direct%> </label>
               <input style="background-color:#14121c;border:none" onclick="copy(`<%if(guild.custom_url != ''){%>https://discolounge.net/server/<%=guild.custom_url%><%}else{%>https://discolounge.net/server/<%=guild.id%><%}%>`)" type="text"  class="form-control"    id="share-input" value="<%if(guild.custom_url != ''){%>https://discolounge.net/server/<%=guild.custom_url%><%}else{%>https://discolounge.net/server/<%=guild.id%><%}%>" readonly>
             </div>
             <div class="share">
@@ -333,7 +333,7 @@ $("#rate-server").rate(options);
               <%})%>
             <%}else{%>
               <div class="container">
-                <h5 class="text-center">No one reviewed this guild yet, be the first person to rate it!</h5>             
+                <h5 class="text-center"><%=locals.language.server.reviews.warning%></h5>             
                 <%if(locals.user){%>
                 <div class="review-input">
                   <div class="row">
@@ -389,11 +389,11 @@ body:JSON.stringify({  comment:comment,
     </div>
     <div class="col-md-3 ">
       <div class="server-info" >
-         <h4><i class="fa-solid fa-circle-info"></i> Details</h4>
+         <h4><i class="fa-solid fa-circle-info"></i> <%=locals.language.server.details.title%></h4>
          <span translate="no"><i style="color:#da9172" class="fa-solid fa-circle"></i> Bumped <%=moment(guild.lastBump, "YYYYMMDD").fromNow()%> </span>
-         <span ><i class="fas fa-calendar"></i> joined <%=moment(guild.createdAt).format('MMMM Do YYYY');%></span>
+         <span ><i class="fas fa-calendar"></i> <%=locals.language.server.details.joined%> <%=moment(guild.createdAt).format('MMMM Do YYYY');%></span>
 
-        <span><i class="fa-solid fa-users"></i> <%=guild.memberCount%> members</span>
+        <span><i class="fa-solid fa-users"></i> <%=guild.memberCount%> <%=locals.language.server.details.members%></span>
         <%if(guild.offline != true){%>
 
          <span><i class="fa-solid fa-face-grin-tears"></i> <%=guild.emojis.cache.size%> emotes</span>
@@ -401,7 +401,7 @@ body:JSON.stringify({  comment:comment,
          
       </div>
       <div class="server-info" >
-        <h4><i class="fas fa-share-alt-square"></i> Socials</h4>
+        <h4><i class="fas fa-share-alt-square"></i> <%=locals.language.server.details.socials%></h4>
         <%if(guild.socials){%>
         <%guild.socials.forEach(social=>{%><a translate="no" class="socials" onclick="window.location.href = '<%=social.url%>'"><i class='fab fa-<%=social.name%>'></i> <%=social.name%></a><%})%>
           <%}%>
@@ -409,29 +409,29 @@ body:JSON.stringify({  comment:comment,
       <div class="server-info" >
         
       <div class="links">
-        <h4>Share on Social Media</h4>
-      <li class="social-share facebook"> <a href="https://www.facebook.com/sharer.php?u=https://discolounge.net/server/<%=guild.id%>"><i style="color:rgb(58, 135, 251)" class="fab fa-facebook-square"></i> Share on Facebook</a></li>
-      <li class="social-share twitter"><a href="https://twitter.com/intent/tweet?url=https://discolounge.net/server/<%=guild.id%>&text=Check out my cool discord server on Discolounge !"><i style="color:rgb(68, 157, 212)"  class="fab fa-twitter-square"></i> Share on Twitter</a></li>
-      <li class="social-share linkedin"><a href="https://www.linkedin.com/shareArticle?mini=true&url=https://discolounge.net/server/<%=guild.id%>"><i style="color:rgb(68, 94, 212)" class="fab fa-linkedin"></i> Share on LinkedIn</a></li>
+        <h4><%=locals.language.server.details.share.title%></h4>
+      <li class="social-share facebook"> <a href="https://www.facebook.com/sharer.php?u=https://discolounge.net/server/<%=guild.id%>"><i style="color:rgb(58, 135, 251)" class="fab fa-facebook-square"></i> <%=locals.language.server.details.share.facebook%></a></li>
+      <li class="social-share twitter"><a href="https://twitter.com/intent/tweet?url=https://discolounge.net/server/<%=guild.id%>&text=Check out my cool discord server on Discolounge !"><i style="color:rgb(68, 157, 212)"  class="fab fa-twitter-square"></i> <%=locals.language.server.details.share.twitter%></a></li>
+      <li class="social-share linkedin"><a href="https://www.linkedin.com/shareArticle?mini=true&url=https://discolounge.net/server/<%=guild.id%>"><i style="color:rgb(68, 94, 212)" class="fab fa-linkedin"></i> <%=locals.language.server.details.share.linkedIn%></a></li>
      
   </div> 
   </div>
       <div class="server-info" >
-         <h4><i class="fa-solid fa-tags"></i> Categories</h4>
+         <h4><i class="fa-solid fa-tags"></i><%=locals.language.server.details.categories%></h4>
          <div class="tags">
          <%guild.tags.forEach(tag=>{%><a translate="no" class="tag" href="/search?tags=<%=tag.name%>"><%=tag.name%></a><%})%>
         </div>
         </div>
       <div class="server-info" >
-        <button  id='vote' onclick="vote()" class="btn bump">Vote</button>
+        <button  id='vote' onclick="vote()" class="btn bump"><%=locals.language.server.details.vote%></button>
 
       </div>
     </div>
   </div>
 </div> 
 <div class="container">
-  <h3>You might also like</h3>
-  <p style="color:rgba(183, 183, 183, 0.685)">Reccomended Discord Servers  </p>
+  <h3><%=locals.language.server.recommended_servers.title%></h3>
+  <p style="color:rgba(183, 183, 183, 0.685)"><%=locals.language.server.recommended_servers.description%>  </p>
   <hr>
   <div class="morelike">
 

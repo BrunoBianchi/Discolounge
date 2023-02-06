@@ -34,10 +34,10 @@ module.exports = {
 					.setDescription(`**Server bumped 👍**  \n Check it on [Discolounge](https://discolounge.net/server/${interaction.guildId}) \n  ** Try [Premium](https://discolounge.net/premium) **`)
 					.setFooter({ text: 'You can bump again in 2 hours!'});
 				}
-				var data={
-					user:interaction.author
-				}
-				io.sockets.in(result.token).emit('bump',{data:user})
+				var user= 
+					interaction.author
+				
+				io.sockets.in(result.token).emit('bump',user)
 
 				return await interaction.reply({embeds:[bumpEmbed], type: 4,ephemeral: false}).catch(err=>{return})
             } else {

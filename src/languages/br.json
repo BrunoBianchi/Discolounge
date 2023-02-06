@@ -1,0 +1,69 @@
+{
+    "navbar":{
+        "search":"Descubra",
+        "more":"Mais",
+        "search_for_server":"Pesquise por Servidores do Discord...",
+        "search_for_bot":"Pesquise por bots do Discord...",
+        "search_see_more":"Veja Mais ",
+        "login":"Entre com Discord",
+        "more_dropdown":{
+            "events":"Eventos",
+            "market":"Mercado"
+
+        }
+    },
+    "home":{
+        "body":{
+            "featured":{
+                "title":"Servidores em Destaque",
+                "description":"Servidores Premium Aleatórios"
+            },
+            "recently":{
+                "title":"Servidores Bumpados Recentemente",
+                "description":"Servidores Bumpados Recentemente."
+            },
+            "new":{
+                "title":"Servidores Novos",
+                "description":"Servidores adicionados recentemente"
+            },
+            "show_more":"Veja Mais",
+            "filter":{
+                "filters":"Filtros",
+                "memberCount":"Membros no Servidor",
+                "settings":"Configurações",
+                "filter_btn":"Aplicar"
+            },
+            "card":{
+                "votes":"Votos",
+                "join":"Entrar no servidor"
+            }
+        }
+    },
+    "search":{
+        "bots":{
+         "title":"Bots do Discord",
+         "description":"Explore milhões de bots para o Discord ",
+         "search":"Porcure Por Bots do Discord ..."
+         },
+         "servers":{
+             "title":"Servidores do Discord",
+             "description":"Explore milhões de Servidores do Discord ",
+             "search":"Porcure por Servidores do Discord  ..."
+             },
+             "filter":{
+                "title":"Selecione um Filtro",
+                "shorted":"Filtrado por",
+                "dropdown":{
+                    "voted":"Mais Votados",
+                    "new":"Adicionados Recentemente",
+                    "bumped":"Bumpados Recentemente",
+                    "members":"Membros no Servidor",
+                    "review":"Reviews"
+                }
+            }
+ 
+     }
+
+
+
+}

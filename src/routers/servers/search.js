@@ -1,6 +1,8 @@
 const Server = require(`${__dirname.split('src')[0]}/src/modals/server`);
+var functions = require(`${__dirname.split('src')[0]}/src/functions/functions`);
+
 module.exports = function(app) {
-app.get("/servers/search",(req,res)=>{
+app.get("/:lang/servers/search",functions.languages,(req,res)=>{
   if(!req.query.page) {
     if(Object.keys(req.query).length === 0 || !Object.keys(req.query).length === 1) return res.redirect(`${req.originalUrl}?page=1`)
     else return res.redirect(`${req.originalUrl}&page=1`)

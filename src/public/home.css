@@ -213,6 +213,9 @@ html {
   margin-right:5px;
     color:#eac820;
 }
+.premium {
+  border:1px solid #eac8203f;
+}
 #partner{
   font-size: 12px;
   color:#6720ea;

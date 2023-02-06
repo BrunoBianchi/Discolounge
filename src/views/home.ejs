@@ -101,16 +101,15 @@
         <div class="col-md-8">
           <div class="servers-cards">
             <div class="servers-cards-info">
-              <h2>Featured Servers</h2>
-              <span
-                >Random <a href="/premium">Premium</a> Discord Servers.</span
+              <h2><%=locals.language.home.body.featured.title%></h2>
+              <span><%=locals.language.home.body.featured.description%></span
               >
             </div>
             <div class="cards">
               <%if(data){data.filter(server=>server.premium ===
               true).slice(0,12).sort(() => Math.random() -
               0.5).forEach(server=>{%>
-              <div  class="card premium">
+              <div  class="card ">
                 <div class="row">
                   <div class="col-md-2">
                     <img alt="<%=server.name%>" <%if(server.icon){%>
@@ -122,27 +121,22 @@
                   <div class="col-md-10 px-3">
                     <div class="card-block px-3">
                       <h4 class="card-title">
-                        <a translate="no" href="/server/<%=server.id%>"
-                          ><%=server.name.slice(0,12)%>
+                        <a translate="no" href="<%=locals.user_lang%>/server/<%=server.id%>"
+                          ><%=server.name.slice(0,12)%> <%if(server.premium === true){%><i data-toggle="tooltip" data-html="true" data-placement="top" title="<strong>Premium Server</strong> "  style="font-size:17px;color:#d6b929" class="far fa-gem"></i><%}%>
+                          <%if(server.partner === true){%><i data-toggle="tooltip" data-html="true" data-placement="top" title="<strong>Partner Server</strong> "  style="font-size:17px;color:rgb(41, 139, 214)" class="fas fa-handshake"></i><%}%>
                         </a>
-                        <%if(server.premium === true) {%><a href="/premium"
-                          ><sup> <small id="premium">premium </small></sup></a
-                        ><%}%> <%if(server.partner === true) {%><a
-                          href="/partners"
-                          ><sup><small id="partner">partner </small></sup></a
-                        ><%}%>
+
                         <a
                           href="/server/<%=server.id%>/join"
-                          style="float: right"
+                          style="float: right;margin-top:4px;"
                           class="btn btn-primary"
-                          >Join Server</a
+                          ><%=locals.language.home.body.card.join%></a
                         >
                         <a
-                          href="/server/<%=server.id%>#vote"
-                          style="float: right"
+                          href="<%=locals.user_lang%>/server/<%=server.id%>#vote"
+                          style="float: right;margin-top:4px;"
                           class="btn btn-primary"
-                          ><i class="fa-solid fa-caret-up"></i> Votes
-                          (<%=server.votes%>)</a
+                          ><i class='fa-solid fa-caret-up'></i> <%=locals.language.home.body.card.votes%> (<%=server.votes%>)  </a
                         >
                       </h4>
                       <span translate="no" class="card-info"
@@ -153,7 +147,7 @@
                                ).toFixed(1)%> </span> | <%}%>
                         <%server.tags.slice(0,2).forEach(tag=>{%>
                         <a translate="no"
-                          href="/servers/search?tags=<%=tag.name.toLowerCase()%>"
+                          href="<%=locals.user_lang%>/servers/search?tags=<%=tag.name.toLowerCase()%>"
                           class="card-tags"
                           ><%=tag.name%></a
                         >
@@ -162,7 +156,7 @@
                           data-toggle="tooltip"
                           data-placement="top"
                           title="<%server.tags.slice(2,server.tags.length).forEach(tag=>{%> <%=tag.name%>, <%})%>"
-                          href="/server/<%=server.id%>"
+                          href="<%=locals.user_lang%>/server/<%=server.id%>"
                           class="card-tags"
                           >+<%=parseInt(server.tags.length) - 2%></a
                         >
@@ -178,11 +172,11 @@
               <%})}%>
             </div>
             <div
-              onclick="location.href='/servers/search?premium=true';"
+              onclick="location.href='<%=locals.user_lang%>/servers/search?premium=true';"
               class="container"
               id="servers-cards-showmore"
             >
-              Show More <i class="fa-solid fa-angles-down"></i>
+              <%=locals.language.home.body.show_more%><i class="fa-solid fa-angles-down"></i>
             </div>
           </div>
           <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7057922306604419"
@@ -200,7 +194,7 @@
           <div id="ad-servers" class="container">
             <h3>
               Grow your server even faster -
-              <a href="/premium" style="color: gold">Premium</a>
+              <a href="<%=locals.user_lang%>/premium" style="color: gold">Premium</a>
             </h3>
             <p style="margin-left: 10px">
               Get more members and specials perks for your server
@@ -228,26 +222,22 @@
                   <div class="col-md-10 px-3">
                     <div class="card-block px-3">
                       <h4 class="card-title">
-                        <a translate="no" href="/server/<%=server.id%>"
-                          ><%=server.name.slice(0,12)%>
+                        <a translate="no" href="<%=locals.user_lang%>/server/<%=server.id%>"
+                          ><%=server.name.slice(0,12)%> <%if(server.premium === true){%><i data-toggle="tooltip" data-html="true" data-placement="top" title="<strong>Premium Server</strong> "  style="font-size:17px;color:#d6b929" class="far fa-gem"></i><%}%>
+                          <%if(server.partner === true){%><i data-toggle="tooltip" data-html="true" data-placement="top" title="<strong>Partner Server</strong> "  style="font-size:17px;color:rgb(41, 139, 214)" class="fas fa-handshake"></i><%}%>
                         </a>
-                        <%if(server.premium === true) {%><a href="/premium"
-                          ><sup> <small id="premium">premium </small></sup></a
-                        ><%}%> <%if(server.partner === true) {%><a
-                          href="/partners"
-                          ><sup><small id="partner">partner </small></sup></a
-                        ><%}%>
+
                         <a
                           href="/server/<%=server.id%>/join"
-                          style="float: right"
+                          style="float: right;margin-top:4px;"
                           class="btn btn-primary"
-                          >Join Server</a
+                          ><%=locals.language.home.body.card.join%></a
                         >
                         <a
-                          href="/server/<%=server.id%>#vote"
-                          style="float: right"
+                          href="<%=locals.user_lang%>/server/<%=server.id%>#vote"
+                          style="float: right;margin-top:4px;"
                           class="btn btn-primary"
-                          ><i class="fa-solid fa-caret-up"></i> Votes
+                          ><i class="fa-solid fa-caret-up"></i> <%=locals.language.home.body.card.votes%>
                           (<%=server.votes%>)</a
                         >
                       </h4>
@@ -259,7 +249,7 @@
                                ).toFixed(1)%> </span> | <%}%>
                         <%server.tags.slice(0,2).forEach(tag=>{%>
                         <a translate="no"
-                          href="/servers/search?tags=<%=tag.name.toLowerCase()%>"
+                          href="<%=locals.user_lang%>/servers/search?tags=<%=tag.name.toLowerCase()%>"
                           class="card-tags"
                           ><%=tag.name%></a
                         >
@@ -268,7 +258,7 @@
                           data-toggle="tooltip"
                           data-placement="top"
                           title="<%server.tags.slice(2,server.tags.length).forEach(tag=>{%> <%=tag.name%>, <%})%>"
-                          href="/server/<%=server.id%>"
+                          href="<%=locals.user_lang%>/server/<%=server.id%>"
                           class="card-tags"
                           >+<%=parseInt(server.tags.length) - 2%></a
                         >
@@ -284,11 +274,11 @@
               <%})}%>
             </div>
             <div
-              onclick="location.href='/servers/search?page=1&filter=lastBump';"
+              onclick="location.href='<%=locals.user_lang%>/servers/search?page=1&filter=lastBump';"
               class="container"
               id="servers-cards-showmore"
             >
-              Show More <i class="fa-solid fa-angles-down"></i>
+              <%=locals.language.home.body.show_more%><i class="fa-solid fa-angles-down"></i>
             </div>
           </div>
           <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7057922306604419"
@@ -324,26 +314,22 @@
                   <div class="col-md-10 px-3">
                     <div class="card-block px-3">
                       <h4 class="card-title">
-                        <a translate="no" href="/server/<%=server.id%>"
-                          ><%=server.name.slice(0,12)%>
+                        <a translate="no" href="<%=locals.user_lang%>/server/<%=server.id%>"
+                          ><%=server.name.slice(0,12)%> <%if(server.premium === true){%><i data-toggle="tooltip" data-html="true" data-placement="top" title="<strong>Premium Server</strong> "  style="font-size:17px;color:#d6b929" class="far fa-gem"></i><%}%>
+                          <%if(server.partner === true){%><i data-toggle="tooltip" data-html="true" data-placement="top" title="<strong>Partner Server</strong> "  style="font-size:17px;color:rgb(41, 139, 214)" class="fas fa-handshake"></i><%}%>
                         </a>
-                        <%if(server.premium === true) {%><a href="/premium"
-                          ><sup> <small id="premium">premium </small></sup></a
-                        ><%}%> <%if(server.partner === true) {%><a
-                          href="/partners"
-                          ><sup><small id="partner">partner </small></sup></a
-                        ><%}%>
+
                         <a
                           href="/server/<%=server.id%>/join"
-                          style="float: right"
+                          style="float: right;margin-top:4px;"
                           class="btn btn-primary"
-                          >Join Server</a
+                          ><%=locals.language.home.body.card.join%></a
                         >
                         <a
-                          href="/server/<%=server.id%>#vote"
-                          style="float: right"
+                          href="<%=locals.user_lang%>/server/<%=server.id%>#vote"
+                          style="float: right;margin-top:4px;"
                           class="btn btn-primary"
-                          ><i class="fa-solid fa-caret-up"></i> Votes
+                          ><i class="fa-solid fa-caret-up"></i> <%=locals.language.home.body.card.votes%>
                           (<%=server.votes%>)</a
                         >
                       </h4>
@@ -355,7 +341,7 @@
                                ).toFixed(1)%> </span> | <%}%>
                         <%server.tags.slice(0,2).forEach(tag=>{%>
                         <a translate="no"
-                          href="/servers/search?tags=<%=tag.name.toLowerCase()%>"
+                          href="<%=locals.user_lang%>/servers/search?tags=<%=tag.name.toLowerCase()%>"
                           class="card-tags"
                           ><%=tag.name%></a
                         >
@@ -364,7 +350,7 @@
                           data-toggle="tooltip"
                           data-placement="top"
                           title="<%server.tags.slice(2,server.tags.length).forEach(tag=>{%> <%=tag.name%>, <%})%>"
-                          href="/server/<%=server.id%>"
+                          href="<%=locals.user_lang%>/server/<%=server.id%>"
                           class="card-tags"
                           >+<%=parseInt(server.tags.length) - 2%></a
                         >
@@ -381,11 +367,11 @@
             </div>
 
             <div
-              onclick="location.href='/servers/search?page=1&filter=createdAt';"
+              onclick="location.href='<%=locals.user_lang%>/servers/search?page=1&filter=createdAt';"
               class="container"
               id="servers-cards-showmore"
             >
-              Show More <i class="fa-solid fa-angles-down"></i>
+              <%=locals.language.home.body.show_more%><i class="fa-solid fa-angles-down"></i>
             </div>
           </div>
           <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7057922306604419"
@@ -401,14 +387,14 @@
           (adsbygoogle = window.adsbygoogle || []).push({});
      </script>
         </div>
-        <div class="col-md-4">
-          <div style="z-index: 1" class="side-menu sticky-top">
-            <form method="get" action="/servers/search/">
+        <div class="col-md-4"> 
+          <div style="z-index: 1;margin-top:7px;" class="side-menu sticky-top">
+            <form method="get" action="/<%=locals.user_lang%>/servers/search/">
               <div class="container-slide">
-                <h1>Filters</h1>
+                <h1><%=locals.language.home.body.filter.filters%></h1>
                 <div class="length range__slider" data-min="1" data-max="500">
                   <div class="length__title field-title" data-length="1">
-                    Server Members
+                    <%=locals.language.home.body.filter.memberCount%>
                   </div>
                   <input
                     name="memberCount"
@@ -421,7 +407,7 @@
                 </div>
 
                 <div class="settings">
-                  <span class="settings__title field-title">settings</span>
+                  <span class="settings__title field-title"><%=locals.language.home.body.filter.settings%></span>
                   <div class="setting">
                     <input
                       name="premium"
@@ -446,7 +432,7 @@
                   </div>
                 </div>
 
-                <button class="btn generate" id="generate">Filter</button>
+                <button class="btn generate" id="generate"><%=locals.language.home.body.filter.filter_btn%></button>
               </div>
             </form>
           </div>
