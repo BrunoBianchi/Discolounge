@@ -148,9 +148,9 @@
                       <span translate="no" class="card-info"
                         ><i class="fas fa-users"></i> <%=server.memberCount %> |
                         Bumped <%=moment(server.lastBump,
-                        "YYYYMMDD").fromNow()%> | <%if(server.reviews.rates.length >= 1){%><span style="color:#d6a529" data-toggle="tooltip" data-html="true" data-placement="top" title="<div class='container text-centered'><p>Based in <strong><%=server.reviews.rates.length%></strong> reviews </p></div>" href="/server/<%=server.id%>"><i class="fas fa-star"></i> <%=server.reviews.
+                        "YYYYMMDD").fromNow()%> | <%if(server.reviews.rates.length >= 1){%><span style="color:#d6a529" data-toggle="tooltip" data-html="true" data-placement="top" title="<div class='container text-centered'><p>Based in <strong><%=server.reviews.rates.length%></strong> reviews </p></div>" href="/server/<%=server.id%>"><i class="fas fa-star"></i> <%=(server.reviews.
                               averageStars / server.reviews.rates.length
-                               %> </span> | <%}%>
+                               ).toFixed(1)%> </span> | <%}%>
                         <%server.tags.slice(0,2).forEach(tag=>{%>
                         <a translate="no"
                           href="/servers/search?tags=<%=tag.name.toLowerCase()%>"
@@ -254,9 +254,9 @@
                       <span translate="no"  class="card-info"
                         ><i class="fas fa-users"></i> <%=server.memberCount %> |
                         Bumped <%=moment(server.lastBump,
-                        "YYYYMMDD").fromNow()%> | <%if(server.reviews.rates.length >= 1){%><span style="color:#d6a529" data-toggle="tooltip" data-html="true" data-placement="top" title="<div class='container text-centered'><p>Based in <strong><%=server.reviews.rates.length%></strong> reviews </p></div>" href="/server/<%=server.id%>"><i class="fas fa-star"></i> <%=server.reviews.
+                        "YYYYMMDD").fromNow()%> | <%if(server.reviews.rates.length >= 1){%><span style="color:#d6a529" data-toggle="tooltip" data-html="true" data-placement="top" title="<div class='container text-centered'><p>Based in <strong><%=server.reviews.rates.length%></strong> reviews </p></div>" href="/server/<%=server.id%>"><i class="fas fa-star"></i> <%=(server.reviews.
                               averageStars / server.reviews.rates.length
-                               %> </span> | <%}%>
+                               ).toFixed(1)%> </span> | <%}%>
                         <%server.tags.slice(0,2).forEach(tag=>{%>
                         <a translate="no"
                           href="/servers/search?tags=<%=tag.name.toLowerCase()%>"
@@ -350,9 +350,9 @@
                       <span translate="no" class="card-info"
                         ><i class="fas fa-users"></i> <%=server.memberCount %> |
                         Bumped <%=moment(server.lastBump,
-                        "YYYYMMDD").fromNow()%> | <%if(server.reviews.rates.length >= 1){%><span style="color:#d6a529" data-toggle="tooltip" data-html="true" data-placement="top" title="<div class='container text-centered'><p>Based in <strong><%=server.reviews.rates.length%></strong> reviews </p></div>" href="/server/<%=server.id%>"><i class="fas fa-star"></i> <%=server.reviews.
+                        "YYYYMMDD").fromNow()%> | <%if(server.reviews.rates.length >= 1){%><span style="color:#d6a529" data-toggle="tooltip" data-html="true" data-placement="top" title="<div class='container text-centered'><p>Based in <strong><%=server.reviews.rates.length%></strong> reviews </p></div>" href="/server/<%=server.id%>"><i class="fas fa-star"></i> <%=(server.reviews.
                               averageStars / server.reviews.rates.length
-                               %> </span> | <%}%>
+                               ).toFixed(1)%> </span> | <%}%>
                         <%server.tags.slice(0,2).forEach(tag=>{%>
                         <a translate="no"
                           href="/servers/search?tags=<%=tag.name.toLowerCase()%>"
