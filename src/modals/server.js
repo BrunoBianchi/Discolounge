@@ -37,6 +37,10 @@ const ServerSchema = new Schema({
     type:String,
     require:true,
   },
+  lang:{
+    type:String,
+    default:'en'
+  },
   id: {
     type: String,
     unique: true,

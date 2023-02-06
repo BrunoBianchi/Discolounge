@@ -16,7 +16,10 @@
     </style>
 
     <div class="dropdown show">
+    <input type="checkbox" id="autoT" name="autoT" >
+<label for="autoT">Auto Translate</label>
 
+</div>
 
     <div id="google_translate_element" class="boxTradutor"></div>
 
@@ -27,40 +30,6 @@
     <script type="text/javascript">
     var comboGoogleTradutor =  navigator.language || navigator.userLanguage; //Varialvel global
     var lang = navigator.language || navigator.userLanguage
-
-    async function googleTranslateElementInit() {
-        var a = await lang.toLowerCase().split('-')[0]
-        document.cookie = `googtrans=/en/${lang.toLowerCase().split('-')[0]}`
-  new google.translate.TranslateElement({
-  	pageLanguage: 'en',
-  	includedLanguages: 'en,es,pt,de,fr,pt-br',
-  }, 'google_translate_element');
-  setTimeout(function(){
-  	var select = document.querySelector('select.goog-te-combo');
-  	select.value  = `${a}`; 
-  	select.dispatchEvent(new Event('change'));
-  },1000)
-}
-
-    function changeEvent(el) {
-        if (el.fireEvent) {
-            el.fireEvent('onchange');
-        } else {
-            var evObj = document.createEvent("HTMLEvents");
-
-            evObj.initEvent("change", false, true);
-            el.dispatchEvent(evObj);
-        }
-    }
-
-    function trocarIdioma(sigla) {
-        if (comboGoogleTradutor) {
-            comboGoogleTradutor.value = sigla;
-            document.getElementById('dropdownMenuLink').innerText = `${sigla}`
-            changeEvent(comboGoogleTradutor);//Dispara a troca
-        }
-    }
-
     </script>
 
 </html>
