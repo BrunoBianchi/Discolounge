@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<%- include('../partials/favicon'); %>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="Discord">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="msapplication-TileColor" content="#8c72da">
+<title translate="no">Discolounge | <%if(locals.url.split('filter=')[1]){%>Serves sorted by <%=locals.url.split('filter=')[1]%> <%}else if(locals.url.split('premium=')[1]){%> Serves sorted by Premium<%}else if(locals.url.split('tags=')[1]){%>Servers tagged with <%=locals.url.split('tags=')[1].split('&page=')[0]%> <%}%> </title>
+<meta name="description" content=" <%if(locals.url.split('filter=')[1]){%>Serves sorted by <%=locals.url.split('filter=')[1]%> <%}else if(locals.url.split('premium=')[1]){%> Serves sorted by Premium<%}else if(locals.url.split('tags=')[1]){%>Servers tagged with <%=locals.url.split('tags=')[1].split('&page=')[0]%> <%}%>">
+<meta property="og:title" content="Discord Servers" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://discolounge.net/" />
+<meta property="og:description" content=" <%if(locals.url.split('filter=')[1]){%>Serves sorted by <%=locals.url.split('filter=')[1]%> <%}else if(locals.url.split('premium=')[1]){%> Serves sorted by Premium<%}else if(locals.url.split('tags=')[1]){%>Servers tagged with <%=locals.url.split('tags=')[1].split('&page=')[0]%> <%}%>" />
+<meta name="theme-color" content="#8c72da">
+<meta property="og:image:alt" content=" <%if(locals.url.split('filter=')[1]){%>Serves sorted by <%=locals.url.split('filter=')[1]%> <%}else if(locals.url.split('premium=')[1]){%> Serves sorted by Premium<%}else if(locals.url.split('tags=')[1]){%>Servers tagged with <%=locals.url.split('tags=')[1].split('&page=')[0]%> <%}%>" />
+<meta property="og:site_name" content="Discolounge" />
+<link rel='canonical' href='https://discolounge.net/' />
+
+<meta property="twitter:url" content="https://discolounge.net/">
+<meta property="twitter:title" content="Discord Servers">
+<meta property="twitter:description" content=" <%if(locals.url.split('filter=')[1]){%>Serves sorted by <%=locals.url.split('filter=')[1]%> <%}else if(locals.url.split('premium=')[1]){%> Serves sorted by Premium<%}else if(locals.url.split('tags=')[1]){%>Servers tagged with <%=locals.url.split('tags=')[1].split('&page=')[0]%> <%}%>">
+<script src="/jquery.js" ></script>
+<script src="/poper.js" ></script>
+<link rel="stylesheet" href="/boostrap.css" >
+<script src="/boostrap.js"></script>
+<script src="/font.js" ></script>
+<link rel="stylesheet" href="/home.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+
+<script defer async src="/pwabuilder-sw-register.js" type="87fa30033e28593e842e08ba-text/javascript"></script>
+<script defer async src="/pwabuilder-sw.js" type="87fa30033e28593e842e08ba-text/javascript"></script>
+
+<meta name="viewport" content="width=device-width, intial-scale=1.0" />
+<script type="87fa30033e28593e842e08ba-module">
+  import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+  
+  const el = document.createElement('pwa-update');
+  
+  document.body.appendChild(el);
+</script>
+
+</head>
+<script src="https://momentjs.com/downloads/moment.js"></script>
+<%- include('../partials/navbar'); %>
+
+<div  style="height:250px;background-color: transparent;" class="jumbotron jumbotron-fluid">
+  <%- include('../partials/form-search-bar'); %>
+
+          </div>
+
+<div  class="container"> 
+    <div  class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         <%if(locals.url.split('filter=')[1]){%>Sorted by <%=locals.url.split('filter=')[1]%> <%}else{%>Select a filter<%}%>
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="<%=locals.url.replace( /\bfilter\=[^&]+&?/,'').replace( /\bpage\=[^&]+&?/,'')%>page=<%=page%>&filter=votes">Top Voted</a>
+        <a class="dropdown-item" href="<%=locals.url.replace( /\bfilter\=[^&]+&?/,'').replace( /\bpage\=[^&]+&?/,'')%>page=<%=page%>&filter=createdAt">Recently Added</a>
+        <a class="dropdown-item" href="<%=locals.url.replace( /\bfilter\=[^&]+&?/,'').replace( /\bpage\=[^&]+&?/,'')%>page=<%=page%>&filter=lastBump">Recently Bumped</a>
+        <a class="dropdown-item" href="<%=locals.url.replace( /\bfilter\=[^&]+&?/,'').replace( /\bpage\=[^&]+&?/,'')%>page=<%=page%>&filter=memberCount">Member Count </a>
+        <a class="dropdown-item" href="<%=locals.url.replace( /\bfilter\=[^&]+&?/,'').replace( /\bpage\=[^&]+&?/,'')%>page=<%=page%>&filter=reviews">Reviews </a>
+
+      </div>
+    </div>
+  <div class="row">
+      <div class="col-md-8 ">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7057922306604419"
+        crossorigin="anonymous"></script>
+   <!-- horizontal -->
+   <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-7057922306604419"
+        data-ad-slot="7692097650"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
+   <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+   </script>
+              <div class="servers-cards">
+                <div class="cards">
+                  <%if(data){data.forEach(server=>{%>
+                    <div class="card">
+                      <div class="row ">
+                        <div class="col-md-2">
+                            <img alt="<%=server.name%>"  <%if(server.icon){%> src="https://cdn.discordapp.com/icons/<%=server.id%>/<%=server.icon%>.png" <%}else{%> src="https://gizmodo.uol.com.br/wp-content/blogs.dir/8/files/2021/03/i8qztv1ucn3bhsttuz1q.jpg" <%}%> >
+                          </div>
+                          <div class="col-md-10 px-3">
+                            <div class="card-block px-3">
+                              
+                              <h4 class="card-title"><a translate="no" href="/server/<%=server.id%>"><%=server.name.slice(0,12)%> </a>   <%if(server.premium === true) {%><a href="/premium"><sup> <small id="premium">premium </small></sup></a><%}%> <%if(server.partner === true) {%><a href="/partners"><sup><small id="partner">partner </small></sup></a><%}%>
+                                <a href="/server/<%=server.id%>/join" style="float:right" class="btn btn-primary">Join Server</a>
+                              <a href="/server/<%=server.id%>#vote" style="float:right" class="btn btn-primary"><i class="fa-solid fa-caret-up"></i> Votes (<%=server.votes%>)</a>
+                            </h4>
+                            <span translate="no" class="card-info"><i class="fas fa-users"></i>  <%=server.memberCount %> | Bumped <%=moment(server.lastBump, "YYYYMMDD").fromNow()%> | <%if(server.reviews.rates.length >= 1){%><span style="color:#d6a529" data-toggle="tooltip" data-html="true" data-placement="top" title="<div class='container text-centered'><p>Based in <strong><%=server.reviews.rates.length%></strong> reviews </p></div>" href="/server/<%=server.id%>"><i class="fas fa-star"></i> <%=server.reviews.
+                              averageStars / server.reviews.rates.length
+                               %> </span> | <%}%>
+                              <%server.tags.slice(0,2).forEach(tag=>{%>
+                                <a translate="no" href="/servers/search?tags=<%=tag.name.toLowerCase()%>" class="card-tags"><%=tag.name%></a>
+                                <%})%>
+                                <%if(server.tags.length >=3){%>
+                                   <a translate="no" data-toggle="tooltip" data-placement="top" title="<%server.tags.slice(2,server.tags.length).forEach(tag=>{%> <%=tag.name%>, <%})%>" href="/server/<%=server.id%>" class="card-tags">+<%=parseInt(server.tags.length) - 2%></a>
+                                <%}%>
+
+                              </span>
+                              <div class="card-content">
+                                <p class="card-text"><%=server.short_description%></p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    <%})}%>
+                    <% var filter =  locals.url.split('filter=')[1]%>
+                    <nav aria-label="Page navigation example">
+                      <ul class="pagination justify-content-center">
+                        <li <%if(parseInt(page) === 1 ){%> class="page-item disabled"  <%}else{%> class="page-item" <%}%>>
+                          <a  style="  background-color: #302d38;
+                          color:white;
+                          border-color: #201e25;"  class="page-link" href="<%=locals.url.replace( /\bpage\=[^&]+&?/,'').replace( /\bfilter\=[^&]+&?/,'')%>page=<%=parseInt(page) - 1%><%if(filter){%>&filter=<%=filter%> <%}%>" tabindex="-1">Previous</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="<%=locals.url.replace( /\bpage\=[^&]+&?/,'').replace( /\bfilter\=[^&]+&?/,'')%>page=<%=parseInt(page)+ 1%><%if(filter){%>&filter=<%=filter%> <%}%>"><%=parseInt(page) + 1%></a></li>
+                        <li class="page-item"><a class="page-link"href="<%=locals.url.replace( /\bpage\=[^&]+&?/,'').replace( /\bfilter\=[^&]+&?/,'')%>page=<%=parseInt(page) + 2%><%if(filter){%>&filter=<%=filter%> <%}%>"><%=parseInt(page) + 2%></a></li>
+                        <li class="page-item"><a class="page-link"href="<%=locals.url.replace( /\bpage\=[^&]+&?/,'').replace( /\bfilter\=[^&]+&?/,'')%>page=<%=parseInt(page) + 3%><%if(filter){%>&filter=<%=filter%> <%}%>"><%=parseInt(page) + 3%></a></li>
+                        <li class="page-item">
+                          <a class="page-link" href="<%=locals.url.replace( /\bpage\=[^&]+&?/,'').replace( /\bfilter\=[^&]+&?/,'')%>page=<%=parseInt(page) + 1%><%if(filter){%>&filter=<%=filter%> <%}%>">Next</a>
+                        </li>
+                      </ul>
+                    </nav>
+                </div>
+              </div>
+              </div>
+              <div  class="col-md-4">
+                <div style="z-index: 1"  class="side-menu sticky-top">
+                  <form method="get" action="/servers/search/">
+                    <div class="container-slide">
+                      <h1 >Filters</h1>
+                      <div class="length range__slider" data-min="1" data-max="500">
+                        <div class="length__title field-title" data-length='1'>Server Members</div>
+                        <input name="memberCount" id="slider" type="range" min="1" max="500" value="1" />
+                      </div>
+                    
+                      <div class="settings">
+                        <span class="settings__title field-title">settings</span>
+                        <div class="setting">
+                          <input name="premium" type="checkbox" value="<%if(locals.url.split('premium=')[1]){%><%if(locals.url.split('premium=')[1].split('&')[0] === 'true'){%>true<%}else{%>false<%}%><%}else{%>false<%}%>" onClick="if(this.value === 'false') {this.value = true}else {this.value =false}" id="uppercase" <%if(locals.url.split('premium=')[1]){%><%if(locals.url.split('premium=')[1].split('&')[0] === 'true'){%> checked <%}%> <%}%> />
+                          <label for="uppercase">Premium</label>
+                        </div>
+                        <div class="setting">
+
+                          <input name="NSFW" type="checkbox" value="<%if(locals.url.split('NSFW=')[1]){%><%if(locals.url.split('NSFW=')[1].split('&')[0] === 'true'){%>true<%}else{%>false<%}%><%}%>" onClick="if(this.value === 'false') {this.value = true}else {this.value =false}" id="symbol"<%if(locals.url.split('NSFW=')[1]){%><%if(locals.url.split('NSFW=')[1].split('&')[0] === 'false'){%> checked <%}%> <%}%> />
+
+                          
+                          <label for="symbol">SFW</label>
+                        </div>
+                      </div>
+                    
+                      <button class="btn generate" id="generate">Filter</button>
+                    </div>
+
+                  </form>
+                </div>
+            </div>
+              </div>
+
+              </div>
+
+              <%- include('../partials/footer'); %>
+
+
+
+              <script type="text/javascript">
+                $(document).ready(function () {
+                  $('[data-toggle="tooltip"]').tooltip();
+                });
+              </script>

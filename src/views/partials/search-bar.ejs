@@ -1,0 +1,342 @@
+
+<div id="search-form" class="form">
+    <div>
+        <i class="fa fa-search"></i>
+        <form action="<%if(locals._locals.path_url.includes('bot')){ %>/bots/search/ <%}else{%>/servers/search/ <%}%>">
+            <input id="search" name='name' type="text" class="form-control form-input" autocomplete="off" placeholder="Search for Discord <%if(locals._locals.path_url.includes('bot')){ %> Bots <%}else{%> Servers <%}%>...">
+    
+        </form>
+    </div>
+
+    <div class="advanced-search hidden">
+        <div id="servers">
+
+        </div>
+        <a class="search-bar-see-more hidden" >See More</a>
+
+    </div>
+  </div>
+
+
+
+  <script>
+
+    
+var inputBox = document.getElementById('search')
+inputBox.addEventListener('click',function() {
+    $(".advanced-search").removeClass("hidden");
+    $('#servers').empty();
+
+for (let i = 0; i < 8; i++) {
+  $('#servers').append(`
+    <div " class="mini-server">
+                <div class="card">
+                         <div class="row ">
+                           <div class="col-md-2">
+                               <img class='skeleton'>
+                             </div>
+                             <div class="col-md-10 px-3">
+                               <div class="card-block px-3">
+                                <div style='width:50px;height:15px;float:right;margin-right:5px;' class="skeleton skeleton-text"></div>
+                                  <div style='width:50px;height:15px;float:right;' class="skeleton skeleton-text"></div>
+                                <h4 class="card-title">
+                                  <div style='width:280px;height:15px' class="skeleton skeleton-text"></div>
+
+                                  </h4>
+                               <span class="card-info"> <div style='width:250px;height:15px' class="skeleton skeleton-text"></div></span>
+                                 <div class="card-content">
+                                   <p class="card-text"><div style='width:200px;height:15px' class="skeleton skeleton-text"></div></p>
+                                 </div>
+                               </div>
+                             </div>
+                           </div>
+                         </div>
+        </div>
+    `)
+}
+
+    fetch(` <%if(locals._locals.path_url.includes('bot')){ %>/bots/<%}else{%>/servers/<%}%>searchName?name=${$input.val()}`, { method: "GET",
+    headers: { "Content-Type": "application/json" },
+    })
+    .then(res => res.json())
+    .then(async response => { 
+      $('#servers').empty();
+
+        response.data.forEach(server => {
+            var name = server.name
+            if(server.name.length > 12) name = `${ server.name.slice(0,12)}...`
+            var src = ''
+            var premium = ''
+            if(server.premium) {
+                premium = ' <a href="/premium"><sup><small id="premium">premium </small></sup></a>'
+            }
+            var partner = ''
+    if(server.partner) partner =  '<a href="/partners"><sup><small id="partner">partner </small></sup></a>'
+            if(server.icon){
+               src=` https://cdn.discordapp.com/<%if(locals._locals.path_url.includes('bot')){ %>avatars<%}else{%>icons<%}%>/${server.id}/${server.icon}.png`
+              }else
+              {src="https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png" 
+            }
+            $('#servers').append(`
+            <div onclick="location.href='/<%if(locals._locals.path_url.includes('bot')){ %>bot<%}else{%>server<%}%>/${server.id}';" class="mini-server">
+                <div class="card">
+                         <div class="row ">
+                           <div class="col-md-2">
+                               <img  alt="Discolounge" src="${src}">
+                             </div>
+                             <div class="col-md-10 px-3">
+                               <div class="card-block px-3">
+                                 
+                                <h4 class="card-title"><a href="/server/${server.id}">${server.name} </a> ${premium} ${partner}
+                                 <a href="/<%if(locals._locals.path_url.includes('bot')){ %>bot<%}else{%>server<%}%>/${server.id}#vote" style="float:right" class="btn btn-primary"><i class="fa-solid fa-caret-up"></i> Votes (1)</a>
+                               </h4>
+                                 </span>
+                                 <div class="card-content">
+                                   <p class="card-text">${server.short_description}</p>
+                                 </div>
+                               </div>
+                             </div>
+                           </div>
+                         </div>
+        </div>
+            `)
+        });
+        $(".search-bar-see-more").removeClass("hidden");
+        $(".search-bar-see-more").attr("href", `<%if(locals._locals.path_url.includes('bot')){ %>/bots/search<%}else{%>/servers/search<%}%>?name=${$input.val()}`)
+    })
+})
+window.addEventListener('click', function(e){   
+    if (document.getElementById('search-form').contains(e.target)){
+      return
+    } else{
+        $(".advanced-search").addClass("hidden");
+    }
+  });
+//setup before functions
+var typingTimer;                //timer identifier
+var doneTypingInterval = 400;  //time in ms, 5 seconds for example
+var $input = $('#search');
+
+//on keyup, start the countdown
+$input.on('keyup', function () {
+  clearTimeout(typingTimer);
+  typingTimer = setTimeout(doneTyping, doneTypingInterval);
+});
+
+//on keydown, clear the countdown 
+$input.on('keydown', function () {
+  clearTimeout(typingTimer);
+});
+
+//user is "finished typing," do something
+function doneTyping () {
+    
+   $('#servers').empty();
+   for (let i = 0; i < 8; i++) {
+  $('#servers').append(`
+    <div  class="mini-server">
+                <div class="card">
+                         <div class="row ">
+                           <div class="col-md-2">
+                               <img class='skeleton'>
+                             </div>
+                             <div class="col-md-10 px-3">
+                               <div class="card-block px-3">
+                                <div style='width:50px;height:15px;float:right;margin-right:5px;' class="skeleton skeleton-text"></div>
+                                  <div style='width:50px;height:15px;float:right;' class="skeleton skeleton-text"></div>
+                                <h4 class="card-title">
+                                  <div style='width:280px;height:15px' class="skeleton skeleton-text"></div>
+
+                                  </h4>
+                               <span class="card-info"> <div style='width:250px;height:15px' class="skeleton skeleton-text"></div></span>
+                                 <div class="card-content">
+                                   <p class="card-text"><div style='width:200px;height:15px' class="skeleton skeleton-text"></div></p>
+                                 </div>
+                               </div>
+                             </div>
+                           </div>
+                         </div>
+        </div>
+    `)
+}
+    fetch(` <%if(locals._locals.path_url.includes('bot')){ %>/bots/<%}else{%>/servers/<%}%>searchName?name=${$input.val()}`, { method: "GET",
+    headers: { "Content-Type": "application/json" },
+    })
+    .then(res => res.json())
+    .then(async response => { 
+      $('#servers').empty();
+        if(response.data.length <= 0) return    $('#servers').append(`<%if(locals._locals.path_url.includes('bot')){ %>No Bots Found!<%}else{%>No Servers Found!<%}%>`)
+        response.data.forEach(async server => {
+            var name = server.name
+            if(server.name.length > 12) name = `${ server.name.slice(0,12)}...`
+            var src = ''
+            var premium = ''
+            if(server.premium) {
+                premium = ' <a href="/premium"><sup><small id="premium">premium </small></sup></a>'
+            }
+            var partner = ''
+    if(server.partner) partner =  '<a href="/partners"><sup><small id="partner">partner </small></sup></a>'
+            if(server.icon){
+               src=` https://cdn.discordapp.com/<%if(locals._locals.path_url.includes('bot')){ %>avatars<%}else{%>icons<%}%>/${server.id}/${server.icon}.png`
+              }else
+              {src="https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png" 
+            }
+            $('#servers').append(`
+            <div onclick="location.href='/<%if(locals._locals.path_url.includes('bot')){ %>bot<%}else{%>server<%}%>/${server.id}';" class="mini-server">
+                <div class="card">
+                         <div class="row ">
+                           <div class="col-md-2">
+                               <img  alt="Discolounge" src="${src}">
+                             </div>
+                             <div class="col-md-10 px-3">
+                               <div class="card-block px-3">
+                                 
+                                <h4 class="card-title"><a href="/server/${server.id}">${server.name} </a> ${premium} ${partner}
+                                 <a href="/<%if(locals._locals.path_url.includes('bot')){ %>bot<%}else{%>server<%}%>/${server.id}#vote" style="float:right" class="btn btn-primary"><i class="fa-solid fa-caret-up"></i> Votes (1)</a>
+                               </h4>
+                                 </span>
+                                 <div class="card-content">
+                                   <p class="card-text">${server.short_description}</p>
+                                 </div>
+                               </div>
+                             </div>
+                           </div>
+                         </div>
+        </div>
+            `)
+        });
+        $(".search-bar-see-more").removeClass("hidden");
+        $(".search-bar-see-more").attr("href", `/search?name=${$input.val()}`)
+    })
+}
+
+
+
+
+  </script>
+  <style>
+    .server .card {
+      background-color: #090613;
+    }
+.search-form{
+    width:100%;
+}
+    .form{
+        position: relative;
+        width:100%;
+    }
+    
+    .form .fa-search{
+    
+        position: absolute;
+        top:20px;
+        left: 20px;
+        color: #9ca3af;
+    
+    }
+    
+    .skeleton {
+  animation: skeleton-loading 1s linear infinite alternate;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: #292439;
+  }
+  100% {
+    background-color: #1f1a2c;;
+  }
+}
+
+.skeleton-text {
+  width: 30%;
+  height:90%;
+  height: 0.7rem;
+  margin-bottom: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.skeleton-text__body {
+  width: 100%;
+  height:90%;
+}
+
+    
+    .left-pan{
+        padding-left: 7px;
+    }
+    
+    .left-pan i{
+       
+       padding-left: 10px;
+    }
+    
+    .form-input{
+        height: 55px;
+        text-indent: 33px;
+        border-radius: 10px;
+    }
+    
+    .form-input:focus{
+    
+        box-shadow: none;
+        border:none;
+    }
+    
+ 
+    .advanced-search {
+        max-height:300px ;
+        background-color:#090613;
+            border-radius:5px;
+        width:100%;
+        height:300px;
+        position: absolute;
+        z-index:1
+    }
+    .search-bar-see-more{
+        font-size:15px;
+        padding:10px;
+        color:white;
+    }
+    .search-bar-see-more:hover{
+    text-decoration: none;
+    color:	#7289da;
+    }
+    .hidden{
+        display:none;
+    }
+    .mini-server {
+        margin-top:10px;
+        margin-left:10px;
+        width:95%;
+        border-radius:5px;
+        background-color:#14121c;
+        padding:10px;
+        text-align: left;
+        color:white;
+        font-size:20px;
+    }
+    .card {
+      background-color:#14121c;
+      color:white;
+    }
+    .mini-server:hover{
+        background-color:#16141f;
+        cursor:pointer;
+    }
+    .mini-server img {
+        width:80px;
+        height:80px;
+        border-radius:50%;
+    }
+    #search{
+        width:100%;
+    }
+    #servers {
+         height: 92%;
+         width:100%;
+         overflow: auto; 
+        
+        display:inline-block;
+    }
+      </style>

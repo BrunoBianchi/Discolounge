@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <%- include('../partials/favicon'); %>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="Discord" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="msapplication-TileColor" content="#8c72da" />
+    <title translate="no">Find Your Perfect Discord Community | discolounge.net</title>
+    <meta
+      name="description"
+      content="Find the best Discord servers on discolounge.net - the ultimate Discord server listing website. Search for new unique servers by genre, interests, location and more. Join new communities, grow your server to the infinite and expand your social circle. Sign up now for free!"
+    />
+    <meta property="og:title" content="Discord Servers" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://discolounge.net/" />
+    <meta
+      property="og:description"
+      content="Find the best Discord servers on discolounge.net - the ultimate Discord server listing website. Search for new unique servers by genre, interests, location and more. Join new communities, grow your server to the infinite and expand your social circle. Sign up now for free!"
+    />
+    <meta name="theme-color" content="#8c72da" />
+    <meta
+      property="og:image:alt"
+      content="Find the best Discord servers on discolounge.net - the ultimate Discord server listing website. Search for new unique servers by genre, interests, location and more. Join new communities, grow your server to the infinite and expand your social circle. Sign up now for free!"
+    />
+    <meta property="og:site_name" content="Discolounge" />
+    <link rel="canonical" href="https://discolounge.net/" />
+
+    <meta property="twitter:url" content="https://discolounge.net/" />
+    <meta property="twitter:title" content="Discord Servers" />
+    <meta
+      property="twitter:description"
+      content="Find the best Discord servers on discolounge.net - the ultimate Discord server listing website. Search for new unique servers by genre, interests, location and more. Join new communities, grow your server to the infinite and expand your social circle. Sign up now for free!"
+    />
+    <meta name="robots" content="index" />
+    <meta property="twitter:image" content="https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png">
+
+    <script src="<%=locals.path_ur%>/jquery.js"></script>
+    <script src="<%=locals.path_ur%>/poper.js"></script>
+    <link rel="stylesheet" href="/boostrap.css" />
+    <script src="<%=locals.path_ur%>/boostrap.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="<%=locals.path_ur%>/font.js"></script>
+    <link rel="stylesheet" href="<%=locals.path_ur%>/home.css" />
+    <link rel="stylesheet" href="<%=locals.path_ur%>/market.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="manifest" href="/pwa.webmanifest" />
+    <script src="/pwa.js"></script>
+    <script src="/status.js"></script>
+  </head>
+  <body>
+    <%- include('../partials/navbar'); %>
+    <div class="container">
+      <h1 class="text-center">Select a Server </h1>
+    <%locals.user.guilds.forEach(server=>{%>
+      <div style="display:inline-block" class="cards">
+            <div  onclick="location.href='/dashboard/server/<%=server.id%>';" style="display:inline-block;height:110px;width:280px" class="card" >
+              <div class="row">
+                <div class="col-md-3">
+                  <img class="card-img" style="width:70px;height:70px;" alt="<%=server.name%>" <%if(server.icon){%>
+                    src="https://cdn.discordapp.com/icons/<%=server.id%>/<%=server.icon%>.png"
+                    <%}else{%>
+                    src="https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png"
+                    <%}%> >
+                </div>
+                <div class="col-md-9"> 
+                  <h5 translate="no" class="card-title"><%=server.name%></h5>
+
+                </div>
+
+              </div>
+              <div style="display: flex;
+              justify-content: center;" class="card-body">
+                  <a href="/dashboard/server/<%=server.id%>" style="margin-left:0px;    position: absolute;
+                    bottom: 0;" class="btn btn-primary"> <i class="fas fa-plus-square"></i> Add Server </a>
+                 
+              </div>
+
+              </div>
+    
+    </div>
+        <%})%>
+    </div>
+
+    <%- include('../partials/footer'); %>
+
+    <!-- Site footer -->
+
+    <script src="./slider.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+      });
+    </script>
+  </body>
+</html>

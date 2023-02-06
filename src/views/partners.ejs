@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <%- include('partials/favicon'); %>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="Discord" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="msapplication-TileColor" content="#8c72da" />
+    <title translate="no">Discolounge - Partners</title>
+    <meta
+      name="description"
+      content="Servers Shorted by  <%=locals.url.split('filter=')[1]%>"
+    />
+    <meta property="og:title" content="Discord Servers" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://discolounge.net/" />
+    <meta
+      property="og:description"
+      content="Servers Shorted by  <%=locals.url.split('filter=')[1]%>"
+    />
+    <meta name="theme-color" content="#8c72da" />
+    <meta
+      property="og:image:alt"
+      content="Servers Shorted by  <%=locals.url.split('filter=')[1]%>"
+    />
+    <meta property="og:site_name" content="Discolounge" />
+    <link rel="canonical" href="https://discolounge.net/" />
+
+    <meta property="twitter:url" content="https://discolounge.net/" />
+    <meta property="twitter:title" content="Discord Servers" />
+    <meta
+      property="twitter:description"
+      content="Servers Shorted by  <%=locals.url.split('filter=')[1]%>"
+    />
+    <script src="./jquery.js"></script>
+    <script src="./poper.js"></script>
+    <link rel="stylesheet" href="./boostrap.css" />
+    <script src="./boostrap.js"></script>
+    <script src="./font.js"></script>
+    <link rel="stylesheet" href="./home.css" />
+    <link rel="stylesheet" href="./partners.css" />
+    <script src="/toastr.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/dashboard.css" />
+
+    <link rel="stylesheet" href="/toastr.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      defer
+      async
+      src="/pwabuilder-sw-register.js"
+      type="87fa30033e28593e842e08ba-text/javascript"
+    ></script>
+    <script
+      defer
+      async
+      src="/pwabuilder-sw.js"
+      type="87fa30033e28593e842e08ba-text/javascript"
+    ></script>
+
+    <meta name="viewport" content="width=device-width, intial-scale=1.0" />
+    <script type="87fa30033e28593e842e08ba-module">
+      import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+
+      const el = document.createElement('pwa-update');
+
+      document.body.appendChild(el);
+    </script>
+  </head>
+  <body>
+    <%- include('partials/navbar'); %>
+    <div style="margin-top: 100px" class="container">
+      <h1 style="text-align: center">
+        Partners Program
+        <br />
+      </h1>
+      <br />
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card-premium">
+            <div class="card-premium-content">
+              <ul>
+                <li>
+                  <i class="fa fa-bullhorn" aria-hidden="true"></i> Priority
+                  When Searched or Shorted
+                </li>
+                <li>
+                  <i class="fa-solid fa-star" aria-hidden="true"></i> Garanteed
+                  Frame in Front Page
+                </li>
+                <li>
+                  <i class="fas fa-users" aria-hidden="true"></i> Increase
+                  Server Visits
+                </li>
+                <li>
+                  <i class="fas fa-tags" aria-hidden="true"></i> Custom Partner
+                  Tag: <span style="font-size: 16px" id="partner">partner</span>
+                </li>
+                <li>
+                  <i class="fas fa-handshake-alt" aria-hidden="true"></i> Custom
+                  Partner Role in server
+                </li>
+                <li>
+                  <i class="fas fa-slash"></i> Bump command (can be done by
+                  anyone)
+                </li>
+
+                <li>
+                  <i style="color: #da7272" c class="fas fa-heart"></i> Support
+                  us With some Love
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <%if( locals.user.partner === true){%>
+          <h5 style="text-align: center">
+            Select the Server you want to have all the perks
+          </h5>
+          <% var server = results.find(server=> server.partner === true) %>
+          <%if(server){%>
+          <div class="dropdown text-center">
+            <button
+              style="width: 100%"
+              class="btn btn-secondary dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <a style="color: white; width: 100%" class="dropdown-item"
+                ><img
+                  style="
+                    margin-right: 10px;
+                    width: 35px;
+                    height: 35px;
+                    border-radius: 50%;
+                  "
+                  <%if(server.icon){%>
+                src="https://cdn.discordapp.com/icons/<%=server.id%>/<%=server.icon%>.png"
+                <%}else{%>
+                src="https://gizmodo.uol.com.br/wp-content/blogs.dir/8/files/2021/03/i8qztv1ucn3bhsttuz1q.jpg"
+                <%}%>> <%=server.name%></a
+              >
+            </button>
+            <div
+              style="width: 100%"
+              class="dropdown-menu"
+              aria-labelledby="dropdownMenuButton"
+            >
+              <%if(results.length>= 1){results.forEach(server=>{%>
+              <a
+                style="color: white"
+                class="dropdown-item text-center"
+                onclick="changePartnerServer('<%=server.id%>')"
+                ><img
+                  style="
+                    margin-right: 10px;
+                    width: 35px;
+                    height: 35px;
+                    border-radius: 50%;
+                  "
+                  <%if(server.icon){%>
+                src="https://cdn.discordapp.com/icons/<%=server.id%>/<%=server.icon%>.png"
+                <%}else{%>
+                src="https://gizmodo.uol.com.br/wp-content/blogs.dir/8/files/2021/03/i8qztv1ucn3bhsttuz1q.jpg"
+                <%}%>> <%=server.name%></a
+              >
+              <%})}else{%>
+              <a href="/dashboard" class="dropdown-item">
+                You don't have a Server added yet!</a
+              >
+              <%}%>
+            </div>
+          </div>
+          <%}else{%>
+          <div style="width: 100%" class="dropdown text-center">
+            <button
+              style="width: 100%"
+              class="btn btn-secondary dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Select a Server
+            </button>
+            <div
+              style="width: 100%"
+              class="dropdown-menu"
+              aria-labelledby="dropdownMenuButton"
+            >
+              <%if(results.length>= 1){results.forEach(server=>{%>
+              <a
+                style="color: white"
+                class="dropdown-item text-center"
+                onclick="changePartnerServer('<%=server.id%>')"
+                ><img
+                  style="
+                    margin-right: 10px;
+                    width: 35px;
+                    height: 35px;
+                    border-radius: 50%;
+                  "
+                  <%if(server.icon){%>
+                src="https://cdn.discordapp.com/icons/<%=server.id%>/<%=server.icon%>.png"
+                <%}else{%>
+                src="https://gizmodo.uol.com.br/wp-content/blogs.dir/8/files/2021/03/i8qztv1ucn3bhsttuz1q.jpg"
+                <%}%>> <%=server.name%></a
+              >
+              <%})}else{%>
+              <a href="/dashboard" class="dropdown-item">
+                You don't have a Server added yet!</a
+              >
+              <%}%>
+            </div>
+          </div>
+          <%}%> <%}else{%>
+          <h5 style="text-align: center">
+            Not Partner yet 😭 Apply for it now!
+          </h5>
+          <p>Our requirements:</p>
+          <ul>
+            <li>At Least 50 Members (Might Change Later)</li>
+            <li>Must Add your server in our site</li>
+            <li>Must follow server and discord TOS</li>
+            <li>Must be SFW</li>
+            <li>No racism / homophobia</li>
+            <li>No @ everyone or @ here</li>
+          </ul>
+          <br />
+          <p>
+            Meet all requirements? Select a server you want to be partner with
+            us.
+          </p>
+          <div style="width: 100%" class="dropdown text-center">
+            <button
+              style="width: 100%"
+              class="btn btn-secondary dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Select a Server
+            </button>
+            <div
+              style="width: 100%"
+              class="dropdown-menu"
+              aria-labelledby="dropdownMenuButton"
+            >
+              <%if(results.length>= 1){results.forEach(server=>{%>
+              <a
+                style="color: white"
+                class="dropdown-item text-center"
+                onclick="sendForm('<%=server.id%>')"
+                ><img
+                  style="
+                    margin-right: 10px;
+                    width: 35px;
+                    height: 35px;
+                    border-radius: 50%;
+                  "
+                  <%if(server.icon){%>
+                src="https://cdn.discordapp.com/icons/<%=server.id%>/<%=server.icon%>.png"
+                <%}else{%>
+                src="https://gizmodo.uol.com.br/wp-content/blogs.dir/8/files/2021/03/i8qztv1ucn3bhsttuz1q.jpg"
+                <%}%>> <%=server.name%></a
+              >
+              <%})}else{%> <%locals.user.guilds.filter(server=>server.owner ===
+              true).forEach(server=>{%>
+              <a
+                style="color: white"
+                class="dropdown-item text-center"
+                href="/dashboard/<%=server.id%>"
+                ><img
+                  style="
+                    margin-right: 10px;
+                    width: 35px;
+                    height: 35px;
+                    border-radius: 50%;
+                  "
+                  <%if(server.icon){%>
+                src="https://cdn.discordapp.com/icons/<%=server.id%>/<%=server.icon%>.png"
+                <%}else{%>
+                src="https://gizmodo.uol.com.br/wp-content/blogs.dir/8/files/2021/03/i8qztv1ucn3bhsttuz1q.jpg"
+                <%}%>> <%=server.name%> (server not added yet)</a
+              >
+
+              <%})%> <%}%>
+            </div>
+          </div>
+
+          <%}%>
+        </div>
+      </div>
+      <br />
+    </div>
+    <%- include('partials/footer'); %>
+
+    <script>
+      function sendForm(id) {
+        fetch(`/partners/sendForm?serverId=${id}`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+        })
+          .then((res) => res.json())
+          .then(async (response) => {
+            toastr[response.icon](response.content);
+          });
+      }
+      function changePartnerServer(id) {
+        fetch(`/partners/changePartnerServer?serverId=${id}`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+        })
+          .then((res) => res.json())
+          .then(async (response) => {
+            toastr[response.icon](response.content);
+          });
+      }
+    </script>
+  </body>
+</html>

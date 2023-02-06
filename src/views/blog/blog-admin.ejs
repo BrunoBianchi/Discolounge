@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<%- include('../partials/favicon'); %>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="Discord">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="msapplication-TileColor" content="#da532c">
+<title translate="no">Discolounge - Blog Admin</title>
+<meta name="description" content="Are you looking for the best Discord servers for your interests? From Roleplay to Gaming, we have you covered!">
+<meta property="og:title" content="Discord Servers" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.Discolounge.net/" />
+<meta property="og:description" content="Are you looking for the best Discord servers for your interests? From Roleplay to Gaming, we have you covered!" />
+<meta name="theme-color" content="#439CEE">
+<meta property="og:image:alt" content="Are you looking for the best Discord servers for your interests? From Roleplay to Gaming, we have you covered!" />
+<meta property="og:site_name" content="Discolounge" />
+<link rel='canonical' href='https://www.Discolounge.net/' />
+
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://www.Discolounge.net/">
+<meta property="twitter:title" content="Discord Servers">
+<meta property="twitter:description" content="Are you looking for the best Discord servers for your interests? From Roleplay to Gaming, we have you covered!">
+<script src="/jquery.js" ></script>
+<script src="/poper.js" ></script>
+<link rel="stylesheet" href="/boostrap.css" >
+<script src="/boostrap.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script src="/font.js" ></script>
+<link rel="stylesheet" href="/home.css">
+<link rel="stylesheet" type="text/css" href="/editor.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/dashboard.css">
+
+</head>
+<%- include('../partials/navbar'); %>
+
+<div class="container" id="content">
+
+    <div class="form-content">
+      <div class="form-group">
+        <label id="short_description_header" for="exampleFormControlSelect1">Post Title <span style="color:#de4343">*</span></label>
+        <textarea name='title' id="p-title"  placeholder="" class="form-control" required></textarea>
+      </div>
+    </div>
+    <div class="form-content">
+        <div class="form-group">
+          <label id="long_description_header" for="exampleFormControlSelect1">Post Description <span style="color:#de4343">*</span></label>
+          <div id="markdown-editor">
+            <div class="toolbar">
+              <div class="group">
+                <button id="heading1"><i class="fa fa-header" aria-hidden="true"></i>1</button>
+                <button id="heading2"><i class="fa fa-header" aria-hidden="true"></i>2</button>
+                <button id="heading3"><i class="fa fa-header" aria-hidden="true"></i>3</button>
+              </div>
+              <div class="group">
+                <button id="bold"><i class="fa fa-bold" aria-hidden="true"></i></button>
+                <button id="italic"><i class="fa fa-italic" aria-hidden="true"></i></button>
+              </div>
+              <div class="group">
+                <button id="link"><i class="fa fa-link" aria-hidden="true"></i></button>
+                <button id="list-ul"><i class="fa fa-list-ul" aria-hidden="true"></i></button>
+                <button id="list-ol"><i class="fa fa-list-ol" aria-hidden="true"></i></button>
+                <button id="token">{{Token}}</button>
+              </div>
+              <button id="preview">Preview</button>
+            </div>
+            <div id="input-output">
+              <textarea name="content" id="input-area" rows="30" cols="50" required></textarea>
+              <div id="output-area"></div>
+              <p class="preview-message">Preview Mode</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button  id="confirm-btn" onclick="confirm()">Add Post</button>
+
+</div>
+
+<div class="container">
+
+</div>
+
+<script>
+
+function confirm() {
+  var divElem = document.getElementById("content");
+var inputElements = divElem.querySelectorAll("input, select, checkbox, textarea");
+var el = {}
+inputElements.forEach(i=>{
+  el[`${i.name}`] = {
+  name:i.name,
+  content:i.value,
+  required:i.hasAttribute("required"),
+    id:i.id,
+}
+})
+fetch(`/blog/admin/post`, { method: "POST",
+headers: { "Content-Type": "application/json" },
+
+body:JSON.stringify(el),
+})
+.then(res => res.json())
+.then(async response => {
+  toastr[response.icon](response.content)
+  if(response.icon === 'error')  {
+    $('html, body').animate({scrollTop: $(`#${response.el}`).offset().top -100 }, 'slow');
+
+  }
+})     
+}  
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/editor.js"></script> 

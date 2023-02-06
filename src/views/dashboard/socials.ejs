@@ -1,0 +1,137 @@
+<%- include('../partials/favicon'); %>
+<title translate="no">Discolounge - Dashboard - Socials </title>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.5/socket.io.js" integrity="sha512-2rUSTSAeOO02jF6eBqENNqPs1EohenJ5j+1dgDPdXSLz9nOlrr8DJk4zW/lDy8rjhGCSonW3Gx812XJQIKZKJQ==" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" /><script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+<script src="https://kit.fontawesome.com/3bad20df7c.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/amsify.js"></script> 
+<link rel="stylesheet" type="text/css" href="/amsify.css">
+<link rel="stylesheet" type="text/css" href="/dashboard.css">
+<link rel="stylesheet" type="text/css" href="/editor.css">
+
+<link rel="stylesheet" href="/home.css">
+<%- include('../partials/navbar'); %>
+
+
+
+<!-- End vertical navbar -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <%- include('../partials/vertical-navbar'); %>
+
+    </div>
+    <div class="col-md-9">
+
+<!-- Page content holder -->
+<%if(data != undefined){%>
+  <div id="content">
+
+    <div class="form-content" >
+      <div class="form-group">
+        <label id="title_header" for="title">Name <span style="color:#de4343">*</span></label>
+        <input type="text" placeholder="social media name" id="name"  class="form-control" name="name" required>
+      </div>
+      <div class="form-group">
+        <label id="content_header" for="content">Url <span style="color:#de4343">*</span></label>
+        <input type="text" placeholder="social media url" id="url"  class="form-control" name="url" required>
+      </div>
+      <div class="form-content">
+        <div class="form-group">
+
+      <button style="float:right"  id="confirm-btn" onclick="confirm()">Save Changes</button>
+
+    </div>
+    </div>
+    </div>
+    <br>
+    <div  class="form-content">
+        <h1 style="padding:10px">Socials</h1>
+        <div style="max-height:200px;
+        overflow: auto;"  class="socials-content">
+            <%data.socials.forEach(social=>{%>
+                <div class="post"><%=social.name%> <i onClick="removePost('<%=social.name%>')" id="post-remove"  class="fas fa-times-circle"></i></div>
+                <%})%>
+        </div>
+
+      </div>
+      
+
+</div>
+<%- include('../partials/footer'); %>
+
+
+<%}%>
+    </div>
+  </div>
+</div>
+
+
+<!-- End demo content -->
+
+
+
+  
+  <style>
+
+
+.label-info {
+  background-color: #5bc0de;
+  padding: 3px;
+}
+  </style>
+  <%if(data != undefined){%>
+  <script>
+function confirm() {
+
+  var divElem = document.getElementById("content");
+var inputElements = divElem.querySelectorAll("input, select, checkbox, textarea");
+var el = {}
+inputElements.forEach(i=>{
+  el[`${i.name}`] = {
+  name:i.name,
+  content:i.value,
+  required:i.hasAttribute("required"),
+    id:i.id,
+}
+})
+fetch(`/dashboard/server/<%=data.id%>/socials/add`, { method: "POST",
+headers: { "Content-Type": "application/json" },
+
+body:JSON.stringify(el),
+})
+.then(res => res.json())
+.then(async response => {
+  toastr[response.icon](response.content)
+  if(response.icon === 'error')  {
+    $('html, body').animate({scrollTop: $(`#${response.el}`).offset().top -100 }, 'slow');
+
+  }
+})     
+}  
+function removePost(id) {
+
+fetch(`/dashboard/server/<%=data.id%>/socials/remove?name=${name}`, { method: "POST",
+headers: { "Content-Type": "application/json" },
+})
+.then(res => res.json())
+.then(async response => {
+  toastr[response.icon](response.content)
+})     
+}  
+  </script>
+  <%}%>
+
+  <script>
+    $('#sidebarCollapse').on('click', function() {
+$('#nav').toggleClass('active');
+});
+</script>

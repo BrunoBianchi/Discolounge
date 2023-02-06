@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<%- include('partials/favicon'); %>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="Discord">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="msapplication-TileColor" content="#8c72da">
+<title translate="no">Discolounge - Premium </title>
+<meta name="description" content="Servers Shorted by  <%=locals.url.split('filter=')[1]%>">
+<meta property="og:title" content="Discord Servers" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://discolounge.net/" />
+<meta property="og:description" content="Servers Shorted by  <%=locals.url.split('filter=')[1]%>" />
+<meta name="theme-color" content="#8c72da">
+<meta property="og:image:alt" content="Servers Shorted by  <%=locals.url.split('filter=')[1]%>" />
+<meta property="og:site_name" content="Discolounge" />
+<link rel='canonical' href='https://discolounge.net/' />
+
+<meta property="twitter:url" content="https://discolounge.net/">
+<meta property="twitter:title" content="Discord Servers">
+<meta property="twitter:description" content="Servers Shorted by  <%=locals.url.split('filter=')[1]%>">
+<script src="./jquery.js" ></script>
+<script src="./poper.js" ></script>
+<link rel="stylesheet" href="./boostrap.css" >
+<script src="./boostrap.js"></script>
+<script src="./font.js" ></script>
+<link rel="stylesheet" href="./home.css">
+<link rel="stylesheet" href="./premium.css">
+<script  src="/toastr.min.js"></script>
+<link rel="stylesheet" href="/toastr.css" >
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+
+<script defer async src="/pwabuilder-sw-register.js" type="87fa30033e28593e842e08ba-text/javascript"></script>
+<script defer async src="/pwabuilder-sw.js" type="87fa30033e28593e842e08ba-text/javascript"></script>
+
+<meta name="viewport" content="width=device-width, intial-scale=1.0" />
+<script type="87fa30033e28593e842e08ba-module">
+  import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+  
+  const el = document.createElement('pwa-update');
+  
+  document.body.appendChild(el);
+</script>
+
+</head>
+<%- include('partials/navbar'); %>
+<div style="margin-top:100px" class="container">
+    <h1 style="text-align:center;margin-bottom:30px;font-size:60px;">
+        Grow Your Community
+<br>
+    </h1>
+    <p style="text-align:center;font-size:19px">Starting Growing to the infinite with Discolounge Premimu Plan. Unlock the true potencial of your server paying less than other lists!</p>
+<br>
+<div class="row">
+    <div class="col-md-4">
+        <div class="premium-stats">
+            <h1>+ 30K
+                <p>Impressions Every Month</p>
+            </h1>
+            
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="premium-stats">
+            <h1>10
+                <p>Average Growth Per Day </p>
+            </h1>
+            
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="premium-stats">
+            <h1>Special Perks
+                <p>unlock special perks!</p>
+            </h1>
+            
+        </div>
+    </div>
+</div>
+    <div class="card-premium">
+        <div class="card-price">Monthly<span> $2.00/mo</span>
+        </div>
+        <hr>
+        <div class="card-premium-content">
+            <ul>
+                <li><i class="fa fa-bullhorn" aria-hidden="true"></i> Priority When Searched or Shorted</li>
+                <li><i class="fa-solid fa-star"  aria-hidden="true"></i> Garanteed Frame in Front Page</li>
+                <li><i class="fas fa-users" aria-hidden="true"></i> Increase Server Visits</li>
+                <li><i class="fas fa-cogs" aria-hidden="true"></i> Access to Custom Webhook Settings</li>
+                <li><i class="fas fa-tags" aria-hidden="true"></i> Custom Premium Tag: <span style='font-size:16px' id="premium">premium </span></li>
+                <li><i class="fa-solid fa-clock"></i> Auto Bump </li>
+                <li><i class="fa fa-id-badge" aria-hidden="true"></i> Background Image</li>
+                <li><i style="color:#da7272"c class="fas fa-heart"></i> Support us With some Love</li>
+            </ul>
+            <%if(locals.user){%>
+            <div class="dropdown text-center">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Select a Server
+                    </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">   
+                    <%if(results.length>= 1){results.forEach(server=>{%>                
+                        <a class="dropdown-item" href='/checkoutPlan?plan=mo&server_id=<%=server.id%>'><img style="margin-right:10px;width:35px;height:35px;border-radius:50%" <%if(server.icon){%> src="https://cdn.discordapp.com/icons/<%=server.id%>/<%=server.icon%>.png" <%}else{%> src="https://gizmodo.uol.com.br/wp-content/blogs.dir/8/files/2021/03/i8qztv1ucn3bhsttuz1q.jpg" <%}%>> <%=server.name%></a>
+                        <%})}else{%>
+                    <a href="/dashboard" class="dropdown-item"> You don't have a Server added yet!</a>
+                    <%}%>
+                </div>
+              </div>
+              <%}else{%>
+                <div class="dropdown text-center">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        You need to be logged in!
+                      </button>
+                </div>
+                <%}%>
+        </div>
+    </div>
+    <div class="card-premium">
+        <div class="card-price">6 Months<span> <s>$12.00</s><sup>$10.00/6 mo</sup></span>
+        </div>
+        <hr>
+        <div class="card-premium-content">
+            <ul>
+                <li><i class="fa fa-bullhorn" aria-hidden="true"></i> Priority When Searched or Shorted</li>
+                <li><i class="fa-solid fa-star"  aria-hidden="true"></i> Garanteed Frame in Front Page</li>
+                <li><i class="fas fa-users" aria-hidden="true"></i> Increase Server Visits</li>
+                <li><i class="fas fa-cogs" aria-hidden="true"></i> Access to Custom Webhook Settings</li>
+                <li><i class="fas fa-tags" aria-hidden="true"></i> Custom Premium Tag: <span style='font-size:16px' id="premium">premium </span></li>
+                <li><i class="fa-solid fa-clock"></i> Auto Bump </li>
+                <li><i class="fa fa-id-badge" aria-hidden="true"></i> Background Image</li>
+                <li><i style="color:#da7272"c class="fas fa-heart"></i> Support us With some Love</li>
+            </ul>
+            <%if(locals.user){%>
+                <div class="dropdown text-center">
+                      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Select a Server
+                        </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">   
+                        <%if(results.length>= 1){results.forEach(server=>{%>                
+                            <a class="dropdown-item" href='/checkoutPlan?plan=6mo&server_id=<%=server.id%>'><img style="margin-right:10px;width:35px;height:35px;border-radius:50%" <%if(server.icon){%> src="https://cdn.discordapp.com/icons/<%=server.id%>/<%=server.icon%>.png" <%}else{%> src="https://gizmodo.uol.com.br/wp-content/blogs.dir/8/files/2021/03/i8qztv1ucn3bhsttuz1q.jpg" <%}%>> <%=server.name%></a>
+                            <%})}else{%>
+                        <a href="/dashboard" class="dropdown-item"> You don't have a Server added yet!</a>
+                        <%}%>
+                    </div>
+                  </div>
+                  <%}else{%>
+                    <div class="dropdown text-center">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            You need to be logged in!
+                          </button>
+                    </div>
+                    <%}%>
+        </div>
+    </div>
+    <div class="card-premium">
+        <div class="card-price">Annual<span> <s>$24.00</s><sup>$20.00/yr</sup></span>
+                </div>
+        <hr>
+        <div class="card-premium-content">
+            <ul>
+                <li><i class="fa fa-bullhorn" aria-hidden="true"></i> Priority When Searched or Shorted</li>
+                <li><i class="fa-solid fa-star"  aria-hidden="true"></i> Garanteed Frame in Front Page</li>
+                <li><i class="fas fa-users" aria-hidden="true"></i> Increase Server Visits</li>
+                <li><i class="fas fa-cogs" aria-hidden="true"></i> Access to Custom Webhook Settings</li>
+                <li><i class="fas fa-tags" aria-hidden="true"></i> Custom Premium Tag: <span style='font-size:16px' id="premium">premium </span></li>
+                <li><i class="fa-solid fa-clock"></i> Auto Bump </li>
+                <li><i class="fa fa-id-badge" aria-hidden="true"></i> Background Image</li>
+                <li><i style="color:#da7272"c class="fas fa-heart"></i> Support us With some Love</li>
+            </ul>
+            <%if(locals.user){%>
+                <div class="dropdown text-center">
+                      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Select a Server
+                        </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">   
+                        <%if(results.length>= 1){results.forEach(server=>{%>                
+                            <a class="dropdown-item" href='/checkoutPlan?plan=yr&server_id=<%=server.id%>'><img style="margin-right:10px;width:35px;height:35px;border-radius:50%" <%if(server.icon){%> src="https://cdn.discordapp.com/icons/<%=server.id%>/<%=server.icon%>.png" <%}else{%> src="https://gizmodo.uol.com.br/wp-content/blogs.dir/8/files/2021/03/i8qztv1ucn3bhsttuz1q.jpg" <%}%>> <%=server.name%></a>
+                            <%})}else{%>
+                        <a href="/dashboard" class="dropdown-item"> You don't have a Server added yet!</a>
+                        <%}%>
+                    </div>
+                  </div>
+                  <%}else{%>
+                    <div class="dropdown text-center">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            You need to be logged in!
+                          </button>
+                    </div>
+                    <%}%>
+        </div>
+    </div>
+</div>
+<%- include('partials/footer'); %>
+<%if(locals.user){%>
+<script>
+    function buyPremium(server_id,plan) {
+fetch(`/checkoutPlan?plan=${plan}&server_id=${server_id}`, { method: "POST",
+headers: { "Content-Type": "application/json" },
+})
+.then(res => res.json())
+.then(async response => {
+    if(response.url) return window.location = response.url
+  toastr[response.icon](response.content)
+})     
+}  
+</script>
+<%}%>

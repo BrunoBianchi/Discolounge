@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<%- include('../partials/favicon'); %>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="Discord">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="msapplication-TileColor" content="#8c72da">
+<title translate="no">Discolounge - Market</title>
+<meta name="description" content="Are you looking for the best Discord servers for your interests? From Roleplay to Gaming, we have you covered!">
+<meta property="og:title" content="Discord Servers" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.discolounge.net/" />
+<meta property="og:description" content="Are you looking for the best Discord servers for your interests? From Roleplay to Gaming, we have you covered!" />
+<meta name="theme-color" content="#439CEE">
+<meta property="og:image:alt" content="Are you looking for the best Discord servers for your interests? From Roleplay to Gaming, we have you covered!" />
+<meta property="og:site_name" content="Discolounge" />
+<link rel='canonical' href='https://www.discolounge.net/' />
+
+<meta property="twitter:url" content="https://www.discolounge.net/">
+<meta property="twitter:title" content="Discord Servers">
+<meta property="twitter:description" content="Are you looking for the best Discord servers for your interests? From Roleplay to Gaming, we have you covered!">
+<script src="/jquery.js" ></script>
+<script src="/poper.js" ></script>
+<link rel="stylesheet" href="/boostrap.css" >
+<script src="/boostrap.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script src="/font.js" ></script>
+<link rel="stylesheet" href="/market.css">
+
+<link rel="stylesheet" href="/home.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+</head>
+<%- include('../partials/navbar'); %>
+
+<body>
+    <%var query = locals.url.split('?short=')[1]%>
+    <div style="margin-top:30px;width:100%" class="container">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="events-nav">
+                    <div class="events-nav-card<%if(query === 'participatePeople' || !query){%>-active <%}%>" onclick="window.location.href = '?short=participatePeople'">Popular</div>
+                    <div class="events-nav-card<%if(query === 'createdAt' ){%>-active <%}%>" onclick="window.location.href = '?short=createdAt'">Recent</div>
+                    <div class="events-nav-card<%if(query === 'startDate' ){%>-active <%}%>" onclick="window.location.href = '?short=startDate'">Upcoming</div>
+                </div>
+            </div>
+            <div class="col-md-10">
+                <div class="events-card">
+                    <h3> <i class="fas fa-store"></i> Discolounge web market</h3>
+                    <p> Exchange yours coins for items in our market </p>
+                    <%if(locals.user){%>You have <span class="user-coins"><%=locals.user.coins%> coins</span><%}%>
+                </div>
+                <div class="cards">
+                    <%data[0].items.forEach(item=>{%>
+                        <div class="card" >
+                            <span data-toggle="tooltip" data-placement="top" title="Keys Left" class="keys-left" ><%=item.keys.length%></span>
+                            <%if(item.image){%><img class="card-img-top" src="<%=item.image%>" > <%}%>
+                            <div class="card-body">
+                              <h5 class="card-title"><%=item.title%></h5>
+                              <p class="card-text"><%=item.content%></p>
+                              <p class="card-text">Price: <%=item.value%> 💵</p>
+                              <%if(locals.user){%><a style="margin-left:0px;" onclick="buy('<%=item.id%>')" class="btn btn-primary">Buy Item</a><%}else{%>
+                                <a style="margin-left:0px;" class="btn btn-primary">login to buy</a>
+                                <%}%>
+                            </div>
+                          </div>
+                        <%})%>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+</body>
+<script>
+    function buy(id) {
+        const swalWithBootstrapButtons = Swal.mixin({
+  customClass: {
+    confirmButton: 'btn btn-success',
+    cancelButton: 'btn btn-danger'
+  },
+  buttonsStyling: false
+})
+
+swalWithBootstrapButtons.fire({
+  title: 'Are you sure?',
+  text: "You won't be able to revert this!",
+  icon: 'warning',
+  showCancelButton: true,
+  confirmButtonText: 'Yes, confirm!',
+  cancelButtonText: 'No, cancel!',
+  reverseButtons: true
+}).then((result) => {
+  if (result.isConfirmed) {
+    fetch(`/market/buyitem?id=${id}`, { method: "POST",
+headers: {
+'Authorization': `612e56ae77b0c128b2c9e1813a7`,
+"Content-Type": "application/json",
+},
+})
+.then(res => res.json())
+.then(async response => {
+    swalWithBootstrapButtons.fire({
+  title: response.content,
+  content:'Soon you will recieve a message from our bot with your key!',
+  icon: response.icon,
+  showCancelButton:false,
+  reverseButtons: false
+})
+})    
+
+  } else if (
+    /* Read more about handling dismissals below */
+    result.dismiss === Swal.DismissReason.cancel
+  ) {
+    return
+  }
+})
+ 
+}  
+</script>
+<%- include('../partials/footer'); %>
+<script type='text/javascript'>
+    $(document).ready(function () {
+
+      $('[data-toggle="tooltip"]').tooltip()
+
+  });
+  </script>

@@ -1,0 +1,25 @@
+#charts {
+    padding:20px;
+    background-color: #100e16;
+    border-radius:5px;
+}
+#charts-stats {
+    width:100%;
+    padding: 4px;
+    border-radius: 5px;
+    background-color: rgba(24, 22, 33, 0.733);
+    padding: 4px;
+    display: inline-block;
+    font-size:25px;
+    border-radius:5px;
+    margin-bottom:20px;
+
+}
+#charts-stats p {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 100px;  
+}
+.form-content {
+    background-color:#14121c;
+}

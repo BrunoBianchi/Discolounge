@@ -1,0 +1,98 @@
+
+  <link rel="stylesheet" href="/navbar.css">
+
+
+<nav translate="no"  class="navbar navbar-expand-lg navbar-dark navbar-default sticky-top">
+  
+    <div  class="container-fluid">
+      <a translate="no" class="navbar-brand" href="<%if(!locals._locals.path_url.includes('bot')){ %> / <%}else{%> /bots <%}%>" style="font-size:30px;text-transform: uppercase;
+      font-weight: 1000;">Discolounge</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+       </button> 
+       
+       <div class="collapse navbar-collapse" id="navbarsExample09">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="<%if(locals._locals.path_url.includes('bot')){ %>/bots/search <%}else{%>/servers/search <%}%>">Discover</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/premium">Premium <small style="color:gold;"><sup><i class="fa-regular fa-star"></i></sup></small></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="<%if(locals._locals.path_url.includes('bot')){ %> / <%}else{%> /bots <%}%>"><%if(locals._locals.path_url.includes('bot')){ %> Servers <%}else{%> Bots <sup style="color:white;padding:4px;background-color:#c772da;border-radius:5px;">Beta!</sup> <%}%></a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              More
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/events">Events</a>
+              <a class="dropdown-item" href="/market">Market </a>
+              <a class="dropdown-item" href="/market">Api </a>
+
+            </div>
+          </li>
+          </ul>
+          <ul class="navbar-nav mr-auto ml-auto"  style="font-size: 20px;width:50%" >    
+            <div class="text-center" style="width:100%">
+ 
+              <%- include('./search-bar'); %>
+  
+              </div>                                   
+          </ul>
+          <%if(!locals.user) {%>
+            <li   id="drop" class="nav-item dropdown" style="display: initial;">
+              <a style="font-size:15px;" id="login" href="/login?uri=<%=encodeURIComponent(`${locals.url.slice(1)}`)%>">
+                Login with Discord
+             </a>   
+            </li>
+
+          <%}else {%>
+          <li id="drop" class="nav-item dropdown" style="z-index: 1;display: initial;">
+             <a class="dropdown-toggle" id="user_drop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <img style="border-radius:50%;width:40px;height:40px;    max-width: 100%;max-height: 100%;" <%if(user.avatar === null ){%>src="https://i.pinimg.com/736x/34/91/f3/3491f3e50ab6a4d51a348f9cc2419842.jpg"<%}else{%> src="https://images.discordapp.net/avatars/<%=user.id%>/<%=user.avatar%>.png?size=512" <%}%>> <%=user.username.match(/.{1,8}/)[0]%></a>
+  <div class="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="navbarDropdownMenuLink-4" >
+  <a  class="dropdown-item" href="/dashboard" ><i class="far fa-user"></i> Dashboard</a>
+  <a  class="dropdown-item" href="/partners" ><i class="fa-solid fa-people-group"></i> Partners</a>
+  <a  class="dropdown-item" href="/referrals" ><i class="fa-solid fa-handshake-simple"></i> Referrals</a>
+  <a  class="dropdown-item" href="/servers/add" ><i class="fas fa-server"></i> Add Server</a>
+  <a  class="dropdown-item" href="/bots/add" ><i class="fas fa-robot"></i> Add Bot</a>
+  <div class="dropdown-divider"></div>  
+  <%if(locals.user.guilds && locals.user.guilds.find(g=>g.id === '1042848358701736036') && locals.user.guilds.find(g=>g.id === '1042848358701736036').owner === true) {%>
+    <a  class="dropdown-item" href="/blog/admin" ><i class="fas fa-blog"></i> Blog Admin</a>
+    <a  class="dropdown-item" href="/market/admin" ><i class="fas fa-user-shield"></i> Market Admin</a>
+
+    <a  class="dropdown-item" href="/admin" ><i class="fas fa-user-shield"></i> Admin</a>
+
+    <div class="dropdown-divider"></div>  
+
+    <%}%>
+  <a   class="dropdown-item" href="/logout" style='color:#da7272'><i class="fas fa-sign-out-alt"></i> Log Out</a>
+  </div>
+          </li>
+          <%}%>  
+       </div>
+    </div>
+
+  
+  </nav> 
+
+  <script>
+    const nav = document.querySelector('nav');
+
+window.addEventListener('scroll', function() {
+  const offset = window.pageYOffset;
+  
+  if(offset > 25)
+    nav.classList.add('scroll')
+  else 
+    nav.classList.remove('scroll')
+});
+  </script>
+<style>
+.navbar-dark .navbar-nav .active .nav-link:hover{
+  color:rgb(109, 108, 114);
+
+  }
+</style>

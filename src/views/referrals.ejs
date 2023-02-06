@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <%- include('partials/favicon'); %>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="Discord" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="msapplication-TileColor" content="#8c72da" />
+    <title translate="no">Discolounge - Partners</title>
+    <meta
+      name="description"
+      content="Servers Shorted by  <%=locals.url.split('filter=')[1]%>"
+    />
+    <meta property="og:title" content="Discord Servers" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://discolounge.net/" />
+    <meta
+      property="og:description"
+      content="Servers Shorted by  <%=locals.url.split('filter=')[1]%>"
+    />
+    <meta name="theme-color" content="#8c72da" />
+    <meta
+      property="og:image:alt"
+      content="Servers Shorted by  <%=locals.url.split('filter=')[1]%>"
+    />
+    <meta property="og:site_name" content="Discolounge" />
+    <link rel="canonical" href="https://discolounge.net/" />
+
+    <meta property="twitter:url" content="https://discolounge.net/" />
+    <meta property="twitter:title" content="Discord Servers" />
+    <meta
+      property="twitter:description"
+      content="Servers Shorted by  <%=locals.url.split('filter=')[1]%>"
+    />
+    <script src="./jquery.js"></script>
+    <script src="./poper.js"></script>
+    <link rel="stylesheet" href="./boostrap.css" />
+    <script src="./boostrap.js"></script>
+    <script src="./font.js"></script>
+    <link rel="stylesheet" href="./home.css" />
+    <link rel="stylesheet" href="./partners.css" />
+    <link rel="stylesheet" href="./referrals.css" />
+
+    <script src="/toastr.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/dashboard.css" />
+
+    <link rel="stylesheet" href="/toastr.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      defer
+      async
+      src="/pwabuilder-sw-register.js"
+      type="87fa30033e28593e842e08ba-text/javascript"
+    ></script>
+    <script
+      defer
+      async
+      src="/pwabuilder-sw.js"
+      type="87fa30033e28593e842e08ba-text/javascript"
+    ></script>
+
+    <meta name="viewport" content="width=device-width, intial-scale=1.0" />
+    <script type="87fa30033e28593e842e08ba-module">
+      import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+
+      const el = document.createElement('pwa-update');
+
+      document.body.appendChild(el);
+    </script>
+  </head>
+  <%- include('partials/navbar'); %>
+  <div style="margin-top: 100px" class="container">
+    <h1 style="text-align: center">
+      Referral Program
+      <br />
+    </h1>
+    <br />
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-content">
+          <div class="form-group">
+            <label id="long_description_header" for="referralCode"
+              >Your Referral Code Url</label
+            >
+            <input
+              onclick="copy('referralCode')"
+              id="referralCode"
+              type="text"
+              class="form-control"
+              value="https://discolounge.net/r/<%=data[0].referralCode%>"
+              readonly
+            />
+          </div>
+          <div class="form-group">
+            <h4 id="long_description_header" for="referralCode">
+              How does it works ?
+            </h4>
+            <p>
+              Our referral system is a program created so that users can grow by
+              helping us.
+            </p>
+            <p>
+              For each person (not invited by someone else) who uses your code
+              and adds a server, you will receive
+              <strong style="color:rgb(224, 158, 26)"> coins</strong>.
+              <div  id="roles">
+                <h4>Roles:</h4>
+                <p>
+                  <span style="border-radius:10px;border:1px solid #5b01fd; color:#5b01fd;padding:4px;">
+                  PREMIUM💎
+                </span>
+                 <span style="padding:4px;color: rgb(224, 158, 26)"> 2.5 coins per invite</span> 
+                </p>
+                <p>
+                  <span style="border-radius:10px;border:1px solid #961951; color:#961951;padding:4px;">
+                  PARTNERS❤️
+                </span>
+                 <span style="padding:4px;color: rgb(224, 158, 26)"> 2 coins per invite</span> 
+                </p>
+                <p>
+                  <span style="border-radius:10px;border:1px solid #15d8a8; color:#15d8a8;padding:4px;">
+                  STAFF
+                </span>
+                 <span style="padding:4px;color: rgb(224, 158, 26)"> 1.75 coins per invite</span> 
+                </p>
+                <p>
+                  <span style="border-radius:10px;border:1px solid #aa02a6; color:#aa02a6;padding:4px;">
+                  SMALL-PARTNERS
+                </span>
+                 <span style="padding:4px;color: rgb(224, 158, 26)"> 1.25 coins per invite</span> 
+                </p>
+                <p>
+                  <span style="border-radius:10px;border:1px solid #3388c2; color:#3388c2;padding:4px;">
+                    MEMBERS
+                </span>
+                 <span style="padding:4px;color: rgb(224, 158, 26)"> 1 coin per invite</span> 
+                </p>
+              </div>
+            </p>
+            <p>
+              These coins can be used to exchange for other products in our <a href='/market'>store</a>
+              <p>Obs: Every 10 coins user got, he will recieve premium in our list for 7 days!</p>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-content">
+          <div class="form-group">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6">
+                  <h2
+                    style="font-size: 20px; text-align: center"
+                    id="long_description_header"
+                    for="referralCode"
+                  >
+                    Total Referred
+                  </h2>
+                  <h3 style="text-align: center">
+                    <%=data[0].referrals%> <i class="fas fa-users"></i>
+                  </h3>
+                </div>
+                <div class="col-md-6">
+                  <h2
+                    style="font-size: 20px; text-align: center"
+                    id="long_description_header"
+                    for="referralCode"
+                  >
+                    Coins
+                  </h2>
+                  <h3 style="text-align: center">
+                    <%=data[0].coins%>
+                    <i style="color: gold" class="fas fa-coins"></i>
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+  </div>
+  <%- include('partials/footer'); %>
+
+  <script>
+    function copy(id) {
+      // Get the text field
+      var copyText = document.getElementById(id);
+
+      // Select the text field
+      copyText.select();
+      copyText.setSelectionRange(0, 99999); // For mobile devices
+
+      // Copy the text inside the text field
+      navigator.clipboard.writeText(copyText.value);
+
+      // Alert the copied text
+    }
+    function sendForm() {
+      var form = document.getElementById("server-id").value;
+      fetch(`/partners/sendForm?serverId=${form}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+      })
+        .then((res) => res.json())
+        .then(async (response) => {
+          toastr[response.icon](response.content);
+        });
+    }
+    function changePartnerServer(id) {
+      fetch(`/partners/changePartnerServer?serverId=${id}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+      })
+        .then((res) => res.json())
+        .then(async (response) => {
+          toastr[response.icon](response.content);
+        });
+    }
+  </script>
+</html>

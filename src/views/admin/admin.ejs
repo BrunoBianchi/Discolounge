@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<%- include('../partials/favicon'); %>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="Discord">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="msapplication-TileColor" content="#da532c">
+<title translate="no">Discolounge - Blog Admin</title>
+<meta name="description" content="Are you looking for the best Discord servers for your interests? From Roleplay to Gaming, we have you covered!">
+<meta property="og:title" content="Discord Servers" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.Discolounge.xyz/" />
+<meta property="og:description" content="Are you looking for the best Discord servers for your interests? From Roleplay to Gaming, we have you covered!" />
+<meta name="theme-color" content="#439CEE">
+<meta property="og:image:alt" content="Are you looking for the best Discord servers for your interests? From Roleplay to Gaming, we have you covered!" />
+<meta property="og:site_name" content="Discolounge" />
+<link rel='canonical' href='https://www.Discolounge.xyz/' />
+
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://www.Discolounge.xyz/">
+<meta property="twitter:title" content="Discord Servers">
+<meta property="twitter:description" content="Are you looking for the best Discord servers for your interests? From Roleplay to Gaming, we have you covered!">
+<script src="/jquery.js" ></script>
+<script src="/poper.js" ></script>
+<link rel="stylesheet" href="/boostrap.css" >
+<script src="/boostrap.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script src="/font.js" ></script>
+<link rel="stylesheet" href="/home.css">
+<link rel="stylesheet" type="text/css" href="/editor.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/dashboard.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" />
+</head>
+<%- include('../partials/navbar'); %>
+
+<div class="container" id="content">
+    <div class="form-content">
+        <div class="form-group">
+    <div id="search-form" class="form">
+        <div>
+            <i class="fa fa-search"></i>
+            <form action="/search/">
+                <input id="search-user" name='name' type="text" class="form-control form-input" autocomplete="off" placeholder="Search for Users">
+            </form>
+        </div>
+    </div>
+    </div>
+    <h3 id="users-h1"></h3>
+      </div>
+    <div class="form-content">
+      <div class="form-group">
+        <div id="users">
+            <%users.filter( user=> user.user.bot != true).forEach(user=>{%>
+                <img onclick="ban('<%=user.user.id%>','<%=user.user.username%>')" data-toggle="tooltip" data-placement="top" title="<%=user.user.username%>" style="border-radius:50%;height:50px;width:50px;margin-right:5px" src="https://images.discordapp.net/avatars/<%=user.user.id%>/<%=user.user.avatar%>.png?size=512"> 
+                <%})%>
+        </div>
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+var typingTimer;                //timer identifier
+var doneTypingInterval = 400;  //time in ms, 5 seconds for example
+var $input = $('#search-user');
+//on keyup, start the countdown
+$input.on('keyup', function () {
+  clearTimeout(typingTimer);
+  typingTimer = setTimeout(doneTyping, doneTypingInterval);
+});
+
+//on keydown, clear the countdown 
+$input.on('keydown', function () {
+  clearTimeout(typingTimer);
+});
+
+//user is "finished typing," do something
+function doneTyping () {
+   $('#users').empty();
+   $("#users-h1").text('')
+    fetch(`/admin/findUser?${$input.val()}`, { method: "GET",
+    headers: { "Content-Type": "application/json" },
+    })
+    .then(res => res.json())
+    .then(async response => { 
+        if(response.icon === 'error' || response.length <= 0) return $("#users-h1").text('No user Found 🥲')
+        $("#users-h1").text(`Found ${response.length} Users`)
+
+        response.forEach(async user => {
+            $('#users').append(`
+            <img onclick="ban('${user.userId}','${user.displayName}')" data-toggle="tooltip" data-placement="top" title="${user.displayName}"  style="border-radius:50%;height:50px;width:50px;margin-right:5px" src="${user.displayAvatarURL}"> 
+
+            `)
+            $('[data-toggle="tooltip"]').tooltip()
+
+        });
+
+
+    })
+}
+
+function ban(id,name) {
+    Swal.fire({
+    title: `Ban ${name}`,
+    icon:'warning',
+    text: "Write the reason of the ban!",
+    input: 'text',
+    showCancelButton: true        
+}).then((result) => {
+    if (result.value) {
+        fetch(`/admin/banUser?user=${id}&reason=${result.value}`, { method: "POST",
+    headers: { "Content-Type": "application/json" },
+    })
+    .then(res => res.json())
+    .then(async response => {  
+        toastr[response.icon](response.content)
+
+    })
+    }else return
+});
+
+}  
+
+</script>
+
+
+
+
+
+<script type='text/javascript'>
+    $(document).ready(function () {
+
+      $('[data-toggle="tooltip"]').tooltip()
+
+  });
+  </script>
+
+
+
+
+
+
+

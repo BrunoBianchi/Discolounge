@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <%- include('../partials//favicon'); %>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="Discord" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="msapplication-TileColor" content="#8c72da" />
+    <title translate="no">Find The Perfect Bot For Your Discord Community | discolounge.net</title>
+    <meta
+      name="description"
+      content="Find the best Discord bot for your server on discolounge.net - the ultimate Discord server listing website. Search for new unique servers by genre, interests, location and more. Join new communities, grow your server to the infinite and expand your social circle. Sign up now for free!"
+    />
+    <meta property="og:title" content="Discord Servers" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://discolounge.net/bots/" />
+    <meta
+      property="og:description"
+      content="Find the best Discord bot for your server on discolounge.net - the ultimate Discord server listing website. Search for new unique servers by genre, interests, location and more. Join new communities, grow your server to the infinite and expand your social circle. Sign up now for free!"
+    />
+    <meta name="theme-color" content="#8c72da" />
+    <meta
+      property="og:image:alt"
+      content="Find the best Discord bot for your server on discolounge.net - the ultimate Discord server listing website. Search for new unique servers by genre, interests, location and more. Join new communities, grow your server to the infinite and expand your social circle. Sign up now for free!"
+    />
+    <meta property="og:site_name" content="Discolounge" />
+    <link rel="canonical" href="https://discolounge.net/bots/" />
+
+    <meta property="twitter:url" content="https://discolounge.net/bots/" />
+    <meta property="twitter:title" content="Discord Servers" />
+    <meta
+      property="twitter:description"
+      content="Find the best Discord bot for your server on discolounge.net - the ultimate Discord server listing website. Search for new unique servers by genre, interests, location and more. Join new communities, grow your server to the infinite and expand your social circle. Sign up now for free!"
+    />
+    <meta name="robots" content="index" />
+    <meta property="twitter:image" content="https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png">
+
+    <script src="<%=locals.path_ur%>/jquery.js"></script>
+    <script src="<%=locals.path_ur%>/poper.js"></script>
+    <link rel="stylesheet" href="/boostrap.css" />
+    <script src="<%=locals.path_ur%>/boostrap.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="<%=locals.path_ur%>/font.js"></script>
+    <link rel="stylesheet" href="<%=locals.path_ur%>/home.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="manifest" href="/pwa.webmanifest" />
+    <script src="/pwa.js"></script>
+    <script src="/status.js"></script>
+  </head>
+  <body>
+    <%- include('../partials//navbar'); %>
+    <div
+      style="height: 250px; background-color: transparent"
+      class="jumbotron jumbotron-fluid"
+    >
+      <%- include('../partials//form-search-bar'); %>
+    </div>
+    <%if(locals.url.match(/status=([^&]*)/) != null &&
+    locals.url.match(/status=([^&]*)/)[1] === 'error') {%>
+    <script>
+      function getParameterByName(name, url) {
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, "\\$&");
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+          results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return "";
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+      }
+      $(document).ready(function () {
+        if (getParameterByName("status")) {
+          var status = getParameterByName("status");
+          var msg = getParameterByName("msg");
+          if (!msg) return;
+          Swal.fire({
+            title: msg,
+
+            icon: status,
+            showClass: {
+              popup: "animate__animated animate__fadeInDown",
+            },
+            hideClass: {
+              popup: "animate__animated animate__fadeOutUp",
+            },
+          });
+        }
+      });
+    </script>
+    <%}%>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="servers-cards">
+            <div class="servers-cards-info">
+              <h2>Featured Bots</h2>
+              <span
+                >Random <a href="/premium">Premium</a> Discord bots.</span
+              >
+            </div>
+            <div class="cards">
+              <%if(data){data.filter(server=>server.premium ===
+              true).slice(0,8).sort(() => Math.random() -
+              0.5).forEach(server=>{%>
+              <div  class="card premium">
+                <div class="row">
+                  <div class="col-md-2">
+                    <img alt="<%=server.name%>" <%if(server.icon){%>
+                    src="https://images.discordapp.net/avatars/<%=server.id%>/<%=server.icon%>.png?size=512"
+                    <%}else{%>
+                    src="https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png"
+                    <%}%> >
+                  </div>
+                  <div class="col-md-10 px-3">
+                    <div class="card-block px-3">
+                      <h4 class="card-title">
+                        <a translate="no" href="/bot/<%=server.id%>"
+                          ><%=server.name.slice(0,12)%>
+                          <%if(server.verify === true){%><i data-toggle="tooltip" data-html="true" data-placement="top" title="Verified Bot!"  style="font-size:17px;color:#6829d6" class="fas fa-certificate"></i><%}%>
+
+                        </a>
+                        <%if(server.premium === true) {%><a href="/premium"
+                          ><sup> <small id="premium">premium </small></sup></a
+                        ><%}%> <%if(server.partner === true) {%><a
+                          href="/partners"
+                          ><sup><small id="partner">partner </small></sup></a
+                        ><%}%>
+                        <a 
+                          href="<%=server.invite%>"
+                          style="float: right"
+                          class="btn btn-primary"
+                          >Invite Bot</a
+                        >
+                        <a
+                          href="/bot/<%=server.id%>#vote"
+                          style="float: right"
+                          class="btn btn-primary"
+                          ><i class="fa-solid fa-caret-up"></i> Votes
+                          (<%=server.votes.total%>)</a
+                        >
+                      </h4>
+                      <span translate="no" class="card-info"
+                        ><i class="fas fa-users"></i> <%=server.
+serversCount
+ %> |<%if(server.reviews.rates.length >= 1){%> <span style="color:#d6a529" data-toggle="tooltip" data-html="true" data-placement="top" title="<div class='container text-centered'><p>Based in <strong><%=server.reviews.rates.length%></strong> reviews </p></div>" href="/server/<%=server.id%>"><i class="fas fa-star"></i> <%=server.reviews.
+  averageStars / server.reviews.rates.length
+   %> </span> | <%}%> 
+                        <%server.tags.slice(0,2).forEach(tag=>{%>
+                        <a translate="no"
+                          href="/bots/search?tags=<%=tag.name.toLowerCase()%>"
+                          class="card-tags"
+                          ><%=tag.name%></a
+                        >
+                        <%})%> <%if(server.tags.length >=3){%>
+                        <a translate="no"
+                          data-toggle="tooltip"
+                          data-placement="top"
+                          title="<%server.tags.slice(2,server.tags.length).forEach(tag=>{%> <%=tag.name%>, <%})%>"
+                          href="/bot/<%=server.id%>"
+                          class="card-tags"
+                          >+<%=parseInt(server.tags.length) - 2%></a
+                        >
+                        <%}%>
+                      </span>
+                      <div class="card-content">
+                        <p class="card-text"><%=server.short_description%></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <%})}%>
+            </div>
+            <div
+              onclick="location.href='/bots/search?premium=true';"
+              class="container"
+              id="servers-cards-showmore"
+            >
+              Show More <i class="fa-solid fa-angles-down"></i>
+            </div>
+          </div>
+          <div id="ad-servers" class="container">
+            <h3>
+              Grow your bot even faster -
+              <a href="/premium" style="color: gold">Premium</a>
+            </h3>
+            <p style="margin-left: 10px">
+              Get more members and specials perks for your Bot
+            </p>
+          </div>
+          <div class="servers-cards">
+            <div class="servers-cards-info">
+              <h2>Recently Verified</h2>
+              <span>Recently Verified Discord Bots.</span>
+            </div>
+            <div class="cards">
+              <%if(data){data.filter(bot=>{return bot.verify === true}).sort((a,b)=>{ return (b.premium - a.premium) || new
+              Date(b.verifiedAt) - new Date(a.verifiedAt)  
+              }).slice(0,8).forEach(server=>{%>
+              <div class="card">
+                <div class="row">
+                  <div class="col-md-2">
+                    <img alt="<%=server.name%>" <%if(server.icon){%>
+                      src="https://cdn.discordapp.com/avatars/<%=server.id%>/<%=server.icon%>.png"
+                      <%}else{%>
+                    src="https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png"
+                    <%}%> >
+                  </div>
+                  <div class="col-md-10 px-3">
+                    <div class="card-block px-3">
+                      <h4 class="card-title">
+                        <a translate="no" href="/bot/<%=server.id%>"
+                          ><%=server.name.slice(0,12)%>
+                          <%if(server.verify === true){%><i data-toggle="tooltip" data-html="true" data-placement="top" title="Verified Bot!"  style="font-size:17px;color:#6829d6" class="fas fa-certificate"></i><%}%>
+
+                        </a>
+                        <%if(server.premium === true) {%><a href="/premium"
+                          ><sup> <small id="premium">premium </small></sup></a
+                        ><%}%> <%if(server.partner === true) {%><a
+                          href="/partners"
+                          ><sup><small id="partner">partner </small></sup></a
+                        ><%}%>
+                        <a
+                          href="<%=server.invite%>"
+                          style="float: right"
+                          class="btn btn-primary"
+                          >Invite Bot</a
+                        >
+                        <a
+                          href="/bot/<%=server.id%>#vote"
+                          style="float: right"
+                          class="btn btn-primary"
+                          ><i class="fa-solid fa-caret-up"></i> Votes
+                          (<%=server.votes.total%>)</a
+                        >
+                      </h4>
+                      <span translate="no" class="card-info"
+                        ><i class="fas fa-users"></i> <%=server.
+                        serversCount
+                         %> | <%if(server.reviews.rates.length >= 1){%> <span style="color:#d6a529" data-toggle="tooltip" data-html="true" data-placement="top" title="<div class='container text-centered'><p>Based in <strong><%=server.reviews.rates.length%></strong> reviews </p></div>" href="/server/<%=server.id%>"><i class="fas fa-star"></i> <%=server.reviews.
+                          averageStars / server.reviews.rates.length
+                           %> </span> | <%}%> 
+                        <%server.tags.slice(0,2).forEach(tag=>{%>
+                        <a translate="no"
+                          href="/bots/search?tags=<%=tag.name.toLowerCase()%>"
+                          class="card-tags"
+                          ><%=tag.name%></a
+                        >
+                        <%})%> <%if(server.tags.length >=3){%>
+                        <a translate="no"
+                          data-toggle="tooltip"
+                          data-placement="top"
+                          title="<%server.tags.slice(2,server.tags.length).forEach(tag=>{%> <%=tag.name%>, <%})%>"
+                          href="/bot/<%=server.id%>"
+                          class="card-tags"
+                          >+<%=parseInt(server.tags.length) - 2%></a
+                        >
+                        <%}%>
+                      </span>
+                      <div class="card-content">
+                        <p class="card-text"><%=server.short_description%></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <%})}%>
+            </div>
+            <div
+              onclick="location.href='/bots/search?page=1&filter=verify';"
+              class="container"
+              id="servers-cards-showmore"
+            >
+              Show More <i class="fa-solid fa-angles-down"></i>
+            </div>
+          </div>
+          <div class="servers-cards">
+            <div class="servers-cards-info">
+              <h2>New Bots</h2>
+              <span>Recently Added Discord Bots.</span>
+            </div>
+            <div class="cards">
+              <%if(data){data.sort((a,b)=>{ return new Date(b.createdAt) - new
+              Date(a.createdAt) || (b.partner - a.partner)
+              }).slice(0,8).forEach(server=>{%>
+              <div class="card">
+                <div class="row">
+                  <div class="col-md-2">
+                    <img alt="<%=server.name%>" <%if(server.icon){%>
+                    src="https://cdn.discordapp.com/avatars/<%=server.id%>/<%=server.icon%>.png"
+                    <%}else{%>
+                    src="https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png"
+                    <%}%> >
+                  </div>
+                  <div class="col-md-10 px-3">
+                    <div class="card-block px-3">
+                      <h4 class="card-title">
+                        <a translate="no" href="/bot/<%=server.id%>"
+                          ><%=server.name.slice(0,12)%>
+                          <%if(server.verify === true){%><i data-toggle="tooltip" data-html="true" data-placement="top" title="Verified Bot!"  style="font-size:17px;color:#6829d6" class="fas fa-certificate"></i><%}%>
+
+                        </a>
+                        <%if(server.premium === true) {%><a href="/premium"
+                          ><sup> <small id="premium">premium </small></sup></a
+                        ><%}%> <%if(server.partner === true) {%><a
+                          href="/partners"
+                          ><sup><small id="partner">partner </small></sup></a
+                        ><%}%>
+                        <a
+                          href="<%=server.invite%>"
+                          style="float: right"
+                          class="btn btn-primary"
+                          >Invite Bot</a
+                        >
+                        <a
+                          href="/bot/<%=server.id%>#vote"
+                          style="float: right"
+                          class="btn btn-primary"
+                          ><i class="fa-solid fa-caret-up"></i> Votes
+                          (<%=server.votes.total%>)</a
+                        >
+                      </h4>
+                      <span translate="no" class="card-info"
+                        ><i class="fas fa-users"></i> <%=server.serversCount %> | <%if(server.reviews.rates.length >= 1){%> <span style="color:#d6a529" data-toggle="tooltip" data-html="true" data-placement="top" title="<div class='container text-centered'><p>Based in <strong><%=server.reviews.rates.length%></strong> reviews </p></div>" href="/bot/<%=server.id%>"><i class="fas fa-star"></i> <%=server.reviews.
+                          averageStars / server.reviews.rates.length
+                           %> </span> | <%}%> 
+                        <%server.tags.slice(0,2).forEach(tag=>{%>
+                        <a translate="no"
+                          href="/bots/search?tags=<%=tag.name.toLowerCase()%>"
+                          class="card-tags"
+                          ><%=tag.name%></a
+                        >
+                        <%})%> <%if(server.tags.length >=3){%>
+                        <a translate="no"
+                          data-toggle="tooltip"
+                          data-placement="top"
+                          title="<%server.tags.slice(2,server.tags.length).forEach(tag=>{%> <%=tag.name%>, <%})%>"
+                          href="/bot/<%=server.id%>"
+                          class="card-tags"
+                          >+<%=parseInt(server.tags.length) - 2%></a
+                        >
+                        <%}%>
+                      </span>
+                      <div class="card-content">
+                        <p class="card-text"><%=server.short_description%></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <%})}%>
+            </div>
+
+            <div
+              onclick="location.href='/bots/search?page=1&filter=createdAt';"
+              class="container"
+              id="servers-cards-showmore"
+            >
+              Show More <i class="fa-solid fa-angles-down"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div style="z-index: 1" class="side-menu sticky-top">
+            <form method="get" action="<%if(locals._locals.path_url.includes('bots')){ %>/bots/search <%}else{%>/search/ <%}%>">
+              <div class="container-slide">
+                <h1>Filters</h1>
+                <div class="length range__slider" data-min="1" data-max="500">
+                  <div class="length__title field-title" data-length="1">
+                    Bots Servers
+                  </div>
+                  <input
+                    name="serversCount"
+                    id="slider"
+                    type="range"
+                    min="1"
+                    max="500"
+                    value="1"
+                  />
+                </div>
+
+                <div class="settings">
+                  <span class="settings__title field-title">settings</span>
+                  <div class="setting">
+                    <input
+                      name="premium"
+                      type="checkbox"
+                      id="uppercase"
+                      value="false"
+                      onClick="if(this.value === 'false') {this.value = true}else {this.value =false}"
+                    />
+                    <label for="uppercase">Premium</label>
+                  </div>
+                  <div class="setting">
+                    <input  id="verify" name="verified" type="checkbox" value="<%if(locals.url.split('verify=')[1]){%><%if(locals.url.split('verify=')[1].split('&')[0] === 'true'){%>true<%}else{%>false<%}%><%}%>" onClick="if(this.value === 'false') {this.value = true}else {this.value =false}" id="symbol"<%if(locals.url.split('verify=')[1]){%><%if(locals.url.split('verify=')[1].split('&')[0] === 'false'){%> checked <%}%> <%}%> />
+
+                    <label for="uppercase">Verified</label>
+                  </div>
+                  <div class="setting">
+                    <input
+                      name="NSFW"
+                      type="checkbox"
+                      value="false"
+                      onClick="if(this.value === 'false') {this.value = true}else {this.value =false}"
+                      id="symbol"
+                      checked
+                    />
+
+                    <label for="symbol">SFW</label>
+                  </div>
+                </div>
+
+                <button class="btn generate" id="generate">Filter</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <%- include('../partials//footer'); %>
+
+    <!-- Site footer -->
+
+    <script src="./slider.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+      });
+    </script>
+  </body>
+</html>

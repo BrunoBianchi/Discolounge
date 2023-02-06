@@ -1,0 +1,292 @@
+
+
+
+
+      <div class="media d-flex align-items-center py-0 px-4 mb-3 mx-2">
+        <div class="media-body">
+          <div class="dropdown">
+                        <%if(data != undefined){%>  
+            <button style="width:182px;" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <img style="width:35px;height:35px;border-radius:50%" <%if(data.icon){%> src="https://cdn.discordapp.com/icons/<%=data.id%>/<%=data.icon%>.png" <%}else{%> src="https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png" <%}%>> <%=data.name.slice(0,12)%>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <%if(locals && locals.url.split('/dashboard/server/').length > 1){locals.user.guilds.forEach(server=>{ if(server.name.toLowerCase() != data.name.toLowerCase()){%>
+               
+              <a class="dropdown-item" onclick="addServer('<%=server.id%>','<%=server.name%>')"><img style="width:35px;height:35px;border-radius:50%" <%if(server.icon){%> src="https://cdn.discordapp.com/icons/<%=server.id%>/<%=server.icon%>.png" <%}else{%> src="https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png" <%}%>><%=server.name%></a>
+              <%}})}%>
+            </div>
+             <a style="color:white;width:182px;" id="bump-btn" onclick="bumpServer('<%=data.id%>')" class="nav-link  font-italic"> Bump Server</a>
+             <a style="color:white;width:182px" id="delete-btn" onclick="deleteServer('<%=data.id%>')" class="nav-link  font-italic"> Delete Server</a>
+            <%}else{%>
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Select a Server
+                </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <%if(locals.user.guilds){locals.user.guilds.forEach(server=>{%>
+               
+              <a class="dropdown-item" onclick="addServer('<%=server.id%>','<%=server.name%>')"><img style="width:35px;height:35px;border-radius:50%" <%if(server.icon){%> src="https://cdn.discordapp.com/icons/<%=server.id%>/<%=server.icon%>.png" <%}else{%> src="https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png" <%}%>> <%=server.name%></a>
+              <%})}%>
+            </div>
+            
+          <%}%>
+          </div>
+          <br>
+          <button style="width:182px;" id="sidebarCollapse" type="button" class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4"><i class="fa fa-bars mr-2"></i><small class="text-uppercase font-weight-bold">Toggle</small></button>
+
+        </div>
+      </div>
+      <%if(locals.url.split('/dashboard/server/').length > 1 && data != undefined){%>
+        <div style="      border-radius:5px;
+        background-color:#100e16;font-size:16px;"  id="nav">
+                <p class="text-gray font-weight-bold text-uppercase px-3 small py-2 mb-0">Main</p>
+
+            <ul  class="nav flex-column  mb-0">
+          <li class="nav-item">
+            <a href="/dashboard/server/<%=data.id%>" class="nav-link  font-italic">
+                      <i class="fa fa-address-card mr-1  fa-fw"></i>
+                      About
+                  </a>
+          </li>
+          <li class="nav-item">
+            <%if(data.premium === true) {%>
+            <a href="/dashboard/server/<%=data.id%>/background" class="nav-link  font-italic">
+              <i class="fa fa-id-badge  mr-1 fa-fw" aria-hidden="true"></i>
+                      Background
+                  </a>
+                  <%}else{%>
+                    <a href="/premium" style="color:gold" class="nav-link  font-italic">
+                      <i class="fa fa-id-badge   mr-1  fa-fw" aria-hidden="true"></i>
+                      Background 
+                  </a>
+                    <%}%>
+          </li>
+          <li class="nav-item">
+            <a href="/dashboard/server/<%=data.id%>/posts" class="nav-link  font-italic">
+                <i class="fas fa-file-alt   mr-1  fa-fw"></i>
+                      Posts
+                  </a>
+          </li>
+          <li class="nav-item">
+            <a href="/dashboard/server/<%=data.id%>/events" class="nav-link  font-italic">
+                <i class="fas fa-gift   mr-1  fa-fw"></i>
+                      Events
+                  </a>
+          </li>
+          <li class="nav-item">
+            <a href="/dashboard/server/<%=data.id%>/api" class="nav-link  font-italic">
+                      <i class="fa fa-cubes  mr-1  fa-fw"></i>
+                      Api & Webhooks
+                  </a>
+          </li>
+          <li class="nav-item">
+            <a href="/dashboard/server/<%=data.id%>/socials" class="nav-link  font-italic">
+                      <i class="fas fa-share-alt-square  mr-1  fa-fw"></i>
+                      Socials
+                  </a>
+          </li>
+          <li class="nav-item"></li>
+          <a href="/dashboard/server/<%=data.id%>/graph" class="nav-link  font-italic">
+            <i class="fa fa-line-chart  mr-1  fa-fw"></i>
+            Server Statistics 
+        </a>
+      </li>
+        </ul>
+      
+        <p class="text-gray font-weight-bold text-uppercase px-3 small py-4 mb-0">Payments</p>
+        <ul class="nav flex-column  mb-0">
+          <li class="nav-item">
+            <a href="/dashboard/server/<%=data.id%>/payments" class="nav-link  font-italic">
+              <i class="fas fa-money-bill-wave"></i>
+                      Payments
+                  </a>  
+          </li>
+        </ul>
+        <ul style="margin-bottom:50px" class="nav flex-column  mb-0">
+    
+      </ul>
+            
+    </div>
+      <br>
+    
+      <script src="https://momentjs.com/downloads/moment.js"></script>
+      <script src="https://cdn.rawgit.com/mckamey/countdownjs/master/countdown.min.js" type="text/javascript"></script>
+      <%if(data != undefined){%>  
+      <script>
+        function bumpServer(id){
+          fetch(`/dashboard/server/${id}/bump`, { method: "POST",
+    headers: { "Content-Type": "application/json" },
+    })
+    .then(res => res.json())
+    .then(async response => {
+      toastr[response.icon](response.content)
+    })   
+        }
+        function deleteServer(id) {
+          const swalWithBootstrapButtons = Swal.mixin({
+      customClass: {
+        confirmButton: 'btn btn-success',
+        cancelButton: 'btn btn-danger'
+      },
+      buttonsStyling: false
+    })
+    
+    swalWithBootstrapButtons.fire({
+      title: 'Are you sure?',
+      text: "Deleting this server will result in permanent data loss, including premium plan!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Yes, delete it!',
+      cancelButtonText: 'No, cancel!',
+      reverseButtons: true
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(`/deleteServer/${id}`, { method: "POST",
+    headers: { "Content-Type": "application/json" },
+    })
+    .then(res => res.json())
+    .then(async response => {
+      toastr[response.icon](response.content)
+    })   
+      } else if (
+        /* Read more about handling dismissals below */
+        result.dismiss === Swal.DismissReason.cancel
+      ) {
+        return
+      }
+    })
+        }
+      </script>
+      <%}%>
+  
+
+      <%if(data.premium === true){%>
+  <script>
+
+    $(function() {
+var then = moment('<%=data.lastBump%>').add(1, 'hours'); 
+if(moment().diff(moment('<%=data.lastBump%>'),'hours') < 1) {
+  $("#bump-btn").css('cursor', ' not-allowed');
+  (function timerLoop() {
+  $("#bump-btn").html(`Bump in <span style='font-size:11px'>${countdown(then).toString()}</span>`)
+  requestAnimationFrame(timerLoop);
+})();
+  // Sidebar toggle behavior
+}
+
+});
+
+  </script>
+  <%}else {%>
+    <script>
+
+      $(function() {
+  var then = moment('<%=data.lastBump%>').add(2, 'hours'); 
+  if(moment().diff(moment('<%=data.lastBump%>'),'hours') < 2) {
+    $("#bump-btn").css('cursor', ' not-allowed');
+    (function timerLoop() {
+    $("#bump-btn").html(`Bump in <span style='font-size:11px'>${countdown(then).toString()}</span>`)
+    requestAnimationFrame(timerLoop);
+  })();
+    // Sidebar toggle behavior
+  }
+  
+  });
+  
+    </script>
+    <%}%>
+<%}%>
+  <style>
+
+    .dropdown-item:hover{
+      cursor:pointer;
+    }
+    #sidebar{
+      height:auto;
+      margin-bottom:50px;
+    }
+    #dropdownMenuButton{
+      background-color: transparent;
+      border:2px solid #1d1b27;
+    }
+    .page-content .dropdown-toggle{
+      color:white;
+      background-color: transparent;
+      border:1px solid #764ba292;
+    }
+    .page-content .btn {
+      color:white;
+      background-color: transparent;
+      border:1px solid #764ba292;
+    }
+    .swal2-deny{
+      color:#da7272;
+    }
+    #bump-btn{
+      width:30px;
+      margin-top:10px;
+      padding:6px;background-color:#8cda72;color:white;text-align:center;border-radius:3px;width:100%;
+    }
+    #bump-btn:hover{
+      background-color:#7cc763;
+      cursor:pointer;
+      color:white;
+     }
+    #delete-btn{
+      margin-top:10px;
+      padding:6px;background-color:#da7272;color:white;text-align:center;border-radius:3px;width:100%;
+    }
+    #delete-btn:hover{
+      background-color:#da7676d0;
+      cursor:pointer;
+      color:white;
+     }
+.active{
+  display:none;
+}
+#nav .nav-link{
+  color:white;
+}
+#nav .nav-link:hover{
+  color:rgb(109, 108, 114);
+}
+
+  </style>
+
+  <script>
+
+    function addServer(id,name) {
+      fetch(`/guildExist?id=${id}`, { method: "POST",
+headers: { "Content-Type": "application/json" },
+})
+.then(res => res.json())
+.then(async response => {
+
+  if(response[0] === undefined ) {
+    Swal.fire({
+ text: "it's real Important for you and for us that you read all Terms of Service before we can proceed",
+  title: 'Before we continue!',
+  icon: 'warning',
+  showCancelButton: true,
+  confirmButtonText: 'Yes, continue',
+  cancelButtonText: 'No, cancel',
+  input: 'checkbox',
+  inputPlaceholder: ' I agree with all <a href="/TOS">Terms of Service</a> and want to continue',
+  backdrop: `
+  filter: blur(6)
+  rgba(0,0,123,0.4)
+  `
+}).then((result) => { 
+  if (result.isConfirmed && result.value != 0) { 
+    return  window.location.href = `/dashboard/server/${id}`
+  }
+   if(result.isDismissed){
+    return
+  }
+
+})
+  }else return  window.location.href = `/dashboard/server/${id}`
+
+})
+    }
+  </script>
+

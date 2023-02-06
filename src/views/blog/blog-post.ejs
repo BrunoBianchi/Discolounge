@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<%- include('../partials/favicon'); %>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="Discord">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="msapplication-TileColor" content="#da532c">
+<title translate="no">Discolounge - Blog - Post</title>
+<meta name="description" content="Are you looking for the best Discord servers for your interests? From Roleplay to Gaming, we have you covered!">
+<meta property="og:title" content="Discord Servers" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.Discolounge.net/" />
+<meta property="og:description" content="Are you looking for the best Discord servers for your interests? From Roleplay to Gaming, we have you covered!" />
+<meta name="theme-color" content="#439CEE">
+<meta property="og:image:alt" content="Are you looking for the best Discord servers for your interests? From Roleplay to Gaming, we have you covered!" />
+<meta property="og:site_name" content="Discolounge" />
+<link rel='canonical' href='https://www.Discolounge.net/' />
+
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://www.Discolounge.net/">
+<meta property="twitter:title" content="Discord Servers">
+<meta property="twitter:description" content="Are you looking for the best Discord servers for your interests? From Roleplay to Gaming, we have you covered!">
+<script src="/jquery.js" ></script>
+<script src="/poper.js" ></script>
+<link rel="stylesheet" href="/boostrap.css" >
+<script src="/boostrap.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script src="/font.js" ></script>
+<link rel="stylesheet" href="/home.css">
+<link rel="stylesheet" href="/blog.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+</head>
+<%- include('../partials/navbar'); %>
+
+<div class="container">
+    <h3><%=data.title%></h3>
+<div class="post-body">
+    <%-md.render(data.content)%>
+</div>
+
+</div>
+
+
+<%- include('../partials/footer'); %>

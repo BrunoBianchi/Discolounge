@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="twitter:image" content="https://cdn.discordapp.com/avatars/<%=bot.id%>/<%=bot.icon%>.png">
+<meta name="msapplication-TileImage" content="https://cdn.discordapp.com/avatars/<%=bot.id%>/<%=bot.icon%>.png" />
+<meta property="og:image" content="https://cdn.discordapp.com/avatars/<%=bot.id%>/<%=bot.icon%>.png">
+<link rel="apple-touch-icon" sizes="57x57" href="http://<%=host%>/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="http://<%=host%>/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="http://<%=host%>/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="http://<%=host%>/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="http://<%=host%>/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="http://<%=host%>/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="http://<%=host%>/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="http://<%=host%>/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="http://<%=host%>/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="http://<%=host%>/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://<%=host%>/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="http://<%=host%>/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://<%=host%>/favicon/favicon-16x16.png">
+<link rel="manifest" href="http://<%=host%>/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="http://<%=host%>/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<meta name='dmca-site-verification' content='Tk5lakVLN2FDMU1JRVhQdUptYWFlZz090' />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="Discord">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="msapplication-TileColor" content="#8c72da">
+<title translate="no">Invite <%=bot.name%> | discolounge.net</title>
+<meta name="description" content="<%=bot.short_description%> ">
+<meta property="og:title" content="<%=bot.name%>" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://discolounge.net/bot/<%=bot.id%>" />
+<meta property="og:description" content="<%=bot.short_description%>" />
+<meta name="theme-color" content="#8c72da">
+<meta property="og:image:alt" content="<%=bot.short_description%>" />
+<meta property="og:site_name" content="Discolounge" />
+<link rel='canonical' href='https://discolounge.net/bot/<%=bot.id%>' />
+
+<meta property="twitter:url" content="https://discolounge.net/bot/<%=bot.id%>">
+<meta property="twitter:title" content="<%=bot.name%>">
+<meta property="twitter:description" content="<%=bot.short_description%> ">
+<script src="/jquery.js" ></script>
+<script src="/poper.js" ></script>
+<link rel="stylesheet" href="/boostrap.css" >
+<script src="/boostrap.js"></script>
+<script src="/font.js" ></script>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+<script  src="/toastr.min.js"></script>
+<link rel="stylesheet" href="/toastr.css" >
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdn.jsdelivr.net/npm/rater-jquery@1.0.0/rater.min.js"></script>
+<script defer async src="/pwabuilder-sw-register.js" type="87fa30033e28593e842e08ba-text/javascript"></script>
+<script defer async src="/pwabuilder-sw.js" type="87fa30033e28593e842e08ba-text/javascript"></script>
+
+<script type="87fa30033e28593e842e08ba-module">
+  import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+  
+  const el = document.createElement('pwa-update');
+  
+  document.body.appendChild(el);
+</script>
+
+<link rel="stylesheet" href="/server.css">
+<link rel="stylesheet" href="/markdown.css">
+
+</head>
+
+
+<%- include('../partials/navbar'); %>
+<%if(bot.verify === false){%>
+<div style="margin-top:20px;margin-bottom:10px;font-size:18px" class="container">
+  <div class="alert alert-danger alert-dismissible fade show text-center" role="alert">
+    Caution,bot not verified yet !
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+</div>
+<%}%>
+<div style="margin-top:50px;z-index:1" class="container">
+  <div <%if(bot.premium === true && bot.background != ''){%> style="   background: url('<%=bot.background%>') no-repeat; width:100%;background-size: cover;padding:10px"  <%}%> class="row">
+     <div id="top" class="col-12 col-md-2">
+      <img alt="<%=bot.name%>" class='server-icon' <%if(bot.icon){%> src="https://cdn.discordapp.com/avatars/<%=bot.id%>/<%=bot.icon%>.png" <%}else{%> src="https://cdn.discordapp.com/avatars/1042848358701736036/637b11544bece733c840a8caed35d01e.png" <%}%> >
+     </div>
+     <div class="col-12 col-md-10 ">
+     
+      <h1 ><%=bot.name%>      
+          <%if( bot.reviews.rates.length >= 1){%>
+            <%var avStars = bot.reviews.averageStars/bot.reviews.rates.length%>
+            <div style="font-size:30px;" class="rating" id="rate-server" data-rate-value='<%= avStars%>'></div> 
+        <script>
+                options = {
+    step_size: 0.5,
+    cursor: 'default',
+    readonly: true,
+    change_once: false, // Determines if the rating can only be set once
+    only_select_one_symbol: false, // If set to true, only selects the hovered/selected symbol and nothing prior to it
+    //update_input_field_name = some input field set by the user
+};
+$("#rate-server").rate(options);
+        </script>
+            <%}%>
+      </h1> 
+
+
+        <div id="content">
+          <p><%=bot.short_description%></p> 
+        </div>
+
+      
+</div>
+     </div>
+ 
+  <ul class="nav nav-tabs" role="tablist">
+   <li class="nav-item">
+     <a class="nav-link active" href="#Overview" role="tab" data-toggle="tab">Overview</a>
+   </li>
+   <li class="nav-item">
+    <a class="nav-link " href="#Reviews" role="tab" data-toggle="tab">Reviews</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#Share" role="tab" data-toggle="tab">Share </a>
+  </li>
+ </ul>
+ <br>
+  <div class='row'>
+     
+    <div class="col-md-9">
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="Overview" role="tabpanel" aria-labelledby="home-tab"> <div class="container" id="server-content"><%-md.render(`${bot.long_description}`)%></div></div>
+        <div class="tab-pane fade" id="Share" role="tabpanel" aria-labelledby="contact-tab">
+            <div class="share">
+              <label>Direct Link</label>
+              <input style="background-color:#14121c;border:none" onclick="copy(`https://discolounge.net/bot/<%=bot.id%>`)" value="https://discolounge.net/bot/<%=bot.id%>" readonly>
+            </div>
+            <div class="share">
+              <label >Hyper link </label>
+              <input style="background-color:#14121c;border:none" onclick="copy(`[Discolounge](https://discolounge.net/bot/<%=bot.id%>)`)" type="text"  class="form-control"    id="share-iframe" value="[Discolounge](https://discolounge.net/bot/<%=bot.id%>)" readonly>
+            </div>
+            <div class="share">
+              <label >Iframe</label>
+              <input style="background-color:#14121c;border:none" onclick="copy(`<iframe src='https://discolounge.net/bot/<%=bot.id%>' title='Discolounge-<%=bot.name%>'></iframe>`)" type="text"  class="form-control"    id="share-iframe" value="<iframe src='https://discolounge.net/bot/<%=bot.id%>' title='Discolounge-<%=bot.name%>'></iframe>" readonly>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="Reviews" role="tabpanel" aria-labelledby="contact-tab">
+          <%if(bot.reviews.rates.length >= 1){%>
+            <div class="container">  
+              <div class="review-stats">
+                  <h2 class="text-center">RATINGS & REVIEWS</h2>
+                  <br>
+                  <div class="row">
+                    <div class="col-md-6"> 
+                      <div style="width:100%;font-size:30px;margin-top:-15px;margin-bottom:100px;color:gold" class="rating" id="rate-stats" data-rate-value='<%= avStars%>'><br><p style="margin-top:-5px;text-align:center;color:white"><%= avStars%></p> <p style="margin-top:-10px;font-size:20px;text-align:center;color:rgba(255, 255, 255, 0.418)"> <%=bot.reviews.rates.length%> reviews</p></div> 
+                  </div>
+                    <div class="col-md-6">
+                      <ul style="margin-top:-15px">
+                        <li ><div class="progress">
+                          <div class="progress-bar" style="width:<%=(bot.reviews.rates.filter(rate=>rate.stars === 5).length/bot.reviews.rates.length) * 100%>%" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </li>
+                      <li ><div class="progress">
+                        <div class="progress-bar" style="width:<%=(bot.reviews.rates.filter(rate=>rate.stars === 4).length/bot.reviews.rates.length) * 100%>%" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </li>
+                    <li ><div class="progress">
+                      <div class="progress-bar"  style="width:<%=(bot.reviews.rates.filter(rate=>rate.stars ===3).length/bot.reviews.rates.length)* 100%>%" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </li>
+                  <li ><div class="progress">
+                    <div class="progress-bar"  style="width:<%=(bot.reviews.rates.filter(rate=>rate.stars === 2).length/ bot.reviews.rates.length) * 100%>%" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </li>
+                <li ><div class="progress">
+                  <div class="progress-bar"  style="width:<%=(bot.reviews.rates.filter(rate=>rate.stars === 1).length/ bot.reviews.rates.length) * 100%>%" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </li>
+              <li ><div class="progress">
+
+                <div class="progress-bar"  style="width:<%=(bot.reviews.rates.filter(rate=>rate.stars === 0).length/bot.reviews.rates.length)*100%>%" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </li>
+                      </ul>
+                    </div>
+                  </div>
+               
+              </div>
+              <%if(locals.user && !bot.reviews.rates.find(u=>u.user.id === locals.user.id )){%>
+
+
+
+              <div class="review-input">
+                <div class="row">
+                  
+                  <div class="col-md-1"><img src="https://images.discordapp.net/avatars/<%=locals.user.id%>/<%=locals.user.avatar%>.png?size=512"></div>
+                  <div id="name" class="col-md-11"><%=locals.user.username%>#<%=locals.user.discriminator%>
+                  <div style="font-size:30px;" class="rating" id="rate" data-rate-value=0></div>
+                  </div>
+                </div>
+                  <textarea name="comment" id="comment"></textarea>
+                  <div class="review-footer"><button class="btn btn-secondary" onclick="sendReview()">Send Review</button></div>
+                  <div class="clear"></div>
+                </div>
+              <%}%>
+            </div>
+            <%bot.reviews.rates.forEach(review=>{%>
+              <div class="container">
+              <div class="review-input">
+                <div class="row">
+                  <div class="col-md-1"><img src="https://images.discordapp.net/avatars/<%=review.user.id%>/<%=review.user.icon%>.png?size=512"></div>
+                  <div id="name" class="col-md-11"><%=review.user.name%>
+                  <div style="font-size:30px;" class="rating" id="rate-comments-<%=review.user.id%>" data-rate-value='<%=review.stars%>'></div>
+                  </div>
+                </div>
+                <textarea name="comment" id="comment" readonly><%=review.comment%></textarea>
+                </div>
+                </div>
+                <script>
+                        options = {
+    step_size: 0.5,
+    cursor: 'default',
+    readonly: true,
+    change_once: false, // Determines if the rating can only be set once
+    only_select_one_symbol: false, // If set to true, only selects the hovered/selected symbol and nothing prior to it
+    //update_input_field_name = some input field set by the user
+};
+                  $("#rate-comments-<%=review.user.id%>").rate(options);
+
+                </script>
+              <%})%>
+            <%}else{%>
+              <div class="container">
+                <h5 class="text-center">No one reviewed this bot yet, be the first person to rate it!</h5>             
+                <%if(locals.user){%>
+                <div class="review-input">
+                  <div class="row">
+                    
+                    <div class="col-md-1"><img src="https://images.discordapp.net/avatars/<%=locals.user.id%>/<%=locals.user.avatar%>.png?size=512"></div>
+                    <div id="name" class="col-md-11"><%=locals.user.username%>#<%=locals.user.discriminator%>
+                    <div style="font-size:30px;" class="rating" id="rate" data-rate-value=0></div>
+                    </div>
+                  </div>
+                    <textarea name="comment" id="comment"></textarea>
+                    <div class="review-footer"><button class="btn btn-secondary" onclick="sendReview()">Send Review</button></div>
+                    <div class="clear"></div>
+                  </div>
+                <%}%>
+              </div>
+            <%}%>
+            
+          <script>
+      options = {
+    step_size: 0.5,
+    cursor: 'default',
+    readonly: true,
+    change_once: false, // Determines if the rating can only be set once
+    only_select_one_symbol: false, // If set to true, only selects the hovered/selected symbol and nothing prior to it
+    //update_input_field_name = some input field set by the user
+};
+
+$("#rate-stats").rate(options);
+$("#rate-comments").rate(options);
+                      $("#rate").rate();
+            function sendReview() {
+              var rate = $(".rating").rate("getValue");
+              console.log(rate )
+              var comment = document.getElementById('comment').value
+fetch(`/bot/review/create/<%=bot.id%>`, { method: "POST",
+headers: {
+'Authorization': `612e56ae77b0c128b2c9e1813a7`,
+"Content-Type": "application/json",
+},
+body:JSON.stringify({  comment:comment,
+  rate:rate,}),
+})
+.then(res => res.json())
+.then(async response => {
+  toastr[response.icon](response.content)
+})     
+
+            }
+
+                </script>
+      </div>
+      </div>
+    </div>
+    <div class="col-md-3 ">
+      <div class="server-info" >
+         <h4><i class="fa-solid fa-circle-info"></i> Details</h4>
+         <span><i class="fas fa-calendar"></i> joined <%=moment(bot.createdAt).format('MMMM Do YYYY');%></span>
+
+        <span><i class="fa-solid fa-users"></i> <%=bot.serversCount%> Servers</span>
+         
+      </div>
+      <div class="server-info" >
+        <h4><i class="fas fa-share-alt-square"></i> Socials</h4>
+        <%if(bot.socials){%>
+        <%bot.socials.forEach(social=>{%><a class="socials" onclick="window.location.href = '<%=social.url%>'"><i class='fab fa-<%=social.name%>'></i> <%=social.name%></a><%})%>
+          <%}%>
+      </div>
+      <div class="server-info" >
+        
+      <div class="links">
+        <h4>Share on Social Media</h4>
+      <li class="social-share facebook"> <a href="https://www.facebook.com/sharer.php?u=https://discolounge.net/bot/<%=bot.id%>"><i style="color:rgb(58, 135, 251)" class="fab fa-facebook-square"></i> Share on Facebook</a></li>
+      <li class="social-share twitter"><a href="https://twitter.com/intent/tweet?url=https://discolounge.net/bot/<%=bot.id%>&text=Check out my cool discord bot on Discolounge !"><i style="color:rgb(68, 157, 212)"  class="fab fa-twitter-square"></i> Share on Twitter</a></li>
+      <li class="social-share linkedin"><a href="https://www.linkedin.com/shareArticle?mini=true&url=https://discolounge.net/bot/<%=bot.id%>"><i style="color:rgb(68, 94, 212)" class="fab fa-linkedin"></i> Share on LinkedIn</a></li>
+     
+  </div> 
+  </div>
+      <div class="server-info" >
+         <h4><i class="fa-solid fa-tags"></i> Categories</h4>
+         <div class="tags">
+         <%bot.tags.forEach(tag=>{%><a class="tag" href="/search?tags=<%=tag.name%>"><%=tag.name%></a><%})%>
+        </div>
+        </div>
+      <div class="server-info" >
+        <button  id='vote' onclick="vote()" class="btn bump">Vote</button>
+
+      </div>
+    </div>
+  </div>
+</div> 
+<div class="container">
+  <h3>You might also like</h3>
+  <p style="color:rgba(183, 183, 183, 0.685)">Reccomended Discord Bots </p>
+  <hr>
+  <div class="morelike">
+
+  </div>
+</div>
+<%- include('../partials/footer'); %>
+
+<script>
+      function copy(id) {
+  // Get the text field
+  var copyText = document.getElementById(id);
+  console.log(copyText.value)
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+
+   // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);
+
+  // Alert the copied text
+}
+  function vote() {
+    <%if(bot.offline != true){%>
+fetch(`/bot/vote?bot=<%=bot.id%>`, { method: "POST",
+headers: {
+'Authorization': `612e56ae77b0c128b2c9e1813a7`,
+"Content-Type": "application/json",
+},
+})
+.then(res => res.json())
+.then(async response => {
+  toastr[response.icon](response.content)
+}) 
+<%}else{%>
+  toastr['error']("This bot can no longer be voted!")
+  <%}%>   
+}  
+</script>
+
+
+<script type='text/javascript'>
+    $(document).ready(function () {
+
+      $('[data-toggle="tooltip"]').tooltip()
+      fetch(`/bots/morelike?tags=<%= bot.tags.map( function( tag ){ 
+                                return tag.name; 
+                               });%>`, { method: "GET",
+headers: {
+'Authorization': `612e56ae77b0c128b2c9e1813a7`,
+"Content-Type": "application/json",
+},
+})
+.then(res => res.json())
+.then(async response => { 
+  response.server = response.server.filter(server=> server.name.toLowerCase() != '<%=bot.name.toLowerCase()%>')
+  response.server = response.server.sort(() => Math.random() - 0.5)
+  response.server.slice(0,8).forEach(server=>{
+    var src = ''
+    if(server.icon){
+       src=`https://cdn.discordapp.com/avatars/${server.id}/${server.icon}.png`
+      }else
+      {src="https://cdn.discordapp.com/avatars/1042848358701736036/637b11544bece733c840a8caed35d01e.png" 
+    }
+    $( ".morelike" ).append(`
+      <a class='morelikeCard' href='/bot/${server.id}'> <img src=${src}> <p class="img__description">${server.name}   <br> <i class="fa-solid fa-users"></i> ${server.serversCount}
+</p> </a>
+  `); 
+  })
+
+
+
+})
+
+  });
+  var triggerTabList = [].slice.call(document.querySelectorAll('#myTab'))
+      triggerTabList.forEach(function (triggerEl) {
+        var tabTrigger = new bootstrap.Tab(triggerEl)
+      
+        triggerEl.addEventListener('click', function (event) {
+          event.preventDefault()
+          tabTrigger.show()
+        })
+      })
+      function copy(value) {
+
+
+   /* Copy the text inside the text field */
+  navigator.clipboard.writeText(value);
+
+}
+
+ </script>
+ <%if(bot.NSFW === true){%>
+  <script>
+    
+     $(document).ready(function () {
+     if(document.cookie.split('NSFW=')[1] === undefined||document.cookie.split('NSFW=')[1] === 'undefined'|| document.cookie.split('NSFW=')[1] === '0') {
+      Swal.fire({
+ text: 'You are visiting a server tagged with NSFW!',
+  title: 'Are you sure?',
+  icon: 'warning',
+  showCancelButton: true,
+  confirmButtonText: 'Yes, continue',
+  cancelButtonText: 'No, back to home',
+  input: 'checkbox',
+  inputPlaceholder: 'i am 18 years of age or older ',
+  backdrop: `
+  filter: blur(6)
+  rgba(0,0,123,0.4)
+  `
+}).then((result) => { 
+  document.cookie = `NSFW=${result.value};expires=Tue, 19 Jan 2038 03:14:07 UTC;`;
+  if (result.isConfirmed) { 
+    return
+  }else if(result.isDismissed){
+    window.location.href = '/'
+  }
+})
+     }
+
+})
+</script>
+  <%}%>
+ 
+
+<style>
+  .socials:hover{
+    cursor:pointer
+  }
+  #share-input:focus {
+  outline: none;
+  color:white;
+}
+#share-iframe:focus {
+  outline: none;
+  color:white;
+}
+</style>

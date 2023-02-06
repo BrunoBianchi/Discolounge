@@ -1,0 +1,43 @@
+.scroll {
+    transition: all ease-in-out 0.1s;
+    background-color: #111017
+  }
+ .dropdown-item{
+    color:white;
+  }
+  .dropdown-item:hover{
+    color:rgb(109, 108, 114);
+    background: #111017;
+  }
+  .nav-link:hover{
+    color:rgb(109, 108, 114);
+  }
+.nav-item .nav-link:hover {
+  color:rgb(109, 108, 114);
+}
+.navbar-collapse .nav-link:hover  {
+  color:rgb(109, 108, 114);
+}
+  .dropdown-menu {
+    background: #111017;
+    -webkit-box-shadow: -12px 12px 4px -6px rgba(0,0,0,0.35);
+    -moz-box-shadow: -12px 12px 4px -6px rgba(0,0,0,0.35);
+    box-shadow: -12px 12px 4px -6px rgba(0,0,0,0.35);
+  }
+  #login{
+    padding:10px;
+    color:white;
+    border-radius:7px;
+    text-align: center;
+    font-weight: bold;
+
+
+  }
+  #login:hover{
+    outline: none;
+    text-decoration:none;
+  }
+  #user_drop{
+    cursor: pointer;
+  }
+

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<%- include('../partials/favicon'); %>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="Discord">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="msapplication-TileColor" content="#da532c">
+<title translate="no">Discolounge - Blog Admin</title>
+<meta name="description" content="Are you looking for the best Discord servers for your interests? From Roleplay to Gaming, we have you covered!">
+<meta property="og:title" content="Discord Servers" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.Discolounge.xyz/" />
+<meta property="og:description" content="Are you looking for the best Discord servers for your interests? From Roleplay to Gaming, we have you covered!" />
+<meta name="theme-color" content="#439CEE">
+<meta property="og:image:alt" content="Are you looking for the best Discord servers for your interests? From Roleplay to Gaming, we have you covered!" />
+<meta property="og:site_name" content="Discolounge" />
+<link rel='canonical' href='https://www.Discolounge.xyz/' />
+
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://www.Discolounge.xyz/">
+<meta property="twitter:title" content="Discord Servers">
+<meta property="twitter:description" content="Are you looking for the best Discord servers for your interests? From Roleplay to Gaming, we have you covered!">
+<script src="/jquery.js" ></script>
+<script src="/poper.js" ></script>
+<link rel="stylesheet" href="/boostrap.css" >
+<script src="/boostrap.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script src="/font.js" ></script>
+<link rel="stylesheet" href="/home.css">
+<link rel="stylesheet" type="text/css" href="/editor.css">
+<script  src="/toastr.min.js"></script>
+<link rel="stylesheet" href="/toastr.css" >
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/dashboard.css">
+
+</head>
+<%- include('../partials/navbar'); %>
+
+<div class="container" id="content">
+
+    <div class="form-content">
+      <div class="form-group">
+        <label id="short_description_header" for="exampleFormControlSelect1">Item Title <span style="color:#de4343">*</span></label>
+        <textarea name='title' id="p-title"  placeholder="" class="form-control" required></textarea>
+      </div>
+    </div>
+    <div class="form-content">
+        <div class="form-group">
+          <label id="long_description_header" for="exampleFormControlSelect1">Item Content <span style="color:#de4343">*</span></label>
+            <textarea name="content" id="content" class="form-control" ></textarea>
+        </div>
+      </div>
+      <div class="form-content">
+        <div class="form-group">
+          <label id="long_description_header" for="exampleFormControlSelect1">Item Keys<span style="color:#de4343">*</span></label>
+            <textarea name="keys" id="keys" class="form-control" required></textarea>
+        </div>
+      </div>
+      <div class="form-content">
+        <div class="form-group">
+          <label id="long_description_header" for="exampleFormControlSelect1">Item Price<span style="color:#de4343">*</span></label>
+            <input type="number" name="value"class="form-control" required>
+        </div>
+      </div>
+      <div class="form-content">
+        <div class="form-group">
+          <label id="long_description_header" for="exampleFormControlSelect1">Item Image<span style="color:#de4343">*</span></label>
+            <input type="text" name="image" class="form-control" >
+        </div>
+      </div>
+      <button  id="confirm-btn" onclick="confirm()">Create Item</button>
+
+</div>
+
+<div class="container">
+
+</div>
+
+<script>
+
+function confirm() {
+  var divElem = document.getElementById("content");
+var inputElements = divElem.querySelectorAll("input, select, checkbox, textarea");
+var el = {}
+inputElements.forEach(i=>{
+  el[`${i.name}`] = {
+  name:i.name,
+  content:i.value,
+  required:i.hasAttribute("required"),
+    id:i.id,
+}
+})
+fetch(`/market/admin/create`, { method: "POST",
+headers: { "Content-Type": "application/json" },
+
+body:JSON.stringify(el),
+})
+.then(res => res.json())
+.then(async response => {
+  toastr[response.icon](response.content)
+  if(response.icon === 'error')  {
+    $('html, body').animate({scrollTop: $(`#${response.el}`).offset().top -100 }, 'slow');
+
+  }
+})     
+}  
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/editor.js"></script> 

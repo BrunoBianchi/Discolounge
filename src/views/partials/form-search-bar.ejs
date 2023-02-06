@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="<%=locals.path_ur%>/form-search-bar.css">
+
+<div translate="no"  class="container"> 
+        <h1><%if(locals._locals.path_url.includes('bots')){ %> Discord Bots <%}else{%> Discord Servers <%}%></h1>
+        <label for="search">Explorer millions of Discord <%if(locals._locals.path_url.includes('bots')){ %> Bots <%}else{%> Discord Servers <%}%> </label>
+      <div class=" height d-flex  align-items-center">
+          <div class="form-front-search">
+            <i class="fa fa-search"></i>
+            <form action="<%if(locals._locals.path_url.includes('bots')){ %>/bots/search/ <%}else{%>/servers/search/ <%}%>">
+                <input name='name' type="text" class="form-control form-input" placeholder="Search for Discord <%if(locals._locals.path_url.includes('bots')){ %> Bots <%}else{%> Servers <%}%>...">
+
+            </form>
+          </div>
+      </div>
+      
+      <div class="tags">
+        <a class="tag-search" href="<%if(locals._locals.path_url.includes('bots')){ %> /bots/search?tags=community <%}else{%>/servers/search?tags=community <%}%>"># Community</a>
+       <a class="tag-search" href="<%if(locals._locals.path_url.includes('bots')){ %> /bots/search?tags=games <%}else{%>/servers/search?tags=games <%}%>"># Games</a>
+        <a class="tag-search" href="<%if(locals._locals.path_url.includes('bots')){ %> /bots/search?tags=events <%}else{%>/servers/search?tags=events <%}%>"># Events</a>
+       <a class="tag-search" href="<%if(locals._locals.path_url.includes('bots')){ %> /bots/search?tags=youtube <%}else{%>/servers/search?tags=youtube <%}%>"># Youtube</a>
+       <a class="tag-search" href="<%if(locals._locals.path_url.includes('bots')){ %> /bots/search?tags=fun<%}else{%>/servers/search?tags=fun <%}%>"># Fun</a>
+       <a class="tag-search" href="<%if(locals._locals.path_url.includes('bots')){ %> /bots/search?tags=anime <%}else{%>/servers/search?tags=anime <%}%>"># Anime</a>
+       <a class="tag-search" href="<%if(locals._locals.path_url.includes('bots')){ %> /bots/search?tag=programming <%}else{%>/servers/search?tags=programming <%}%>"># Programming</a>
+    </div>
+
+  </div>

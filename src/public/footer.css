@@ -1,0 +1,9 @@
+.site-footer{
+    margin-top:170px;
+    background: #070510;
+    font-weight: bold;
+    position: relative;
+}
+.site-footer h6{
+    font-weight: bold;
+}
