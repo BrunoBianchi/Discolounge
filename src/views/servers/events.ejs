@@ -1,27 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<%=locals.user_lang%>">
 <head>
 <meta charset="utf-8">
 <%- include('../partials/favicon'); %>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
-<meta name="apple-mobile-web-app-title" content="Discord">
+<meta name="apple-mobile-web-app-title" content="<%=locals.language.events.header.title%>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="msapplication-TileColor" content="#8c72da">
-<title translate="no">Discolounge - Blog</title>
-<meta name="description" content="Find the best Discord servers on discolounge.net - the ultimate Discord server listing website. Search for new unique servers by genre, interests, location and more. Join new communities, grow your server to the infinite and expand your social circle. Sign up now for free!">
-<meta property="og:title" content="Discord Servers" />
+<title translate="no"><%=locals.language.events.header.title%></title>
+<meta name="description" content="<%=locals.language.events.header.description%>">
+<meta property="og:title" content="<%=locals.language.events.header.title%>" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://discolounge.net/" />
-<meta property="og:description" content="Find the best Discord servers on discolounge.net - the ultimate Discord server listing website. Search for new unique servers by genre, interests, location and more. Join new communities, grow your server to the infinite and expand your social circle. Sign up now for free!" />
+<meta property="og:description" content="<%=locals.language.events.header.description%>" />
 <meta name="theme-color" content="#8c72da">
-<meta property="og:image:alt" content="Find the best Discord servers on discolounge.net - the ultimate Discord server listing website. Search for new unique servers by genre, interests, location and more. Join new communities, grow your server to the infinite and expand your social circle. Sign up now for free!" />
+<meta property="og:image:alt" content="<%=locals.language.events.header.description%>" />
 <meta property="og:site_name" content="Discolounge" />
 <link rel='canonical' href='https://discolounge.net/' />
 
 <meta property="twitter:url" content="https://discolounge.net/">
-<meta property="twitter:title" content="Discord Servers">
-<meta property="twitter:description" content="Find the best Discord servers on discolounge.net - the ultimate Discord server listing website. Search for new unique servers by genre, interests, location and more. Join new communities, grow your server to the infinite and expand your social circle. Sign up now for free!">
+<meta property="twitter:title" content="<%=locals.language.events.header.title%>">
+<meta property="twitter:description" content="<%=locals.language.events.header.description%>">
 <script src="/jquery.js" ></script>
 <script src="/poper.js" ></script>
 <link rel="stylesheet" href="/boostrap.css" >
@@ -44,14 +44,14 @@
             <div class="col-md-2">
                 <div class="events-nav">
                     <div class="events-nav-card<%if(query === 'participatePeople' || !query){%>-active <%}%>" onclick="window.location.href = '?short=participatePeople'">Popular</div>
-                    <div class="events-nav-card<%if(query === 'createdAt' ){%>-active <%}%>" onclick="window.location.href = '?short=createdAt'">Recent</div>
-                    <div class="events-nav-card<%if(query === 'startDate' ){%>-active <%}%>" onclick="window.location.href = '?short=startDate'">Upcoming</div>
+                    <div class="events-nav-card<%if(query === 'createdAt' ){%>-active <%}%>" onclick="window.location.href = '?short=createdAt'"><%=locals.language.events.body.query.recent%></div>
+                    <div class="events-nav-card<%if(query === 'startDate' ){%>-active <%}%>" onclick="window.location.href = '?short=startDate'"><%=locals.language.events.body.query.upcoming%></div>
                 </div>
             </div>
             <div class="col-md-10">
                 <div class="events-card">
-                    <h3> <i class="fas fa-gift"></i> Discord Server Events</h3>
-                    <p>Discover Discord server events using our event Discovery feature.Explore Hundreds of discord server Events </p>
+                    <h3> <i class="fas fa-gift"></i> <%=locals.language.events.body.title%></h3>
+                    <p><%=locals.language.events.body.description%> </p>
                 </div>
                 <%var query = locals.url.split('?short=')[1] ;data.sort((a,b)=>{
                     return  new Date(b[query]) -  new Date(a[query])
@@ -61,17 +61,17 @@
                                       <div class="col-md-2"> <img alt="<%=event.name%>" style="width:120px;height:120px;border-radius:10px;object-fit: cover" class='server-icon'  <%if(event.icon){%> src="https://cdn.discordapp.com/icons/<%=event.id%>/<%=event.icon%>.png" <%}else{%> src="https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png" <%}%> >
                                       </div>
                                       <div class="col-md-10"> 
-                                        <p style="margin-left:10px;font-size:20px;border-bottom:2px solid #8c72da58"><%=event.title%><br> <small style="font-size:15px;">in <%=event.local[0].name%></small></p>
+                                        <p style="margin-left:10px;font-size:20px;border-bottom:2px solid #8c72da58"><%=event.title%><br> <small style="font-size:15px;"><%=locals.language.events.body.local%> <%=event.local[0].name%></small></p>
                                         <div style="margin-left:10px;letter-spacing: 1px;" class="event-card-content">
                                             <p><%=event.content.split(0,100)[0]%></p>
                                           </div>
                                           <div class="event-card-footer">
                                               <div class="row">
-                                                <div class="col-md-4"> <div onclick="participate('<%=event.id%>','<%=event.local[0].id%>')" class="event-confimed-people"><i style="color:#5fe068"c class="fas fa-street-view"></i> <%=event.participatePeople.length%> Confirmed  </div>
+                                                <div class="col-md-4"> <div onclick="participate('<%=event.id%>','<%=event.local[0].id%>')" class="event-confimed-people"><i style="color:#5fe068"c class="fas fa-street-view"></i> <%=event.participatePeople.length%> <%=locals.language.events.body.confirmed%>  </div>
                                             </div>
-                                                <div class="col-md-4"> <div class="event-date"  data-toggle="tooltip" data-placement="top" title="Start Date"><i class="fas fa-calendar"></i> <%=new Date(event.startDate).getDate() %>/<%=new Date(event.startDate).getMonth()  + 1%>/<%=new Date(event.startDate).getFullYear()%></div>
+                                                <div class="col-md-4"> <div class="event-date"  data-toggle="tooltip" data-placement="top" title="<%=locals.language.events.body.startDate%>"><i class="fas fa-calendar"></i> <%=new Date(event.startDate).getDate() %>/<%=new Date(event.startDate).getMonth()  + 1%>/<%=new Date(event.startDate).getFullYear()%></div>
                                               </div>
-                                              <div class="col-md-4"> <div class="event-date"  data-toggle="tooltip" data-placement="top" title="End Date"><i class="fas fa-calendar"></i> <%=new Date(event.endDate).getDate() %>/<%=new Date(event.endDate).getMonth()  + 1%>/<%=new Date(event.endDate).getFullYear()%></div>
+                                              <div class="col-md-4"> <div class="event-date"  data-toggle="tooltip" data-placement="top" title="<%=locals.language.events.body.endDate%>"><i class="fas fa-calendar"></i> <%=new Date(event.endDate).getDate() %>/<%=new Date(event.endDate).getMonth()  + 1%>/<%=new Date(event.endDate).getFullYear()%></div>
                                             </div>
                                               </div>
                                    

@@ -11,7 +11,7 @@ module.exports = function (app,url,client,nodecache) {
           else resolve(user)
        })
     }
-  app.get("/bot/:id", (req, res) => {
+  app.get("/:lang/bot/:id",functions.languages,(req, res) => {
     var id = req.params.id
     if(!id) return res.send(`No id provided`)
     Bots.findOne({id:id},async  (err, result) => {

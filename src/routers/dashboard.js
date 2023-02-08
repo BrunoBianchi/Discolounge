@@ -37,13 +37,13 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage })
 module.exports = function(app,url,client,nodechace) {
-    app.get("/dashboard",functions.ensureAuthenticated,(req,res)=>{
+    app.get("/:lang/dashboard",functions.languages,functions.ensureAuthenticated,(req,res)=>{
         
 
         res.render("./dashboard/about",{data:undefined})
 
     })
-    app.get("/dashboard/server/:id",functions.ensureAuthenticated,  (req,res)=>{
+    app.get("/:lang/dashboard/server/:id",functions.languages,functions.ensureAuthenticated,  (req,res)=>{
        
         var id = req.params.id
          Server.findOne({id:req.params.id}, (err,result)=>{
@@ -71,7 +71,7 @@ module.exports = function(app,url,client,nodechace) {
 
         })
     })
-    app.get("/dashboard/server/:id/posts",functions.ensureAuthenticated, (req,res)=>{
+    app.get("/:lang/dashboard/server/:id/posts",functions.languages,functions.ensureAuthenticated, (req,res)=>{
         var id = req.params.id
         Server.findOne({id:req.params.id}, (err,result)=>{
             if(result === null)  return res.redirect(`/dashboard`)
@@ -81,7 +81,7 @@ module.exports = function(app,url,client,nodechace) {
             })
         })
     })
-    app.get("/dashboard/server/:id/payments",functions.ensureAuthenticated, (req,res)=>{
+    app.get("/:lang/dashboard/server/:id/payments",functions.languages,functions.ensureAuthenticated, (req,res)=>{
         var id = req.params.id
         Server.findOne({id:req.params.id}, (err,result)=>{
             if(result === null)  return res.redirect(`/dashboard`)
@@ -105,7 +105,7 @@ module.exports = function(app,url,client,nodechace) {
         })
 
     })
-    app.get("/dashboard/server/:id/graph",functions.ensureAuthenticated, (req,res)=>{
+    app.get("/:lang/dashboard/server/:id/graph",functions.languages,functions.ensureAuthenticated, (req,res)=>{
         var id = req.params.id
         var guild = client.guilds.cache.get(id)
 
@@ -188,7 +188,7 @@ module.exports = function(app,url,client,nodechace) {
             })
         })
     })
-    app.get("/dashboard/server/:id/background",functions.ensureAuthenticated, (req,res)=>{
+    app.get("/:lang/dashboard/server/:id/background",functions.languages,functions.ensureAuthenticated, (req,res)=>{
         var id = req.params.id
       
         Server.findOne({id:req.params.id}, (err,result)=>{
@@ -217,7 +217,7 @@ module.exports = function(app,url,client,nodechace) {
         })
         })
     })
-    app.get("/dashboard/server/:id/socials",functions.ensureAuthenticated, (req,res)=>{
+    app.get("/:lang/dashboard/server/:id/socials",functions.languages,functions.ensureAuthenticated, (req,res)=>{
         var id = req.params.id
         Server.findOne({id:req.params.id}, (err,result)=>{
             if(result === null)  return res.redirect(`/dashboard`)
@@ -227,7 +227,7 @@ module.exports = function(app,url,client,nodechace) {
             })
         })
     })
-    app.get("/dashboard/server/:id/url",functions.ensureAuthenticated, (req,res)=>{
+    app.get("/dashboard/server/:id/url",functions.languages,functions.ensureAuthenticated, (req,res)=>{
         var id = req.params.id
         Server.findOne({id:req.params.id}, (err,result)=>{
             if(result === null)  return res.redirect(`/dashboard`)
@@ -237,7 +237,7 @@ module.exports = function(app,url,client,nodechace) {
             })
         })
     })
-    app.get("/dashboard/server/:id/events",functions.ensureAuthenticated, (req,res)=>{
+    app.get("/:lang/dashboard/server/:id/events",functions.languages,functions.ensureAuthenticated, (req,res)=>{
         var id = req.params.id
         Server.findOne({id:req.params.id}, (err,result)=>{
             if(result === null)  return res.redirect(`/dashboard`)
@@ -356,7 +356,7 @@ module.exports = function(app,url,client,nodechace) {
         })
 
     })
-    app.get("/dashboard/server/:id/api",functions.ensureAuthenticated, (req,res)=>{
+    app.get("/:lang/dashboard/server/:id/api",functions.languages,functions.ensureAuthenticated, (req,res)=>{
         var id = req.params.id
         Server.findOne({id:req.params.id}, (err,result)=>{
             if(result === null)  return res.redirect(`/dashboard`)
@@ -587,8 +587,9 @@ module.exports = function(app,url,client,nodechace) {
            server.todayReportChannel = channel.id
            server.impressions =  chart
             server.owner =  server.ownerId
+            var lang = req.cookies.lang?req.cookies.lang:"en"
             Server.findOne({id:server.id}, (err,result)=>{
-                if(result!= undefined) res.redirect(`/dashboard/server/${server.id}`)
+                if(result!= undefined) res.redirect(`/${lang}/dashboard/server/${server.id}`)
                 else {
                     Server.create(server).then(result=>{
                        fs.readFile('./src/public/sitemaps.xml','utf8',(err,file)=>{
@@ -641,10 +642,10 @@ module.exports = function(app,url,client,nodechace) {
                                 result.save()
                             }
                         })
-                        res.redirect(`/dashboard/server/${result.id}`)
+                        res.redirect(`/${lang}/dashboard/server/${result.id}`)
 
                     }).catch(err=>{
-                        if(err) return  res.redirect(`/`)
+                        if(err) return  res.redirect(`/${lang}/`)
                     })
                 }
             })

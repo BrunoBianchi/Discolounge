@@ -56,12 +56,12 @@ for(let i in data.impressions.joinClicks.get(`${date.getFullYear()}`)[locals.mom
     <div class="col-md-6">
       <div id="charts-stats">
         <p><%=join_clicks_values.reduce((partialSum, a) => partialSum + a, 0)%>
-          <smal>Join Clicks</smal></p>
+          <smal><%=locals.language.dashboard.chart.joins.title%></smal></p>
       </div>
     </div>
     <div class="col-md-6">
       <div id="charts-stats">       
-         <p><%=page_views_values.reduce((partialSum, a) => partialSum + a, 0)%> <smal>Page Views</smal></p>
+         <p><%=page_views_values.reduce((partialSum, a) => partialSum + a, 0)%> <smal><%=locals.language.dashboard.chart.views.title%></smal></p>
       </div>
     </div>
 
@@ -87,15 +87,15 @@ for(let i in data.impressions.joinClicks.get(`${date.getFullYear()}`)[locals.mom
         <div  id="wb-content" class="form-content text-left ">
           <div class="form-group">
               <input onclick="confirm(this.value)" id="boolean" type="checkbox" value="<%=data.todaysReport%>" name="todaysReport" value="false" onClick="if(this.value === 'false') {this.value = true }else {this.value =false}" class="switch" <%if(data.todayReport === 'true'){%> checked<%}%> >
-              <label for="s2d">Today's Report</label>
+              <label for="s2d"><%=locals.language.dashboard.chart.report.title%></label>
             </div>
   
-              <label id="long_description_header" for="exampleFormControlSelect1">Today's Report Channel </label>
+              <label id="long_description_header" for="exampleFormControlSelect1"><%=locals.language.dashboard.chart.report.channel%> </label>
         
               <div class="input-group">
                 <input type="text" class="form-control" id="invites" aria-label="Text input with dropdown button" value="<%=data.invite%>" readonly>
                 <div class="input-group-append">
-                  <button id="invite-btn" class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false"><%if(data.todayReportChannel){%><%=guild.channels.cache.get(data.todayReportChannel).name%><%}else{%>Select Channel<%}%></button>
+                  <button id="invite-btn" class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false"><%if(data.todayReportChannel){%><%=guild.channels.cache.get(data.todayReportChannel).name%><%}else{%><%=locals.language.dashboard.chart.report.select%><%}%></button>
                   <div class="dropdown-menu">
                     <%var role = guild.roles.cache.find(role=> role.name === '@everyone')%>
                     <%guild.channels.cache.filter(channel=> channel.type === 'GUILD_TEXT' && channel.id != data.todayReportChannel ).forEach(channel=>{%>
@@ -150,7 +150,7 @@ headers: { "Content-Type": "application/json" },
               data: {
         labels:<%- JSON.stringify(joins_label)%>,
         datasets: [{
-          label: 'joined users',
+          label: '<%=locals.language.dashboard.chart.joins.label%>',
           data: [<%=joins_values%>],
           backgroundColor: '#77da72',
           borderWidth: 1
@@ -175,7 +175,7 @@ headers: { "Content-Type": "application/json" },
         labels:<%- JSON.stringify(page_views_label)%>,
         datasets: [
           {
-          label: 'page views',
+          label: '<%=locals.language.dashboard.chart.views.label%>',
           type: 'line',
           data: [<%=page_views_values%>],
           backgroundColor: '#77da72',

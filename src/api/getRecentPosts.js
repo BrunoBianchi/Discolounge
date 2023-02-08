@@ -2,7 +2,7 @@ const FormData = require("form-data");
 const Blog = require("../modals/blog");
 
 module.exports = function(app,disc_url,redirect) {
-    app.get("/recentPosts", (req, res) => {
+    app.post("/recentPosts", (req, res) => {
         Blog.find({},(err,result)=>{
           if(result.length <=0) return res.json({undefined})
             var posts = result[0].posts.sort((a,b)=>{

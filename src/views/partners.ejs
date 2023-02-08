@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<%=locals.user_lang%>">
   <head>
     <meta charset="utf-8" />
     <%- include('partials/favicon'); %>
@@ -8,43 +8,44 @@
     <meta name="apple-mobile-web-app-title" content="Discord" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="msapplication-TileColor" content="#8c72da" />
-    <title translate="no">Discolounge - Partners</title>
+    <title translate="no"><%=locals.language.partner.header.title%></title>
+
     <meta
       name="description"
-      content="Servers Shorted by  <%=locals.url.split('filter=')[1]%>"
+      content="<%=locals.language.partner.header.description%>"
     />
     <meta property="og:title" content="Discord Servers" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://discolounge.net/" />
     <meta
       property="og:description"
-      content="Servers Shorted by  <%=locals.url.split('filter=')[1]%>"
+      content="<%=locals.language.partner.header.description%>"
     />
     <meta name="theme-color" content="#8c72da" />
     <meta
       property="og:image:alt"
-      content="Servers Shorted by  <%=locals.url.split('filter=')[1]%>"
+      content="<%=locals.language.partner.header.description%>"
     />
     <meta property="og:site_name" content="Discolounge" />
     <link rel="canonical" href="https://discolounge.net/" />
 
     <meta property="twitter:url" content="https://discolounge.net/" />
-    <meta property="twitter:title" content="Discord Servers" />
+    <meta property="twitter:title" content="<%=locals.language.partner.header.title%>" />
     <meta
       property="twitter:description"
-      content="Servers Shorted by  <%=locals.url.split('filter=')[1]%>"
+      content="<%=locals.language.partner.header.description%>"
     />
-    <script src="./jquery.js"></script>
-    <script src="./poper.js"></script>
-    <link rel="stylesheet" href="./boostrap.css" />
-    <script src="./boostrap.js"></script>
-    <script src="./font.js"></script>
-    <link rel="stylesheet" href="./home.css" />
-    <link rel="stylesheet" href="./partners.css" />
-    <script src="/toastr.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="/dashboard.css" />
+    <script src="<%=locals.path_ur%>/jquery.js"></script>
+    <script src="<%=locals.path_ur%>/poper.js"></script>
+    <link rel="stylesheet" href="<%=locals.path_ur%>/boostrap.css" />
+    <script src="<%=locals.path_ur%>/boostrap.js"></script>
+    <script src="<%=locals.path_ur%>/font.js"></script>
+    <link rel="stylesheet" href="<%=locals.path_ur%>/home.css" />
+    <link rel="stylesheet" href="<%=locals.path_ur%>/partners.css" />
+    <script src="<%=locals.path_ur%>/toastr.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="<%=locals.path_ur%>/dashboard.css" />
 
-    <link rel="stylesheet" href="/toastr.css" />
+    <link rel="stylesheet" href="<%=locals.path_ur%>/toastr.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap"
       rel="stylesheet"
@@ -76,7 +77,7 @@
     <%- include('partials/navbar'); %>
     <div style="margin-top: 100px" class="container">
       <h1 style="text-align: center">
-        Partners Program
+        <%=locals.language.partner.body.title%>
         <br />
       </h1>
       <br />
@@ -99,7 +100,7 @@
                 </li>
                 <li>
                   <i class="fas fa-tags" aria-hidden="true"></i> Custom Partner
-                  Tag: <span style="font-size: 16px" id="partner">partner</span>
+                  Tag: <i data-toggle="tooltip" data-html="true" data-placement="top" title="" style="font-size:17px;color:rgb(41, 139, 214)" class="fas fa-handshake" aria-hidden="true" data-original-title="<strong>Partner Server</strong> "></i>
                 </li>
                 <li>
                   <i class="fas fa-handshake-alt" aria-hidden="true"></i> Custom
@@ -234,7 +235,6 @@
             <li>Must follow server and discord TOS</li>
             <li>Must be SFW</li>
             <li>No racism / homophobia</li>
-            <li>No @ everyone or @ here</li>
           </ul>
           <br />
           <p>

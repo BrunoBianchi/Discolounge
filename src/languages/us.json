@@ -1,0 +1,366 @@
+{
+    "navbar":{
+        "search":"Discover",
+        "more":"More",
+        "search_for_server":"Search for Discord Servers...",
+        "search_for_bot":"Search for Discord Bots...",
+        "login":"Login With Discord",
+        "search_see_more":"See More ",
+        "more_dropdown":{
+            "events":"Events",
+            "market":"Market"
+        }
+    },
+    "home":{
+        "header":{
+            "title":"Find The Perfect Discord Server | Discolounge.net",
+            "description":"Find the best Discord servers on discolounge.net - the ultimate Discord server listing website. Search for new unique servers by genre, interests, location and more. Join new communities, grow your server to the infinite and expand your social circle. Sign up now for free!"
+        },
+        "body":{
+            "featured":{
+                "title":"Featured Servers",
+                "description":"Random Premium Discord Servers."
+            },
+            "recently":{
+                "title":"Recently Bumped Servers",
+                "description":"Recently Bumped Discord Servers."
+            },
+            "new":{
+                "title":"New Servers",
+                "description":"Recently Added Discord Servers."
+            },
+            "show_more":"Show More",
+            "filter":{
+                "filters":"Filters",
+                "memberCount":"Server Members",
+                "settings":"settings",
+                "filter_btn":"filter"
+            },
+            "card":{
+                "votes":"Votes",
+                "join":"Join Server"
+            }
+        },
+        "bots":{
+            "header":{
+                "title":"Find The Perfect Bot For Your Discord Community | Discolounge.net",
+                "description":"Find the best Discord bot for your server on Discolounge.net - the ultimate Discord server listing website. Search for new unique servers by genre, interests, location and more. Join new communities, grow your server to the infinite and expand your social circle. Sign up now for free!"
+            },
+            "body":{
+                "featured":{
+                    "title":"Featured Bots",
+                    "description":"Random Premium Discord bots."
+                },
+                "recently":{
+                    "title":"Recently Verified ",
+                    "description":"Recently Verified Discord Bots"
+                },
+                "new":{
+                    "title":"New Bots",
+                    "description":"Recently Added Discord Bots."
+                },
+                "card":{
+                    "votes":"Votes",
+                    "invite":"Invite Bot",
+                    "serverCount":"Server Count",
+                    "showMore":"Show More"
+                }
+                
+            }
+        }
+    },
+    "search":{
+       "bots":{
+        "title":"Discord Bots",
+        "description":"Explore millions of Discord Bots ",
+        "search":"Search For Discord Bots ..."
+        },
+        "servers":{
+            "title":"Discord Servers",
+            "description":"Explore millions of Discord Servers ",
+            "search":"Search For Discord Servers ..."
+            },
+        "filter":{
+            "title":"Select a Filter",
+            "shorted":"Shorted By",
+            "tagged":"Servers tagged with",
+            "premium":"Shorted By Premium",
+            "dropdown":{
+                "voted":"Top Voted",
+                "new":"Recently Added",
+                "bumped":"Recently Bumped",
+                "members":"Server's Members",
+                "review":"Reviews"
+            }
+        }
+
+    },
+    "server":{
+        "warning":"Discolounge's bot not found in this server, informations may be out of date !",
+        "join":"Join",
+        "overview":"Overview",
+        "reviews":{
+            "title":"reviews",
+            "warning":"No one reviewed this guild yet, be the first person to rate it!"
+        },
+        "insights":"Insights",
+        "news":{
+            "title":"News",
+            "warning":"Server did not add a news yet!"
+        },
+        "events":{
+            "title":"Events",
+            "warning":"Server did not add a events yet!"
+        },
+        "share":{
+            "title":"Share",
+            "direct":"Direct Link"
+        },
+        "details":{
+            "title":"details",
+            "bumped":"bumped",
+            "joined":"joined",
+            "members":"members",
+            "socials":"Socials",
+            "share":{
+                "title":"Share on Social Media",
+                "facebook":"Share on Facebook",
+                "twitter":"Share on Twitter",
+                "linkedIn": "Share on LinkedIn"
+            },
+            "categories":"Categories",
+            "vote":"Vote"
+        },
+        "recommended_servers":{
+            "title":"You might also like",
+            "description":"Reccomended Discord Servers "
+        }
+
+    },
+    "footer":{
+        "about":{
+            "title":"About",
+            "description":"Discolounge is a discord list website connected with discord. Discolounge is not an affiliate and does not belong to discord.com"
+        },
+        "links":{
+            "title":"Important Links",
+            "dropdown":{
+                "tos":"Terms of Service",
+                "pp":"Privacy Policy"
+            },
+        "made":"Made with ❤️ by Bruninho",
+        "join":"Join us on Discord"
+        }
+
+    },
+    "premium":{
+        "header":{
+            "title":"Premium Plan | Discolounge.net",
+            "description":"Grow your Server to the infinite, try your Premium Plan!"
+        },
+        "title":"Grow Your Community",
+        "description":"Starting Growing to the infinite with Discolounge Premimu Plan. Unlock the true potencial of your server paying less than other lists!",
+         "card_1":{
+            "title":"+ 30K ",
+            "description":"Impressions Every Month"
+         },
+         "card_2":{
+            "title":"10",
+            "description":"Average Growth Per Day"
+         },
+         "card_3":{
+            "title":"Special Perks",
+            "description":"unlock special perks!"
+         },
+         "premium_card":{
+            "featured1":"Priority When Searched or Shorted",
+            "featured2":" Garanteed Frame in Front Page",
+            "featured3":"Increase Server Visits",
+            "featured4":"Access to Custom Webhook Settings",
+            "featured5":" Custom Premium Tag:",
+            "featured6":"Auto Bump",
+            "featured7":"Background Image",
+            "featured8":"Support us with some Love",
+            "warning":"You need to be logged in!",
+            "select_server":"Select a Server",
+            "no_servers":"You don't have a Server added yet!"
+         },
+         "premium_monthly":"Monthly $2.00/mo",
+         "premium_6months":"6 Months<span> <s>$12.00</s><sup>$10.00/6 mo</sup></span>",
+         "premium_year":"Annual<span> <s>$24.00</s><sup>$20.00/yr</sup></span>"
+
+    },
+    "partner":{
+        "header":{
+            "title":"Partners | Discolounge.net",
+            "description":"Be Partners with Discolounge.net and  Grow your Server Faster!"
+        },
+        "body":{
+            "title":"Partners Program",
+            "featured1":"Priority when Searched or Shorted",
+            "featured2":"Garanteed Frame in Front Page",
+            "featured3":"Increase Server Visits",
+            "featured4":"Custom Partner Tag:",
+            "featured5":"Custom Partner Role in server",
+            "featured6":"Access to advertise server's ad in custom channels ",
+            "featured7":"Support us With some Love",
+            "select_server":"Select the Server you want to have all the perks",
+            "no_servers":"You don't have a Server added yet!",
+            "select":"Select a Server",
+            "requirements":{
+                "title":"Not Partner yet 😭 Apply for it now!",
+                "requirements":"Our requirements:",
+                "req1":"At Least 50 Members",
+                "req2":"Must Add your server in our site",
+                "req3":"Must follow Server and discord TOS",
+                "req4":"Must be SFW",
+                "req5":"No racism / homophobia",
+                "meet":"Meet all requirements? Select a server you want to be partner with us."
+            }
+        }
+    },
+    "events":{
+        "header":{
+            "title":"Servers Events | Discolounge.net",
+            "description":"Discover Discord server events using our event Discovery feature.Explore Hundreds of discord server Events"
+        },
+        "body":{
+            "title":"Discord Server Events",
+            "description":"Discover Discord server events using our event Discovery feature.Explore Hundreds of discord server Events",
+            "query":{
+                "recent":"Recent",
+                "upcoming":"Upcoming"
+            },
+            "confirmed":"Confirmed",
+            "local":"in",
+            "startDate":"Start Date",
+            "endDate":"End Date"
+        }
+    },
+    "referrals":{
+        "header":{
+            "title":"Referrals | Discolounge.net",
+            "descripton":"Get Coins for every user you invite, exchange these coins for discord nitro, spotify premium and soo on..."
+        },
+        "body":{
+            "title":"Referral Program",
+            "inviteURL":"Your Referral Code Url",
+            "how_does_it_works":"How does it works ?",
+            "description1":"Our referral system is a program created so that users can grow byhelping us.",
+            "description2":"For each person (not invited by someone else) who uses your code and adds a server, you will receive <strong style='olor:rgb(224, 158, 26)'> coins</strong>.",
+            "roles":{
+                "title":"Roles:",
+                "role1":"2.5 coins per invite",
+                "role2":"2 coins per invite",
+                "role3":"1.75 coins per invite",
+                "role4":"1.25 coins per invite",
+                "role5":" 1 coin per invite"
+            },
+            "description3":"These coins can be used to exchange for other products in our <a href='/<%=locals.user_lang%>/market'>store</a> ",
+            "user":{
+                "referred":"Total Referred",
+                "coins":"Coins"
+            }
+        }
+    },
+    "dashboard":{
+        "about":{
+            "header":{
+                "title":"Dashboard | Discolounge.net",
+                "description":"Find the best Discord servers on discolounge.net - the ultimate Discord server listing website. Search for new unique servers by genre, interests, location and more. Join new communities, grow your server to the infinite and expand your social circle. Sign up now for free!"
+            },
+            "body":{
+                "news":"News And Updates 🎉",
+                "supporters":{
+                    "title":"Thanks to our supporters ❤️",
+                    "description":"Wan't to be here and get more bonus,visits and so much more? try <a href='/<%=locals.user_lang%>/premium'>Premium</a> "
+                },
+                "warning":{
+                    "title":"Warning ⚠️",
+                    "description":"Before Adding your bot,please read all our <a href='/TOS'>TOS</a>,make sure that everything is in accordance with our policy so that no type of penalty occurs"
+                },
+                "card":{
+                    "tags":"Tags",
+                    "short":{
+                        "title":"Short Description",
+                        "description":"Write a unique short description about your server"
+                    },
+                    "long":{
+                        "title":"Long Description",
+                        "description":"Write a unique long description about your server"
+                    },
+                    "serverInvite":{
+                        "title":"Server Invite",
+                        "select":"Select Channel"
+                    },
+                    "custom":"Custom Url",
+                    "change":"Change",
+                    "save_changes":"Save Changes"
+                }
+                          
+
+            }
+        },
+        "posts":{
+            "name":"Name",
+            "title":"Post Title",
+            "postContent":"Post Content",
+            "description":"Write the content of your post!",
+            "save_changes":"Save Changes"
+        },
+        "socials":{
+            "name":"Name",
+            "title":"Social Media Name",
+            "url":"Social Media Url",
+            "save_changes":"Save Changes"
+        },
+        "chart":{
+            "joins":{
+                "title":"Join Clicks",
+                "label":"Joined Users"
+            },
+            "views":{
+                "title":"Page Views",
+                "label":"Page Views"
+            },
+            "report":{
+                "title":"Today's Report Channel ",
+                "select":"Select Channel",
+                "channel":"Today's Report Channel"
+            }
+        },
+        "events":{
+            "title":"Title",
+            "tPlace":"Event Title",
+            "start":"Start Date",
+            "end":"End Date",
+            "content":"Event Content",
+            "ePlace":"Write the content of your Event!",
+            "add":"Add Event",
+            "events":"Events"
+        },
+        "api":{
+            "variables":{
+                "title":"Variables:",
+                "user":"user that voted",
+                "user_votes":"amount of votes user has",
+                "server_votes":"total votes of the server",
+                "show_more":" Show more settings",
+                "save":"Save Changes"
+            }
+        }
+        
+    },
+    "vertical_nav":{
+        "select_server":"Select Server" ,
+        "about":"About",
+        "events":"Events",
+        "socials":"Socials",
+        "serverStatistic":"Server Statistic",
+        "payments":"Payments",
+        "bump":"Bump Server",
+        "bumpIn":"Bump in",
+        "delete":"Delete Server"
+    }
+
+}

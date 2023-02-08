@@ -4,7 +4,7 @@ var paypal = require('paypal-rest-sdk');
 const moment = require("moment")
 
 module.exports = function(app,url,client,nodecache) {
-app.get("/premium",(req,res)=>{
+app.get("/:lang/premium",functions.languages,(req,res)=>{
     var name = req.query.name
    Server.find({},(err,result)=>{
     if(req.cookies.token&&nodecache.get(req.cookies.token)) {

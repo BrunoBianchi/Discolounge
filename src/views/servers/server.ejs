@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<%=locals.user_lang%>">
 <head>
 <meta charset="utf-8">
 <meta name="twitter:image" content="https://cdn.discordapp.com/icons/<%=guild.id%>/<%=guild.icon%>.png">
@@ -28,32 +28,32 @@
 <meta name="apple-mobile-web-app-title" content="Discord">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="msapplication-TileColor" content="#8c72da">
-<title translate="no">Join <%=guild.name%> | discolounge.net</title>
+<title translate="no"><%=locals.language.server.join%> <%=guild.name%> | Discolounge.net</title>
 <meta name="description" content="<%=guild.short_description%> ">
 <meta property="og:title" content="<%=guild.name%>" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://discolounge.net/server/<%=guild.id%>" />
+<meta property="og:url" content="https://discolounge.net/<%=locals.user_lang%>/server/<%=guild.id%>" />
 <meta property="og:description" content="<%=guild.short_description%>" />
 <meta name="theme-color" content="#8c72da">
 <meta property="og:image:alt" content="<%=guild.short_description%>" />
 <meta property="og:site_name" content="Discolounge" />
-<link rel='canonical' href='https://discolounge.net/server/<%=guild.id%>' />
+<link rel='canonical' href='https://discolounge.net/<%=locals.user_lang%>/server/<%=guild.id%>' />
 
-<meta property="twitter:url" content="https://discolounge.net/server/<%=guild.id%>">
+<meta property="twitter:url" content="https://discolounge.net/<%=locals.user_lang%>/server/<%=guild.id%>">
 <meta property="twitter:title" content="<%=guild.name%>">
 <meta property="twitter:description" content="<%=guild.short_description%> ">
-<script src="/jquery.js" ></script>
-<script src="/poper.js" ></script>
-<link rel="stylesheet" href="/boostrap.css" >
-<script src="/boostrap.js"></script>
-<script src="/font.js" ></script>
+<script src="<%=locals.path_ur%>/jquery.js" ></script>
+<script src="<%=locals.path_ur%>/poper.js" ></script>
+<link rel="stylesheet" href="<%=locals.path_ur%>/boostrap.css" >
+<script src="<%=locals.path_ur%>/boostrap.js"></script>
+<script src="<%=locals.path_ur%>/font.js" ></script>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
-<script  src="/toastr.min.js"></script>
-<link rel="stylesheet" href="/toastr.css" >
+<script  src="<%=locals.path_ur%>/toastr.min.js"></script>
+<link rel="stylesheet" href="<%=locals.path_ur%>/toastr.css" >
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="https://cdn.jsdelivr.net/npm/rater-jquery@1.0.0/rater.min.js"></script>
-<script defer async src="/pwabuilder-sw-register.js" type="87fa30033e28593e842e08ba-text/javascript"></script>
-<script defer async src="/pwabuilder-sw.js" type="87fa30033e28593e842e08ba-text/javascript"></script>
+<script defer async src="<%=locals.path_ur%>/pwabuilder-sw-register.js" type="87fa30033e28593e842e08ba-text/javascript"></script>
+<script defer async src="<%=locals.path_ur%>/pwabuilder-sw.js" type="87fa30033e28593e842e08ba-text/javascript"></script>
 
 <script type="87fa30033e28593e842e08ba-module">
   import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
@@ -63,8 +63,8 @@
   document.body.appendChild(el);
 </script>
 
-<link rel="stylesheet" href="/server.css">
-<link rel="stylesheet" href="/markdown.css">
+<link rel="stylesheet" href="<%=locals.path_ur%>/server.css">
+<link rel="stylesheet" href="<%=locals.path_ur%>/markdown.css">
 
 </head>
 
@@ -73,7 +73,7 @@
 <%if(guild.offline === true){%>
 <div style="margin-top:20px;margin-bottom:10px;font-size:18px" class="container">
   <div class="alert alert-danger alert-dismissible fade show text-center" role="alert">
-    Discolounge's bot not found in this server, informations may be out of date !
+  <%=locals.language.server.warning%>
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
       <span aria-hidden="true">&times;</span>
     </button>
@@ -235,15 +235,15 @@ $("#rate-server").rate(options);
         <div class="tab-pane fade" id="Share" role="tabpanel" aria-labelledby="contact-tab">
             <div class="share">
               <label><%=locals.language.server.share.direct%> </label>
-              <input style="background-color:#14121c;border:none" onclick="copy(`<%if(guild.custom_url != ''){%>https://discolounge.net/server/<%=guild.custom_url%><%}else{%>https://discolounge.net/server/<%=guild.id%><%}%>`)" type="text"  class="form-control"    id="share-input" value="<%if(guild.custom_url != ''){%>https://discolounge.net/server/<%=guild.custom_url%><%}else{%>https://discolounge.net/server/<%=guild.id%><%}%>" readonly>
+              <input style="background-color:#14121c;border:none" onclick="copy(`<%if(guild.custom_url != ''){%>https://discolounge.net/<%=locals.user_lang%>/server/<%=guild.custom_url%><%}else{%>https://discolounge.net/<%=locals.user_lang%>/server/<%=guild.id%><%}%>`)" type="text"  class="form-control"    id="share-input" value="<%if(guild.custom_url != ''){%>https://discolounge.net/<%=locals.user_lang%>/server/<%=guild.custom_url%><%}else{%>https://discolounge.net/<%=locals.user_lang%>/server/<%=guild.id%><%}%>" readonly>
             </div>
             <div class="share">
               <label >Hyper link </label>
-              <input style="background-color:#14121c;border:none" onclick="copy(`[Discolounge](https://discolounge.net/server/<%=guild.id%>)`)" type="text"  class="form-control"    id="share-iframe" value="[Discolounge](https://discolounge.net/server/<%=guild.id%>)" readonly>
+              <input style="background-color:#14121c;border:none" onclick="copy(`[Discolounge](https://discolounge.net/<%=locals.user_lang%>/server/<%=guild.id%>)`)" type="text"  class="form-control"    id="share-iframe" value="[Discolounge](https://discolounge.net/<%=locals.user_lang%>/server/<%=guild.id%>)" readonly>
             </div>
             <div class="share">
               <label >Iframe</label>
-              <input style="background-color:#14121c;border:none" onclick="copy(`<iframe src='https://discolounge.net/server/<%=guild.id%>' title='Discolounge-<%=guild.name%>'></iframe>`)" type="text"  class="form-control"    id="share-iframe" value="<iframe src='https://discolounge.net/server/<%=guild.id%>' title='Discolounge-<%=guild.name%>'></iframe>" readonly>
+              <input style="background-color:#14121c;border:none" onclick="copy(`<iframe src='https://discolounge.net/<%=locals.user_lang%>/server/<%=guild.id%>' title='Discolounge-<%=guild.name%>'></iframe>`)" type="text"  class="form-control"    id="share-iframe" value="<iframe src='https://discolounge.net/<%=locals.user_lang%>/server/<%=guild.id%>' title='Discolounge-<%=guild.name%>'></iframe>" readonly>
             </div>
         </div>
         <div class="tab-pane fade" id="Reviews" role="tabpanel" aria-labelledby="contact-tab">
@@ -410,16 +410,16 @@ body:JSON.stringify({  comment:comment,
         
       <div class="links">
         <h4><%=locals.language.server.details.share.title%></h4>
-      <li class="social-share facebook"> <a href="https://www.facebook.com/sharer.php?u=https://discolounge.net/server/<%=guild.id%>"><i style="color:rgb(58, 135, 251)" class="fab fa-facebook-square"></i> <%=locals.language.server.details.share.facebook%></a></li>
-      <li class="social-share twitter"><a href="https://twitter.com/intent/tweet?url=https://discolounge.net/server/<%=guild.id%>&text=Check out my cool discord server on Discolounge !"><i style="color:rgb(68, 157, 212)"  class="fab fa-twitter-square"></i> <%=locals.language.server.details.share.twitter%></a></li>
-      <li class="social-share linkedin"><a href="https://www.linkedin.com/shareArticle?mini=true&url=https://discolounge.net/server/<%=guild.id%>"><i style="color:rgb(68, 94, 212)" class="fab fa-linkedin"></i> <%=locals.language.server.details.share.linkedIn%></a></li>
+      <li class="social-share facebook"> <a href="https://www.facebook.com/sharer.php?u=https://discolounge.net/<%=locals.user_lang%>/server/<%=guild.id%>"><i style="color:rgb(58, 135, 251)" class="fab fa-facebook-square"></i> <%=locals.language.server.details.share.facebook%></a></li>
+      <li class="social-share twitter"><a href="https://twitter.com/intent/tweet?url=https://discolounge.net/<%=locals.user_lang%>/server/<%=guild.id%>&text=Check out my cool discord server on Discolounge !"><i style="color:rgb(68, 157, 212)"  class="fab fa-twitter-square"></i> <%=locals.language.server.details.share.twitter%></a></li>
+      <li class="social-share linkedin"><a href="https://www.linkedin.com/shareArticle?mini=true&url=https://discolounge.net/<%=locals.user_lang%>/server/<%=guild.id%>"><i style="color:rgb(68, 94, 212)" class="fab fa-linkedin"></i> <%=locals.language.server.details.share.linkedIn%></a></li>
      
   </div> 
   </div>
       <div class="server-info" >
          <h4><i class="fa-solid fa-tags"></i><%=locals.language.server.details.categories%></h4>
          <div class="tags">
-         <%guild.tags.forEach(tag=>{%><a translate="no" class="tag" href="/search?tags=<%=tag.name%>"><%=tag.name%></a><%})%>
+         <%guild.tags.forEach(tag=>{%><a translate="no" class="tag" href="/<%=locals.user_lang%>/<%=locals.user_lang%>/servers/search?tags=<%=tag.name%>"><%=tag.name%></a><%})%>
         </div>
         </div>
       <div class="server-info" >
@@ -508,7 +508,7 @@ headers: {
       {src="https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png" 
     }
     $( ".morelike" ).append(`
-      <a translate="no" class='morelikeCard' href='/server/${server.id}'> <img src=${src}> <p class="img__description">${server.name}   <br> <i class="fa-solid fa-users"></i> ${server.memberCount}
+      <a translate="no" class='morelikeCard' href='/<%=locals.user_lang%>/<%=locals.user_lang%>/server/${server.id}'> <img src=${src}> <p class="img__description">${server.name}   <br> <i class="fa-solid fa-users"></i> ${server.memberCount}
 </p> </a>
   `); 
   })

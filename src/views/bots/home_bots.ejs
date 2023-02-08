@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<%=locals.user_lang%>">
   <head>
     <meta charset="utf-8" />
 
@@ -9,31 +9,31 @@
     <meta name="apple-mobile-web-app-title" content="Discord" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="msapplication-TileColor" content="#8c72da" />
-    <title translate="no">Find The Perfect Bot For Your Discord Community | discolounge.net</title>
+    <title translate="no"><%=locals.language.home.bots.header.title%></title>
     <meta
       name="description"
-      content="Find the best Discord bot for your server on discolounge.net - the ultimate Discord server listing website. Search for new unique servers by genre, interests, location and more. Join new communities, grow your server to the infinite and expand your social circle. Sign up now for free!"
+      content="<%=locals.language.home.bots.header.description%>"
     />
-    <meta property="og:title" content="Discord Servers" />
+    <meta property="og:title" content="<%=locals.language.home.bots.header.title%>" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://discolounge.net/bots/" />
+    <meta property="og:url" content="https://discolounge.net/<%=locals.user_lang%>/<%=locals.user_lang%>/bots/" />
     <meta
       property="og:description"
-      content="Find the best Discord bot for your server on discolounge.net - the ultimate Discord server listing website. Search for new unique servers by genre, interests, location and more. Join new communities, grow your server to the infinite and expand your social circle. Sign up now for free!"
+      content="<%=locals.language.home.bots.header.description%>"
     />
     <meta name="theme-color" content="#8c72da" />
     <meta
       property="og:image:alt"
-      content="Find the best Discord bot for your server on discolounge.net - the ultimate Discord server listing website. Search for new unique servers by genre, interests, location and more. Join new communities, grow your server to the infinite and expand your social circle. Sign up now for free!"
+      content="<%=locals.language.home.bots.header.description%>"
     />
     <meta property="og:site_name" content="Discolounge" />
-    <link rel="canonical" href="https://discolounge.net/bots/" />
+    <link rel="canonical" href="https://discolounge.net/<%=locals.user_lang%>/<%=locals.user_lang%>/bots/" />
 
-    <meta property="twitter:url" content="https://discolounge.net/bots/" />
-    <meta property="twitter:title" content="Discord Servers" />
+    <meta property="twitter:url" content="https://discolounge.net/<%=locals.user_lang%>/<%=locals.user_lang%>/bots/" />
+    <meta property="twitter:title" content="<%=locals.language.home.bots.header.title%>" />
     <meta
       property="twitter:description"
-      content="Find the best Discord bot for your server on discolounge.net - the ultimate Discord server listing website. Search for new unique servers by genre, interests, location and more. Join new communities, grow your server to the infinite and expand your social circle. Sign up now for free!"
+      content="<%=locals.language.home.bots.header.description%>"
     />
     <meta name="robots" content="index" />
     <meta property="twitter:image" content="https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png">
@@ -98,10 +98,8 @@
         <div class="col-md-8">
           <div class="servers-cards">
             <div class="servers-cards-info">
-              <h2>Featured Bots</h2>
-              <span
-                >Random <a href="/premium">Premium</a> Discord bots.</span
-              >
+              <h2><%=locals.language.home.bots.body.featured.title%></h2>
+              <span><%=locals.language.home.bots.body.featured.description%></span>
             </div>
             <div class="cards">
               <%if(data){data.filter(server=>server.premium ===
@@ -119,7 +117,7 @@
                   <div class="col-md-10 px-3">
                     <div class="card-block px-3">
                       <h4 class="card-title">
-                        <a translate="no" href="/bot/<%=server.id%>"
+                        <a translate="no" href="/<%=locals.user_lang%>/bot/<%=server.id%>"
                           ><%=server.name.slice(0,12)%>
                           <%if(server.verify === true){%><i data-toggle="tooltip" data-html="true" data-placement="top" title="Verified Bot!"  style="font-size:17px;color:#6829d6" class="fas fa-certificate"></i><%}%>
 
@@ -132,15 +130,15 @@
                         ><%}%>
                         <a 
                           href="<%=server.invite%>"
-                          style="float: right"
+                          style="float:right;margin-top:4px;"
                           class="btn btn-primary"
-                          >Invite Bot</a
+                          ><%=locals.language.home.bots.body.card.invite%></a
                         >
                         <a
-                          href="/bot/<%=server.id%>#vote"
-                          style="float: right"
+                          href="/<%=locals.user_lang%>/bot/<%=server.id%>#vote"
+                          style="float:right;margin-top:4px;"
                           class="btn btn-primary"
-                          ><i class="fa-solid fa-caret-up"></i> Votes
+                          ><i class="fa-solid fa-caret-up"></i> <%=locals.language.home.bots.body.card.votes%>
                           (<%=server.votes.total%>)</a
                         >
                       </h4>
@@ -152,7 +150,7 @@ serversCount
    %> </span> | <%}%> 
                         <%server.tags.slice(0,2).forEach(tag=>{%>
                         <a translate="no"
-                          href="/bots/search?tags=<%=tag.name.toLowerCase()%>"
+                          href="/<%=locals.user_lang%>/bots/search?tags=<%=tag.name.toLowerCase()%>"
                           class="card-tags"
                           ><%=tag.name%></a
                         >
@@ -161,7 +159,7 @@ serversCount
                           data-toggle="tooltip"
                           data-placement="top"
                           title="<%server.tags.slice(2,server.tags.length).forEach(tag=>{%> <%=tag.name%>, <%})%>"
-                          href="/bot/<%=server.id%>"
+                          href="/<%=locals.user_lang%>/bot/<%=server.id%>"
                           class="card-tags"
                           >+<%=parseInt(server.tags.length) - 2%></a
                         >
@@ -177,11 +175,11 @@ serversCount
               <%})}%>
             </div>
             <div
-              onclick="location.href='/bots/search?premium=true';"
+              onclick="location.href='/<%=locals.user_lang%>/bots/search?premium=true';"
               class="container"
               id="servers-cards-showmore"
             >
-              Show More <i class="fa-solid fa-angles-down"></i>
+              <%=locals.language.home.bots.body.card.showMore%> <i class="fa-solid fa-angles-down"></i>
             </div>
           </div>
           <div id="ad-servers" class="container">
@@ -195,8 +193,8 @@ serversCount
           </div>
           <div class="servers-cards">
             <div class="servers-cards-info">
-              <h2>Recently Verified</h2>
-              <span>Recently Verified Discord Bots.</span>
+              <h2><%=locals.language.home.bots.body.recently.title%></h2>
+              <span><%=locals.language.home.bots.body.recently.description%></span>
             </div>
             <div class="cards">
               <%if(data){data.filter(bot=>{return bot.verify === true}).sort((a,b)=>{ return (b.premium - a.premium) || new
@@ -214,7 +212,7 @@ serversCount
                   <div class="col-md-10 px-3">
                     <div class="card-block px-3">
                       <h4 class="card-title">
-                        <a translate="no" href="/bot/<%=server.id%>"
+                        <a translate="no" href="/<%=locals.user_lang%>/bot/<%=server.id%>"
                           ><%=server.name.slice(0,12)%>
                           <%if(server.verify === true){%><i data-toggle="tooltip" data-html="true" data-placement="top" title="Verified Bot!"  style="font-size:17px;color:#6829d6" class="fas fa-certificate"></i><%}%>
 
@@ -227,15 +225,15 @@ serversCount
                         ><%}%>
                         <a
                           href="<%=server.invite%>"
-                          style="float: right"
+                          style="float:right;margin-top:4px;"
                           class="btn btn-primary"
-                          >Invite Bot</a
+                          ><%=locals.language.home.bots.body.card.invite%></a
                         >
                         <a
-                          href="/bot/<%=server.id%>#vote"
-                          style="float: right"
+                          href="/<%=locals.user_lang%>/bot/<%=server.id%>#vote"
+                          style="float:right;margin-top:4px;"
                           class="btn btn-primary"
-                          ><i class="fa-solid fa-caret-up"></i> Votes
+                          ><i class="fa-solid fa-caret-up"></i> <%=locals.language.home.bots.body.card.votes%>
                           (<%=server.votes.total%>)</a
                         >
                       </h4>
@@ -247,7 +245,7 @@ serversCount
                            %> </span> | <%}%> 
                         <%server.tags.slice(0,2).forEach(tag=>{%>
                         <a translate="no"
-                          href="/bots/search?tags=<%=tag.name.toLowerCase()%>"
+                          href="/<%=locals.user_lang%>/bots/search?tags=<%=tag.name.toLowerCase()%>"
                           class="card-tags"
                           ><%=tag.name%></a
                         >
@@ -256,7 +254,7 @@ serversCount
                           data-toggle="tooltip"
                           data-placement="top"
                           title="<%server.tags.slice(2,server.tags.length).forEach(tag=>{%> <%=tag.name%>, <%})%>"
-                          href="/bot/<%=server.id%>"
+                          href="/<%=locals.user_lang%>/bot/<%=server.id%>"
                           class="card-tags"
                           >+<%=parseInt(server.tags.length) - 2%></a
                         >
@@ -272,17 +270,17 @@ serversCount
               <%})}%>
             </div>
             <div
-              onclick="location.href='/bots/search?page=1&filter=verify';"
+              onclick="location.href='/<%=locals.user_lang%>/bots/search?page=1&filter=verify';"
               class="container"
               id="servers-cards-showmore"
             >
-              Show More <i class="fa-solid fa-angles-down"></i>
+              <%=locals.language.home.bots.body.card.showMore%> <i class="fa-solid fa-angles-down"></i>
             </div>
           </div>
           <div class="servers-cards">
             <div class="servers-cards-info">
-              <h2>New Bots</h2>
-              <span>Recently Added Discord Bots.</span>
+              <h2><%=locals.language.home.bots.body.new.title%></h2>
+              <span><%=locals.language.home.bots.body.new.description%></span>
             </div>
             <div class="cards">
               <%if(data){data.sort((a,b)=>{ return new Date(b.createdAt) - new
@@ -300,7 +298,7 @@ serversCount
                   <div class="col-md-10 px-3">
                     <div class="card-block px-3">
                       <h4 class="card-title">
-                        <a translate="no" href="/bot/<%=server.id%>"
+                        <a translate="no" href="/<%=locals.user_lang%>/bot/<%=server.id%>"
                           ><%=server.name.slice(0,12)%>
                           <%if(server.verify === true){%><i data-toggle="tooltip" data-html="true" data-placement="top" title="Verified Bot!"  style="font-size:17px;color:#6829d6" class="fas fa-certificate"></i><%}%>
 
@@ -313,25 +311,25 @@ serversCount
                         ><%}%>
                         <a
                           href="<%=server.invite%>"
-                          style="float: right"
+                          style="float:right;margin-top:4px;"
                           class="btn btn-primary"
-                          >Invite Bot</a
+                          ><%=locals.language.home.bots.body.card.invite%></a
                         >
                         <a
-                          href="/bot/<%=server.id%>#vote"
-                          style="float: right"
+                          href="/<%=locals.user_lang%>/bot/<%=server.id%>#vote"
+                          style="float:right;margin-top:4px;"
                           class="btn btn-primary"
-                          ><i class="fa-solid fa-caret-up"></i> Votes
+                          ><i class="fa-solid fa-caret-up"></i> <%=locals.language.home.bots.body.card.votes%>
                           (<%=server.votes.total%>)</a
                         >
                       </h4>
                       <span translate="no" class="card-info"
-                        ><i class="fas fa-users"></i> <%=server.serversCount %> | <%if(server.reviews.rates.length >= 1){%> <span style="color:#d6a529" data-toggle="tooltip" data-html="true" data-placement="top" title="<div class='container text-centered'><p>Based in <strong><%=server.reviews.rates.length%></strong> reviews </p></div>" href="/bot/<%=server.id%>"><i class="fas fa-star"></i> <%=server.reviews.
+                        ><i class="fas fa-users"></i> <%=server.serversCount %> | <%if(server.reviews.rates.length >= 1){%> <span style="color:#d6a529" data-toggle="tooltip" data-html="true" data-placement="top" title="<div class='container text-centered'><p>Based in <strong><%=server.reviews.rates.length%></strong> reviews </p></div>" href="/<%=locals.user_lang%>/bot/<%=server.id%>"><i class="fas fa-star"></i> <%=server.reviews.
                           averageStars / server.reviews.rates.length
                            %> </span> | <%}%> 
                         <%server.tags.slice(0,2).forEach(tag=>{%>
                         <a translate="no"
-                          href="/bots/search?tags=<%=tag.name.toLowerCase()%>"
+                          href="/<%=locals.user_lang%>/bots/search?tags=<%=tag.name.toLowerCase()%>"
                           class="card-tags"
                           ><%=tag.name%></a
                         >
@@ -340,7 +338,7 @@ serversCount
                           data-toggle="tooltip"
                           data-placement="top"
                           title="<%server.tags.slice(2,server.tags.length).forEach(tag=>{%> <%=tag.name%>, <%})%>"
-                          href="/bot/<%=server.id%>"
+                          href="/<%=locals.user_lang%>/bot/<%=server.id%>"
                           class="card-tags"
                           >+<%=parseInt(server.tags.length) - 2%></a
                         >
@@ -357,17 +355,17 @@ serversCount
             </div>
 
             <div
-              onclick="location.href='/bots/search?page=1&filter=createdAt';"
+              onclick="location.href='/<%=locals.user_lang%>/bots/search?page=1&filter=createdAt';"
               class="container"
               id="servers-cards-showmore"
             >
-              Show More <i class="fa-solid fa-angles-down"></i>
+              <%=locals.language.home.bots.body.card.showMore%> <i class="fa-solid fa-angles-down"></i>
             </div>
           </div>
         </div>
         <div class="col-md-4">
           <div style="z-index: 1" class="side-menu sticky-top">
-            <form method="get" action="<%if(locals._locals.path_url.includes('bots')){ %>/bots/search <%}else{%>/search/ <%}%>">
+            <form method="get" action="<%if(locals._locals.path_url.includes('bots')){ %>/<%=locals.user_lang%>/bots/search <%}else{%>/search/ <%}%>">
               <div class="container-slide">
                 <h1>Filters</h1>
                 <div class="length range__slider" data-min="1" data-max="500">

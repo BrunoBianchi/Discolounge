@@ -15,13 +15,13 @@
       </div>
       
       <div class="tags">
-        <a class="tag-search" href="<%if(locals._locals.path_url.includes('bots')){ %> /bots/search?tags=community <%}else{%>/servers/search?tags=community <%}%>"># Community</a>
-       <a class="tag-search" href="<%if(locals._locals.path_url.includes('bots')){ %> /bots/search?tags=games <%}else{%>/servers/search?tags=games <%}%>"># Games</a>
-        <a class="tag-search" href="<%if(locals._locals.path_url.includes('bots')){ %> /bots/search?tags=events <%}else{%>/servers/search?tags=events <%}%>"># Events</a>
-       <a class="tag-search" href="<%if(locals._locals.path_url.includes('bots')){ %> /bots/search?tags=youtube <%}else{%>/servers/search?tags=youtube <%}%>"># Youtube</a>
-       <a class="tag-search" href="<%if(locals._locals.path_url.includes('bots')){ %> /bots/search?tags=fun<%}else{%>/servers/search?tags=fun <%}%>"># Fun</a>
-       <a class="tag-search" href="<%if(locals._locals.path_url.includes('bots')){ %> /bots/search?tags=anime <%}else{%>/servers/search?tags=anime <%}%>"># Anime</a>
-       <a class="tag-search" href="<%if(locals._locals.path_url.includes('bots')){ %> /bots/search?tag=programming <%}else{%>/servers/search?tags=programming <%}%>"># Programming</a>
+        <a class="tag-search" href="<%if(locals._locals.path_url.includes('bots')){ %>/<%=locals.user_lang%>/bots/search?tags=community <%}else{%>/<%=locals.user_lang%>/servers/search?tags=community <%}%>"># Community</a>
+       <a class="tag-search" href="<%if(locals._locals.path_url.includes('bots')){ %>/<%=locals.user_lang%>/bots/search?tags=games <%}else{%>/<%=locals.user_lang%>/servers/search?tags=games <%}%>"># Games</a>
+        <a class="tag-search" href="<%if(locals._locals.path_url.includes('bots')){ %>/<%=locals.user_lang%>/bots/search?tags=events <%}else{%>/<%=locals.user_lang%>/servers/search?tags=events <%}%>"># Events</a>
+       <a class="tag-search" href="<%if(locals._locals.path_url.includes('bots')){ %>/<%=locals.user_lang%>/bots/search?tags=youtube <%}else{%>/<%=locals.user_lang%>/servers/search?tags=youtube <%}%>"># Youtube</a>
+       <a class="tag-search" href="<%if(locals._locals.path_url.includes('bots')){ %>/<%=locals.user_lang%>/bots/search?tags=fun<%}else{%>/<%=locals.user_lang%>/servers/search?tags=fun <%}%>"># Fun</a>
+       <a class="tag-search" href="<%if(locals._locals.path_url.includes('bots')){ %>/<%=locals.user_lang%>/bots/search?tags=anime <%}else{%>/<%=locals.user_lang%>/servers/search?tags=anime <%}%>"># Anime</a>
+       <a class="tag-search" href="<%if(locals._locals.path_url.includes('bots')){ %>/<%=locals.user_lang%>/bots/search?tag=programming <%}else{%>/<%=locals.user_lang%>/servers/search?tags=programming <%}%>"># Programming</a>
     </div>
 
   </div>

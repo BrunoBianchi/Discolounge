@@ -1,715 +1,1611 @@
 <?xml version="1.0" encoding="UTF-8"?>
       <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
         <url>
-        <loc>https://discolounge.net/server/943585221943644201</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-        <image:loc>https://cdn.discordapp.com/icons/943585221943644201/94321e77756808ad52deac79cbd0c9bd.png</image:loc>
-        </image:image>
-        </url><url>
-        <loc>https://discolounge.net/server/1060912812102258758</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-        <image:loc>https://cdn.discordapp.com/icons/1060912812102258758/e1cd29a67ef53a6dcdc317154850922b.png</image:loc>
-        </image:image>
-        </url><url>
-        <loc>https://discolounge.net/server/914232215091679332</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-        <image:loc>https://cdn.discordapp.com/icons/914232215091679332/4a737083a2c98ebe2e4ddf3b53a4984d.png</image:loc>
-        </image:image>
-        </url><url>
-        <loc>https://discolounge.net/server/1036346913911492750</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-        <image:loc>https://cdn.discordapp.com/icons/1036346913911492750/9d991b825e7e7a09318e95d7af1b0632.png</image:loc>
-        </image:image>
-        </url><url>
-        <loc>https://discolounge.net/server/1057363269486133360</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-        <image:loc>https://cdn.discordapp.com/icons/1057363269486133360/3b7426de0cc5ac575cea2c9304f2088e.png</image:loc>
-        </image:image>
-        </url><url>
-        <loc>https://discolounge.net/server/1058299107841675274</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-        <image:loc>https://cdn.discordapp.com/icons/1058299107841675274/41683dce14b6d97365a309443d1941e7.png</image:loc>
-        </image:image>
-        </url><url>
-        <loc>https://discolounge.net/server/634079989310160896</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-        <image:loc>https://cdn.discordapp.com/icons/634079989310160896/ceafa4204ab34be8ec16edf4bf7b4645.png</image:loc>
-        </image:image>
-        </url><url>
-        <loc>https://discolounge.net/server/1026283727346733137</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-        <image:loc>https://cdn.discordapp.com/icons/1026283727346733137/5aed8414afa11ce2e352b2c35559ed0b.png</image:loc>
-        </image:image>
-        </url><url>
-        <loc>https://discolounge.net/server/1053877138329182289</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-        <image:loc>https://cdn.discordapp.com/icons/1053877138329182289/3b05f52fb14bcd143688346ab07710fd.png</image:loc>
-        </image:image>
-        </url><url>
-        <loc>https://discolounge.net/server/655871441945886742</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-        <image:loc>https://cdn.discordapp.com/icons/655871441945886742/null.png</image:loc>
-        </image:image>
-        </url><url>
-        <loc>https://discolounge.net/server/835068714159570944</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-        <image:loc>https://cdn.discordapp.com/icons/835068714159570944/null.png</image:loc>
-        </image:image>
-        </url><url>
-        <loc>https://discolounge.net/server/1063915746289266729</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-        <image:loc>https://cdn.discordapp.com/icons/1063915746289266729/b9677763576df4c14a0f0aae672ff29a.png</image:loc>
-        </image:image>
-        </url><url>
-        <loc>https://discolounge.net/server/1061736273292841023</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-        <image:loc>https://cdn.discordapp.com/icons/1061736273292841023/149a501accafdca6d8212be1f3228f6b.png</image:loc>
-        </image:image>
-        </url><url>
-        <loc>https://discolounge.net/server/1042848358701736036</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-        <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
-        </image:image>
-        </url><url>
-        <loc>https://discolounge.net/server/1022896078250582086</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-        <image:loc>https://cdn.discordapp.com/icons/1022896078250582086/5a506ff578c4d6b7625fc1300ec3bf70.png</image:loc>
-        </image:image>
-        </url><url>
-        <loc>https://discolounge.net/server/1060609979507294318</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-        <image:loc>https://cdn.discordapp.com/icons/1060609979507294318/b51853ab1239723c6a028fd6b4e489e3.png</image:loc>
-        </image:image>
-        </url><url>
-        <loc>https://discolounge.net/server/689937289282846776</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-        <image:loc>https://cdn.discordapp.com/icons/689937289282846776/334a33390a20430e231f6896b51de92e.png</image:loc>
-        </image:image>
-        </url><url>
-        <loc>https://discolounge.net/server/1044250295632412722</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-        <image:loc>https://cdn.discordapp.com/icons/1044250295632412722/374160d8681f618d537948c872524e72.png</image:loc>
-        </image:image>
-        </url><url>
-        <loc>https://discolounge.net/server/967405540235943986</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-        <image:loc>https://cdn.discordapp.com/icons/967405540235943986/4dc8f0d95b998e4d803e28377e8ce47e.png</image:loc>
-        </image:image>
-        </url><url>
-        <loc>https://discolounge.net/server/839824640666501180</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-        <image:loc>https://cdn.discordapp.com/icons/839824640666501180/e699788e41edf8e284cd8d6441ccf88e.png</image:loc>
-        </image:image>
-        </url><url>
-        <loc>https://discolounge.net/server/1070007011070185604</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-        <image:loc>https://cdn.discordapp.com/icons/1070007011070185604/null.png</image:loc>
-        </image:image>
-        </url><url>
-        <loc>https://discolounge.net/server/1067803723243454495</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-        <image:loc>https://cdn.discordapp.com/icons/1067803723243454495/cc520c80b71087040d8e0492025f56c8.png</image:loc>
-        </image:image>
-        </url><url>
-        <loc>https://discolounge.net/server/1058327553049382912</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-        <image:loc>https://cdn.discordapp.com/icons/1058327553049382912/39f65441d7a2569b7ea7360098f96d4b.png</image:loc>
-        </image:image>
-        </url><url>
-        <loc>https://discolounge.net/server/984816152008065065</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-        <image:loc>https://cdn.discordapp.com/icons/984816152008065065/79929b065597b7e93f75dfb0911dff71.png</image:loc>
-        </image:image>
-        </url><url>
-        <loc>https://discolounge.net/server/949582278017810452</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-        <image:loc>https://cdn.discordapp.com/icons/949582278017810452/a0f4b427dfff29edec29d5475e392d8d.png</image:loc>
-        </image:image>
-        </url><url>
-        <loc>https://discolounge.net/server/1064172508439396353</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-        <image:loc>https://cdn.discordapp.com/icons/1064172508439396353/07d88c3599dfe5192fb0b35fe57f323f.png</image:loc>
-        </image:image>
-        </url><url>
-        <loc>https://discolounge.net/server/1053493432456331304</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-        <image:loc>https://cdn.discordapp.com/icons/1053493432456331304/cf98997069c61c9af668ce3b3c459421.png</image:loc>
-        </image:image>
-        </url><url>
-        <loc>https://discolounge.net/server/997851406167969933</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-        <image:loc>https://cdn.discordapp.com/icons/997851406167969933/a56b514c4a1c87e93f2b6cc9df485d7e.png</image:loc>
-        </image:image>
-        </url><url>
-        <loc>https://discolounge.net/server/1034475422454399089</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-        <image:loc>https://cdn.discordapp.com/icons/1034475422454399089/a_362e6434b636071ddb9b91d5ab771e05.png</image:loc>
-        </image:image>
-        </url><url>
-        <loc>https://discolounge.net/server/1061472205432684614</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-        <image:loc>https://cdn.discordapp.com/icons/1061472205432684614/695355508de64c53385e5cd9c308d72d.png</image:loc>
-        </image:image>
-        </url><url>
-        <loc>https://discolounge.net/server/1062560181306806313</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-        <image:loc>https://cdn.discordapp.com/icons/1062560181306806313/3644b946d9e2c873c689e2cfd2f1b12b.png</image:loc>
-        </image:image>
-        </url><url>
-        <loc>https://discolounge.net/server/1060160023151517706</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-        <image:loc>https://cdn.discordapp.com/icons/1060160023151517706/a2ec572fec5130fe62ecd260b35d5fa1.png</image:loc>
-        </image:image>
-        </url><url>
-        <loc>https://discolounge.net/server/1030818144618565673</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-        <image:loc>https://cdn.discordapp.com/icons/1030818144618565673/76233ab1c6d55d6323346708dcc0da39.png</image:loc>
-        </image:image>
-        </url><url>
-        <loc>https://discolounge.net/server/934680836555538534</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-        <image:loc>https://cdn.discordapp.com/icons/934680836555538534/36028667dfd87c8f2e00ace610bdd0e4.png</image:loc>
-        </image:image>
-        </url><url>
-        <loc>https://discolounge.net/server/1059763287115440168</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-        <image:loc>https://cdn.discordapp.com/icons/1059763287115440168/a_e89e9297fd5e2a9e6f8c860eb84e3b64.png</image:loc>
-        </image:image>
-        </url><url>
-        <loc>https://discolounge.net/server/1068687442753880125</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-        <image:loc>https://cdn.discordapp.com/icons/1068687442753880125/409e9e23fc6bef9fbadd0cdaf0a4728f.png</image:loc>
-        </image:image>
-        </url><url>
-        <loc>https://discolounge.net/server/1046401006784753664</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-        <image:loc>https://cdn.discordapp.com/icons/1046401006784753664/e09caa72ea1a7325b504dcecbb9bd6d0.png</image:loc>
-        </image:image>
-        </url><url>
-        <loc>https://discolounge.net/server/1048246413303226498</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-        <image:loc>https://cdn.discordapp.com/icons/1048246413303226498/bbf97de08ae62d4d4eb801c956bedeba.png</image:loc>
-        </image:image>
-        </url><url>
-        <loc>https://discolounge.net/server/1060018243194069142</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-        <image:loc>https://cdn.discordapp.com/icons/1060018243194069142/null.png</image:loc>
-        </image:image>
-        </url><url>
-        <loc>https://discolounge.net/server/1060806317968732212</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-        <image:loc>https://cdn.discordapp.com/icons/1060806317968732212/af2e57500fa8093df848dbaa437167e5.png</image:loc>
-        </image:image>
-        </url><url>
-        <loc>https://discolounge.net/server/1061665303320342621</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-        <image:loc>https://cdn.discordapp.com/icons/1061665303320342621/a_93901543785646bfe6bab1c5144d7b5c.png</image:loc>
-        </image:image>
-        </url><url>
-        <loc>https://discolounge.net/server/1028926255837478952</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-        <image:loc>https://cdn.discordapp.com/icons/1028926255837478952/b1e90ed459e4a486ecb3ecc3b48c7a83.png</image:loc>
-        </image:image>
-        </url><url>
-        <loc>https://discolounge.net/server/634856370029723668</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-        <image:loc>https://cdn.discordapp.com/icons/634856370029723668/null.png</image:loc>
-        </image:image>
-        </url><url>
-        <loc>https://discolounge.net/server/1063219450469429359</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-        <image:loc>https://cdn.discordapp.com/icons/1063219450469429359/613a4a7f0868b939ed5355bb4577df85.png</image:loc>
-        </image:image>
-        </url><url>
-        <loc>https://discolounge.net/server/1027557909351104572</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-        <image:loc>https://cdn.discordapp.com/icons/1027557909351104572/322b40f93383eaedc586974793f20292.png</image:loc>
-        </image:image>
-        </url><url>
-        <loc>https://discolounge.net/server/1065041479548018821</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-        <image:loc>https://cdn.discordapp.com/icons/1065041479548018821/6391d781af795c442ed456539a63bea2.png</image:loc>
-        </image:image>
-        </url><url>
-        <loc>https://discolounge.net/server/1065951804753461309</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-        <image:loc>https://cdn.discordapp.com/icons/1065951804753461309/dfa762adf857b95956e1878b15660d31.png</image:loc>
-        </image:image>
-        </url><url>
-        <loc>https://discolounge.net/server/1014232236402409522</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-        <image:loc>https://cdn.discordapp.com/icons/1014232236402409522/5c069bb797f8d5a7d014b6a3efaf7403.png</image:loc>
-        </image:image>
-        </url><url>
-        <loc>https://discolounge.net/server/726251694706393292</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-        <image:loc>https://cdn.discordapp.com/icons/726251694706393292/6407bb9e31ebba5839e60c3f28549f80.png</image:loc>
-        </image:image>
-        </url><url>
-        <loc>https://discolounge.net/server/915362732583321611</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-        <image:loc>https://cdn.discordapp.com/icons/915362732583321611/73ea0891abdf71c91edd75c9ae19d3db.png</image:loc>
-        </image:image>
-        </url><url>
-        <loc>https://discolounge.net/server/1066878120663203941</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-        <image:loc>https://cdn.discordapp.com/icons/1066878120663203941/03b4c37f763d2a7c624195719abf9ec2.png</image:loc>
-        </image:image>
-        </url><url>
-        <loc>https://discolounge.net/server/1064313444813262908</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-        <image:loc>https://cdn.discordapp.com/icons/1064313444813262908/a_583cb9793d40b54b2279d92279b97b2f.png</image:loc>
-        </image:image>
-        </url><url>
-        <loc>https://discolounge.net/server/1025097124679008368</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-        <image:loc>https://cdn.discordapp.com/icons/1025097124679008368/765fe205ecee6b62a8f3753b5248040b.png</image:loc>
-        </image:image>
-        </url><url>
-        <loc>https://discolounge.net/server/1060028997867667486</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-        <image:loc>https://cdn.discordapp.com/icons/1060028997867667486/8441e44e5e8c3623f62b1203e70286fe.png</image:loc>
-        </image:image>
-        </url><url>
-        <loc>https://discolounge.net/server/1011257486801633341</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-        <image:loc>https://cdn.discordapp.com/icons/1011257486801633341/f44829232ab3bacd0121116c04dd1110.png</image:loc>
-        </image:image>
-        </url><url>
-        <loc>https://discolounge.net/server/1058869615582777344</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-        <image:loc>https://cdn.discordapp.com/icons/1058869615582777344/3d86f9ba3e583ebfc9fdc26038c8afe9.png</image:loc>
-        </image:image>
-        </url><url>
-        <loc>https://discolounge.net/server/805807459179823104</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-        <image:loc>https://cdn.discordapp.com/icons/805807459179823104/e6b4def743806f0d6c4886081bab1e48.png</image:loc>
-        </image:image>
-        </url><url>
-        <loc>https://discolounge.net/server/948696395681001574</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-        <image:loc>https://cdn.discordapp.com/icons/948696395681001574/86c4310208ac5ef093c8989dc0ceebc5.png</image:loc>
-        </image:image>
-        </url><url>
-        <loc>https://discolounge.net/server/1060647365146574968</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-        <image:loc>https://cdn.discordapp.com/icons/1060647365146574968/331ef0597f29d22b35cda4b8bb22f451.png</image:loc>
-        </image:image>
-        </url><url>
-        <loc>https://discolounge.net/server/1062523427145125939</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-        <image:loc>https://cdn.discordapp.com/icons/1062523427145125939/528850077925b05ca8f0bbe844248597.png</image:loc>
-        </image:image>
-        </url><url>
-        <loc>https://discolounge.net/server/1067610951743967292</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-        <image:loc>https://cdn.discordapp.com/icons/1067610951743967292/null.png</image:loc>
-        </image:image>
-        </url><url>
-        <loc>https://discolounge.net/server/992094572974985367</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-        <image:loc>https://cdn.discordapp.com/icons/992094572974985367/a_a96fe2ad9a106fa8f2209bfe033b7a56.png</image:loc>
-        </image:image>
-        </url><url>
-        <loc>https://discolounge.net/server/1054565330535600178</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-        <image:loc>https://cdn.discordapp.com/icons/1054565330535600178/576e3007432a55f5f887d5a90f1419e7.png</image:loc>
-        </image:image>
-        </url><url>
-        <loc>https://discolounge.net/server/982093850862555147</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-        <image:loc>https://cdn.discordapp.com/icons/982093850862555147/4c8d35737ecac787bca606d4f95b358c.png</image:loc>
-        </image:image>
-        </url><url>
-        <loc>https://discolounge.net/server/1064974293697572874</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-        <image:loc>https://cdn.discordapp.com/icons/1064974293697572874/null.png</image:loc>
-        </image:image>
-        </url>
+            <loc>https://discolounge.net/br/server/943585221943644201</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/943585221943644201/94321e77756808ad52deac79cbd0c9bd.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/1060912812102258758</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1060912812102258758/e1cd29a67ef53a6dcdc317154850922b.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/914232215091679332</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/914232215091679332/4a737083a2c98ebe2e4ddf3b53a4984d.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/1036346913911492750</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1036346913911492750/9d991b825e7e7a09318e95d7af1b0632.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/1057363269486133360</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1057363269486133360/3b7426de0cc5ac575cea2c9304f2088e.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/1058299107841675274</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1058299107841675274/41683dce14b6d97365a309443d1941e7.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/634079989310160896</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/634079989310160896/ceafa4204ab34be8ec16edf4bf7b4645.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/1026283727346733137</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1026283727346733137/5aed8414afa11ce2e352b2c35559ed0b.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/1053877138329182289</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1053877138329182289/4b6dcc573f2b479b0c34f593a1542ffd.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/655871441945886742</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/655871441945886742/null.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/835068714159570944</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/835068714159570944/null.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/1063915746289266729</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1063915746289266729/b9677763576df4c14a0f0aae672ff29a.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/1061736273292841023</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1061736273292841023/149a501accafdca6d8212be1f3228f6b.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/1042848358701736036</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/1022896078250582086</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1022896078250582086/5a506ff578c4d6b7625fc1300ec3bf70.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/1060609979507294318</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1060609979507294318/b51853ab1239723c6a028fd6b4e489e3.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/689937289282846776</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/689937289282846776/334a33390a20430e231f6896b51de92e.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/1044250295632412722</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1044250295632412722/374160d8681f618d537948c872524e72.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/849750171243249694</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/849750171243249694/4d36323593087e9e790745ddf3e202df.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/888480205709144084</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/888480205709144084/157cff143fe47dbf7d291a37dc6164dd.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/967405540235943986</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/967405540235943986/4dc8f0d95b998e4d803e28377e8ce47e.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/839824640666501180</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/839824640666501180/e699788e41edf8e284cd8d6441ccf88e.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/1070007011070185604</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1070007011070185604/null.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/1067803723243454495</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1067803723243454495/cc520c80b71087040d8e0492025f56c8.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/1058327553049382912</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1058327553049382912/39f65441d7a2569b7ea7360098f96d4b.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/968961803688226866</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/968961803688226866/eeebeb0e00124d78aa0934873caf0ca2.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/1058220833425870878</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1058220833425870878/a_07e9570593d0c51d298115f28793b84c.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/984816152008065065</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/984816152008065065/79929b065597b7e93f75dfb0911dff71.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/949582278017810452</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/949582278017810452/a0f4b427dfff29edec29d5475e392d8d.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/1068540942463807578</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1068540942463807578/df15eb9eec233c988acbe6e760de6f1d.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/1064172508439396353</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1064172508439396353/b2a0e4c4cb5228c13afec96ff995a6cf.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/1036755580041302047</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1036755580041302047/28b62a3ecc382829bd8128804aa904b4.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/1053493432456331304</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1053493432456331304/cf98997069c61c9af668ce3b3c459421.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/997851406167969933</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/997851406167969933/a56b514c4a1c87e93f2b6cc9df485d7e.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/1034475422454399089</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1034475422454399089/a_0a1a99bd1fc54e6513868242f46f9344.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/1061472205432684614</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1061472205432684614/695355508de64c53385e5cd9c308d72d.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/1062560181306806313</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1062560181306806313/3644b946d9e2c873c689e2cfd2f1b12b.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/1034264309892661278</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1034264309892661278/0eefe9a9f0f168c9e2bf265215dd11bc.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/1072931031985963038</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1072931031985963038/null.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/1060160023151517706</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1060160023151517706/a_54a0e011a27252d9d40f678633e86777.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/1030818144618565673</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1030818144618565673/76233ab1c6d55d6323346708dcc0da39.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/934680836555538534</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/934680836555538534/8d6426c3e550ba5485b0ed5b894ce98c.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/1059763287115440168</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1059763287115440168/a_e89e9297fd5e2a9e6f8c860eb84e3b64.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/1068687442753880125</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1068687442753880125/409e9e23fc6bef9fbadd0cdaf0a4728f.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/1071813491280846879</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1071813491280846879/4fef290dbc01b6205320218705a02021.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/929333390228983818</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/929333390228983818/2ee282b21772e9ffc2c9f9417a15fac2.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/1046401006784753664</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1046401006784753664/e09caa72ea1a7325b504dcecbb9bd6d0.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/1048246413303226498</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1048246413303226498/bbf97de08ae62d4d4eb801c956bedeba.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/1060018243194069142</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1060018243194069142/null.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/1069704332888518737</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1069704332888518737/3c70772ad41433cbc5b63c23d69af981.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/1060806317968732212</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1060806317968732212/af2e57500fa8093df848dbaa437167e5.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/1061665303320342621</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1061665303320342621/29e493c67b340590d20ddf1b567f37ca.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/1028926255837478952</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1028926255837478952/b1e90ed459e4a486ecb3ecc3b48c7a83.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/1065705957860049027</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1065705957860049027/d94a71fd8fa580a1cc9e157227f3276c.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/634856370029723668</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/634856370029723668/null.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/1063219450469429359</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1063219450469429359/613a4a7f0868b939ed5355bb4577df85.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/1027557909351104572</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1027557909351104572/a_2d248bad494db756d058e3af84f96ded.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/1065041479548018821</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1065041479548018821/6391d781af795c442ed456539a63bea2.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/1065951804753461309</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1065951804753461309/dfa762adf857b95956e1878b15660d31.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/1014232236402409522</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1014232236402409522/5c069bb797f8d5a7d014b6a3efaf7403.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/726251694706393292</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/726251694706393292/6407bb9e31ebba5839e60c3f28549f80.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/1066878120663203941</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1066878120663203941/03b4c37f763d2a7c624195719abf9ec2.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/1064313444813262908</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1064313444813262908/583cb9793d40b54b2279d92279b97b2f.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/1025097124679008368</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1025097124679008368/765fe205ecee6b62a8f3753b5248040b.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/1060028997867667486</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1060028997867667486/8441e44e5e8c3623f62b1203e70286fe.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/1011257486801633341</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1011257486801633341/f44829232ab3bacd0121116c04dd1110.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/1069804882065903697</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1069804882065903697/d0825d3baf95f23bd059bf208c5f497b.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/1058869615582777344</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1058869615582777344/3d86f9ba3e583ebfc9fdc26038c8afe9.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/805807459179823104</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/805807459179823104/e6b4def743806f0d6c4886081bab1e48.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/948696395681001574</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/948696395681001574/86c4310208ac5ef093c8989dc0ceebc5.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/1060647365146574968</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1060647365146574968/331ef0597f29d22b35cda4b8bb22f451.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/1067610951743967292</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1067610951743967292/null.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/1036444852830871582</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1036444852830871582/db5ec743cb5ec9f474149c2d78af8859.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/1054565330535600178</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1054565330535600178/576e3007432a55f5f887d5a90f1419e7.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/982093850862555147</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/982093850862555147/4c8d35737ecac787bca606d4f95b358c.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/br/server/1064974293697572874</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1064974293697572874/null.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/943585221943644201</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/943585221943644201/94321e77756808ad52deac79cbd0c9bd.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/1060912812102258758</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1060912812102258758/e1cd29a67ef53a6dcdc317154850922b.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/914232215091679332</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/914232215091679332/4a737083a2c98ebe2e4ddf3b53a4984d.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/1036346913911492750</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1036346913911492750/9d991b825e7e7a09318e95d7af1b0632.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/1057363269486133360</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1057363269486133360/3b7426de0cc5ac575cea2c9304f2088e.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/1058299107841675274</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1058299107841675274/41683dce14b6d97365a309443d1941e7.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/634079989310160896</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/634079989310160896/ceafa4204ab34be8ec16edf4bf7b4645.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/1026283727346733137</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1026283727346733137/5aed8414afa11ce2e352b2c35559ed0b.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/1053877138329182289</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1053877138329182289/4b6dcc573f2b479b0c34f593a1542ffd.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/655871441945886742</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/655871441945886742/null.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/835068714159570944</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/835068714159570944/null.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/1063915746289266729</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1063915746289266729/b9677763576df4c14a0f0aae672ff29a.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/1061736273292841023</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1061736273292841023/149a501accafdca6d8212be1f3228f6b.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/1042848358701736036</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/1022896078250582086</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1022896078250582086/5a506ff578c4d6b7625fc1300ec3bf70.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/1060609979507294318</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1060609979507294318/b51853ab1239723c6a028fd6b4e489e3.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/689937289282846776</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/689937289282846776/334a33390a20430e231f6896b51de92e.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/1044250295632412722</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1044250295632412722/374160d8681f618d537948c872524e72.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/849750171243249694</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/849750171243249694/4d36323593087e9e790745ddf3e202df.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/888480205709144084</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/888480205709144084/157cff143fe47dbf7d291a37dc6164dd.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/967405540235943986</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/967405540235943986/4dc8f0d95b998e4d803e28377e8ce47e.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/839824640666501180</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/839824640666501180/e699788e41edf8e284cd8d6441ccf88e.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/1070007011070185604</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1070007011070185604/null.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/1067803723243454495</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1067803723243454495/cc520c80b71087040d8e0492025f56c8.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/1058327553049382912</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1058327553049382912/39f65441d7a2569b7ea7360098f96d4b.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/968961803688226866</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/968961803688226866/eeebeb0e00124d78aa0934873caf0ca2.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/1058220833425870878</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1058220833425870878/a_07e9570593d0c51d298115f28793b84c.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/984816152008065065</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/984816152008065065/79929b065597b7e93f75dfb0911dff71.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/949582278017810452</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/949582278017810452/a0f4b427dfff29edec29d5475e392d8d.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/1068540942463807578</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1068540942463807578/df15eb9eec233c988acbe6e760de6f1d.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/1064172508439396353</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1064172508439396353/b2a0e4c4cb5228c13afec96ff995a6cf.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/1036755580041302047</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1036755580041302047/28b62a3ecc382829bd8128804aa904b4.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/1053493432456331304</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1053493432456331304/cf98997069c61c9af668ce3b3c459421.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/997851406167969933</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/997851406167969933/a56b514c4a1c87e93f2b6cc9df485d7e.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/1034475422454399089</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1034475422454399089/a_0a1a99bd1fc54e6513868242f46f9344.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/1061472205432684614</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1061472205432684614/695355508de64c53385e5cd9c308d72d.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/1062560181306806313</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1062560181306806313/3644b946d9e2c873c689e2cfd2f1b12b.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/1034264309892661278</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1034264309892661278/0eefe9a9f0f168c9e2bf265215dd11bc.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/1072931031985963038</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1072931031985963038/null.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/1060160023151517706</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1060160023151517706/a_54a0e011a27252d9d40f678633e86777.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/1030818144618565673</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1030818144618565673/76233ab1c6d55d6323346708dcc0da39.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/934680836555538534</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/934680836555538534/8d6426c3e550ba5485b0ed5b894ce98c.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/1059763287115440168</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1059763287115440168/a_e89e9297fd5e2a9e6f8c860eb84e3b64.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/1068687442753880125</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1068687442753880125/409e9e23fc6bef9fbadd0cdaf0a4728f.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/1071813491280846879</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1071813491280846879/4fef290dbc01b6205320218705a02021.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/929333390228983818</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/929333390228983818/2ee282b21772e9ffc2c9f9417a15fac2.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/1046401006784753664</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1046401006784753664/e09caa72ea1a7325b504dcecbb9bd6d0.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/1048246413303226498</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1048246413303226498/bbf97de08ae62d4d4eb801c956bedeba.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/1060018243194069142</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1060018243194069142/null.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/1069704332888518737</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1069704332888518737/3c70772ad41433cbc5b63c23d69af981.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/1060806317968732212</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1060806317968732212/af2e57500fa8093df848dbaa437167e5.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/1061665303320342621</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1061665303320342621/29e493c67b340590d20ddf1b567f37ca.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/1028926255837478952</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1028926255837478952/b1e90ed459e4a486ecb3ecc3b48c7a83.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/1065705957860049027</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1065705957860049027/d94a71fd8fa580a1cc9e157227f3276c.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/634856370029723668</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/634856370029723668/null.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/1063219450469429359</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1063219450469429359/613a4a7f0868b939ed5355bb4577df85.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/1027557909351104572</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1027557909351104572/a_2d248bad494db756d058e3af84f96ded.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/1065041479548018821</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1065041479548018821/6391d781af795c442ed456539a63bea2.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/1065951804753461309</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1065951804753461309/dfa762adf857b95956e1878b15660d31.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/1014232236402409522</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1014232236402409522/5c069bb797f8d5a7d014b6a3efaf7403.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/726251694706393292</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/726251694706393292/6407bb9e31ebba5839e60c3f28549f80.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/1066878120663203941</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1066878120663203941/03b4c37f763d2a7c624195719abf9ec2.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/1064313444813262908</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1064313444813262908/583cb9793d40b54b2279d92279b97b2f.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/1025097124679008368</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1025097124679008368/765fe205ecee6b62a8f3753b5248040b.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/1060028997867667486</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1060028997867667486/8441e44e5e8c3623f62b1203e70286fe.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/1011257486801633341</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1011257486801633341/f44829232ab3bacd0121116c04dd1110.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/1069804882065903697</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1069804882065903697/d0825d3baf95f23bd059bf208c5f497b.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/1058869615582777344</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1058869615582777344/3d86f9ba3e583ebfc9fdc26038c8afe9.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/805807459179823104</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/805807459179823104/e6b4def743806f0d6c4886081bab1e48.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/948696395681001574</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/948696395681001574/86c4310208ac5ef093c8989dc0ceebc5.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/1060647365146574968</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1060647365146574968/331ef0597f29d22b35cda4b8bb22f451.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/1067610951743967292</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1067610951743967292/null.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/1036444852830871582</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1036444852830871582/db5ec743cb5ec9f474149c2d78af8859.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/1054565330535600178</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1054565330535600178/576e3007432a55f5f887d5a90f1419e7.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/982093850862555147</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/982093850862555147/4c8d35737ecac787bca606d4f95b358c.png</image:loc>
+            </image:image>
+            </url><url>
+            <loc>https://discolounge.net/us/server/1064974293697572874</loc>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
+            <image:image>
+            <image:loc>https://cdn.discordapp.com/icons/1064974293697572874/null.png</image:loc>
+            </image:image>
+            </url>
         <url>
-        <loc>https://discolounge.net/participate/event</loc>
+        <loc>https://discolounge.net/br//participate/event</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
         <image:image>
         <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
         </image:image>
         </url><url>
-        <loc>https://discolounge.net/events</loc>
+        <loc>https://discolounge.net/us//participate/event</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
         <image:image>
         <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
         </image:image>
         </url><url>
-        <loc>https://discolounge.net/</loc>
+        <loc>https://discolounge.net/br//:lang/events</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
         <image:image>
         <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
         </image:image>
         </url><url>
-        <loc>https://discolounge.net/home</loc>
+        <loc>https://discolounge.net/us//:lang/events</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
         <image:image>
         <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
         </image:image>
         </url><url>
-        <loc>https://discolounge.net/list</loc>
+        <loc>https://discolounge.net/br//</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
         <image:image>
         <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
         </image:image>
         </url><url>
-        <loc>https://discolounge.net/getMoreList</loc>
+        <loc>https://discolounge.net/us//</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
         <image:image>
         <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
         </image:image>
         </url><url>
-        <loc>https://discolounge.net/searchName</loc>
+        <loc>https://discolounge.net/br//:lang/</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
         <image:image>
         <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
         </image:image>
         </url><url>
-        <loc>https://discolounge.net/:guild/post/:id</loc>
+        <loc>https://discolounge.net/us//:lang/</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
         <image:image>
         <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
         </image:image>
         </url><url>
-        <loc>https://discolounge.net/servers/search</loc>
+        <loc>https://discolounge.net/br//:lang/home</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
         <image:image>
         <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
         </image:image>
         </url><url>
-        <loc>https://discolounge.net/servers/searchName</loc>
+        <loc>https://discolounge.net/us//:lang/home</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
         <image:image>
         <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
         </image:image>
         </url><url>
-        <loc>https://discolounge.net/server/:id</loc>
+        <loc>https://discolounge.net/br//list</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
         <image:image>
         <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
         </image:image>
         </url><url>
-        <loc>https://discolounge.net/server/:id/join</loc>
+        <loc>https://discolounge.net/us//list</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
         <image:image>
         <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
         </image:image>
         </url><url>
-        <loc>https://discolounge.net/vote</loc>
+        <loc>https://discolounge.net/br//getMoreList</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
         <image:image>
         <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
         </image:image>
         </url><url>
-        <loc>https://discolounge.net/market</loc>
+        <loc>https://discolounge.net/us//getMoreList</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
         <image:image>
         <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
         </image:image>
         </url><url>
-        <loc>https://discolounge.net/market/buyitem</loc>
+        <loc>https://discolounge.net/br//searchName</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
         <image:image>
         <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
         </image:image>
         </url><url>
-        <loc>https://discolounge.net/partners</loc>
+        <loc>https://discolounge.net/us//searchName</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
         <image:image>
         <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
         </image:image>
         </url><url>
-        <loc>https://discolounge.net/premium</loc>
+        <loc>https://discolounge.net/br//:guild/post/:id</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
         <image:image>
         <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
         </image:image>
         </url><url>
-        <loc>https://discolounge.net/checkoutPlan</loc>
+        <loc>https://discolounge.net/us//:guild/post/:id</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
         <image:image>
         <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
         </image:image>
         </url><url>
-        <loc>https://discolounge.net/success</loc>
+        <loc>https://discolounge.net/br//:lang/servers/search</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
         <image:image>
         <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
         </image:image>
         </url><url>
-        <loc>https://discolounge.net/r/:id</loc>
+        <loc>https://discolounge.net/us//:lang/servers/search</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
         <image:image>
         <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
         </image:image>
         </url><url>
-        <loc>https://discolounge.net/referrals</loc>
+        <loc>https://discolounge.net/br//servers/searchName</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
         <image:image>
         <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
         </image:image>
         </url><url>
-        <loc>https://discolounge.net/tos</loc>
+        <loc>https://discolounge.net/us//servers/searchName</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
         <image:image>
         <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
         </image:image>
         </url><url>
-        <loc>https://discolounge.net/pp</loc>
+        <loc>https://discolounge.net/br//:lang/server/:id</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
         <image:image>
         <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
         </image:image>
         </url><url>
-        <loc>https://discolounge.net/bots/verifyId</loc>
+        <loc>https://discolounge.net/us//:lang/server/:id</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
         <image:image>
         <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
         </image:image>
         </url><url>
-        <loc>https://discolounge.net/bot/:id</loc>
+        <loc>https://discolounge.net/br//server/:id/join</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
         <image:image>
         <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
         </image:image>
         </url><url>
-        <loc>https://discolounge.net/bot/vote</loc>
+        <loc>https://discolounge.net/us//server/:id/join</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
         <image:image>
         <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
         </image:image>
         </url><url>
-        <loc>https://discolounge.net/bots</loc>
+        <loc>https://discolounge.net/br//vote</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
         <image:image>
         <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
         </image:image>
         </url><url>
-        <loc>https://discolounge.net/bots/search</loc>
+        <loc>https://discolounge.net/us//vote</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
         <image:image>
         <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
         </image:image>
         </url><url>
-        <loc>https://discolounge.net/bots/searchName</loc>
+        <loc>https://discolounge.net/br//market</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
         <image:image>
         <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
         </image:image>
         </url><url>
-        <loc>https://discolounge.net/guildExist</loc>
+        <loc>https://discolounge.net/us//market</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
         <image:image>
         <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
         </image:image>
         </url><url>
-        <loc>https://discolounge.net/premiumSupporters</loc>
+        <loc>https://discolounge.net/br//market/buyitem</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
         <image:image>
         <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
         </image:image>
         </url><url>
-        <loc>https://discolounge.net/recentPosts</loc>
+        <loc>https://discolounge.net/us//market/buyitem</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
         <image:image>
         <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
         </image:image>
         </url><url>
-        <loc>https://discolounge.net/login</loc>
+        <loc>https://discolounge.net/br//:lang/partners</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
         <image:image>
         <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
         </image:image>
         </url><url>
-        <loc>https://discolounge.net/logout</loc>
+        <loc>https://discolounge.net/us//:lang/partners</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
         <image:image>
         <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
         </image:image>
         </url><url>
-        <loc>https://discolounge.net/servers/morelike</loc>
+        <loc>https://discolounge.net/br//:lang/premium</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
         <image:image>
         <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
         </image:image>
         </url><url>
-        <loc>https://discolounge.net/bots/morelike</loc>
+        <loc>https://discolounge.net/us//:lang/premium</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
         <image:image>
         <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
         </image:image>
         </url><url>
-        <loc>https://discolounge.net/login</loc>
+        <loc>https://discolounge.net/br//checkoutPlan</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+        <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
+        </image:image>
+        </url><url>
+        <loc>https://discolounge.net/us//checkoutPlan</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+        <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
+        </image:image>
+        </url><url>
+        <loc>https://discolounge.net/br//success</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+        <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
+        </image:image>
+        </url><url>
+        <loc>https://discolounge.net/us//success</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+        <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
+        </image:image>
+        </url><url>
+        <loc>https://discolounge.net/br//r/:id</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+        <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
+        </image:image>
+        </url><url>
+        <loc>https://discolounge.net/us//r/:id</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+        <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
+        </image:image>
+        </url><url>
+        <loc>https://discolounge.net/br//:lang/referrals</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+        <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
+        </image:image>
+        </url><url>
+        <loc>https://discolounge.net/us//:lang/referrals</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+        <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
+        </image:image>
+        </url><url>
+        <loc>https://discolounge.net/br//tos</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+        <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
+        </image:image>
+        </url><url>
+        <loc>https://discolounge.net/us//tos</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+        <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
+        </image:image>
+        </url><url>
+        <loc>https://discolounge.net/br//pp</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+        <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
+        </image:image>
+        </url><url>
+        <loc>https://discolounge.net/us//pp</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+        <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
+        </image:image>
+        </url><url>
+        <loc>https://discolounge.net/br//bots/verifyId</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+        <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
+        </image:image>
+        </url><url>
+        <loc>https://discolounge.net/us//bots/verifyId</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+        <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
+        </image:image>
+        </url><url>
+        <loc>https://discolounge.net/br//:lang/bot/:id</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+        <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
+        </image:image>
+        </url><url>
+        <loc>https://discolounge.net/us//:lang/bot/:id</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+        <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
+        </image:image>
+        </url><url>
+        <loc>https://discolounge.net/br//bot/vote</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+        <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
+        </image:image>
+        </url><url>
+        <loc>https://discolounge.net/us//bot/vote</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+        <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
+        </image:image>
+        </url><url>
+        <loc>https://discolounge.net/br//:lang/bots</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+        <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
+        </image:image>
+        </url><url>
+        <loc>https://discolounge.net/us//:lang/bots</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+        <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
+        </image:image>
+        </url><url>
+        <loc>https://discolounge.net/br//:lang/bots/search</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+        <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
+        </image:image>
+        </url><url>
+        <loc>https://discolounge.net/us//:lang/bots/search</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+        <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
+        </image:image>
+        </url><url>
+        <loc>https://discolounge.net/br//bots/searchName</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+        <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
+        </image:image>
+        </url><url>
+        <loc>https://discolounge.net/us//bots/searchName</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+        <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
+        </image:image>
+        </url><url>
+        <loc>https://discolounge.net/br//api/login/servers</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+        <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
+        </image:image>
+        </url><url>
+        <loc>https://discolounge.net/us//api/login/servers</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+        <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
+        </image:image>
+        </url><url>
+        <loc>https://discolounge.net/br//guildExist</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+        <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
+        </image:image>
+        </url><url>
+        <loc>https://discolounge.net/us//guildExist</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+        <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
+        </image:image>
+        </url><url>
+        <loc>https://discolounge.net/br//premiumSupporters</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+        <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
+        </image:image>
+        </url><url>
+        <loc>https://discolounge.net/us//premiumSupporters</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+        <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
+        </image:image>
+        </url><url>
+        <loc>https://discolounge.net/br//recentPosts</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+        <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
+        </image:image>
+        </url><url>
+        <loc>https://discolounge.net/us//recentPosts</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+        <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
+        </image:image>
+        </url><url>
+        <loc>https://discolounge.net/br//:lang/login</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+        <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
+        </image:image>
+        </url><url>
+        <loc>https://discolounge.net/us//:lang/login</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+        <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
+        </image:image>
+        </url><url>
+        <loc>https://discolounge.net/br//logout</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+        <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
+        </image:image>
+        </url><url>
+        <loc>https://discolounge.net/us//logout</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+        <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
+        </image:image>
+        </url><url>
+        <loc>https://discolounge.net/br//servers/morelike</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+        <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
+        </image:image>
+        </url><url>
+        <loc>https://discolounge.net/us//servers/morelike</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+        <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
+        </image:image>
+        </url><url>
+        <loc>https://discolounge.net/br//bots/morelike</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+        <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
+        </image:image>
+        </url><url>
+        <loc>https://discolounge.net/us//bots/morelike</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+        <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
+        </image:image>
+        </url><url>
+        <loc>https://discolounge.net/br//login</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+        <image:loc>https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png</image:loc>
+        </image:image>
+        </url><url>
+        <loc>https://discolounge.net/us//login</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
         <image:image>

@@ -5,7 +5,7 @@ const Bots = require(`${__dirname.split('src')[0]}/src/modals/bots`);
 var functions = require(`${__dirname.split('src')[0]}/src/functions/functions`);
 
 module.exports = function (app,url,client,nodecache) {
-  app.get("/bots/add", functions.ensureAuthenticated, (req, res) => {
+  app.get("/:lang/bots/add",functions.languages, functions.ensureAuthenticated, (req, res) => {
       res.render(`./bots/addBot.ejs`);
   });
   app.post("/bots/verifyId", functions.ensureAuthenticated, async (req, res) => {

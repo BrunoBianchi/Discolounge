@@ -1,23 +1,25 @@
+<!DOCTYPE html>
+<html lang="<%=locals.user_lang%>">
 <%- include('../partials/favicon'); %>
-<title translate="no">Discolounge - Dashboard  </title>
+<title translate="no"><%=locals.language.dashboard.about.header.title%> </title>
   <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="apple-mobile-web-app-title" content="Discord">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="msapplication-TileColor" content="#8c72da">
-<meta name="description" content="Are you looking for the best Discord servers for your interests? From Roleplay to Gaming, we have you covered!">
-<meta property="og:title" content="Discord Servers" />
+<meta name="description" content="<%=locals.language.dashboard.about.header.description%>">
+<meta property="og:title" content="<%=locals.language.dashboard.about.header.title%>" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://discolounge.net/dashboard" />
-<meta property="og:description" content="Are you looking for the best Discord servers for your interests? From Roleplay to Gaming, we have you covered!" />
+<meta property="og:description" content="<%=locals.language.dashboard.about.header.description%>" />
 <meta name="theme-color" content="#439CEE">
-<meta property="og:image:alt" content="Are you looking for the best Discord servers for your interests? From Roleplay to Gaming, we have you covered!" />
+<meta property="og:image:alt" content="<%=locals.language.dashboard.about.header.description%>" />
 <meta property="og:site_name" content="Discolounge" />
 <link rel='canonical' href='https://discolounge.net/dashboard' />
 
 <meta property="twitter:url" content="https://discolounge.net/dashboard">
-<meta property="twitter:title" content="Discord Servers">
-<meta property="twitter:description" content="Are you looking for the best Discord servers for your interests? From Roleplay to Gaming, we have you covered!">
+<meta property="twitter:title" content="<%=locals.language.dashboard.about.header.title%>">
+<meta property="twitter:description" content="<%=locals.language.dashboard.about.header.description%>">
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.5/socket.io.js" integrity="sha512-2rUSTSAeOO02jF6eBqENNqPs1EohenJ5j+1dgDPdXSLz9nOlrr8DJk4zW/lDy8rjhGCSonW3Gx812XJQIKZKJQ==" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -60,19 +62,19 @@
         <div id="content">
           <div class="form-content" >
             <div class="form-group">
-              <label id="tags_header" for="exampleFormControlSelect1">Tags <span style="color:#de4343">*</span></label>
+              <label id="tags_header" for="exampleFormControlSelect1"><%=locals.language.dashboard.about.body.card.tags%> <span style="color:#de4343">*</span></label>
               <input type="text" value="<%=tags%>" id="tags"  class="form-control" name="tags" required>
             </div>
           </div>
           <div class="form-content">
             <div class="form-group">
-              <label id="short_description_header" for="exampleFormControlSelect1">Short Description <span style="color:#de4343">*</span></label>
-              <textarea name='short_description' style="height:150px" id="SD"  placeholder="Write a unique short description about your server" class="form-control" required><%=data.short_description%></textarea>
+              <label id="short_description_header" for="exampleFormControlSelect1"><%=locals.language.dashboard.about.body.card.short.title%> <span style="color:#de4343">*</span></label>
+              <textarea name='short_description' style="height:150px" id="SD"  placeholder="<%=locals.language.dashboard.about.body.card.short.description%>" class="form-control" required><%=data.short_description%></textarea>
             </div>
           </div>
           <div class="form-content">
             <div class="form-group">
-              <label id="long_description_header" for="exampleFormControlSelect1">Long Description <span style="color:#de4343">*</span></label>
+              <label id="long_description_header" for="exampleFormControlSelect1"><%=locals.language.dashboard.about.body.card.long.title%><span style="color:#de4343">*</span></label>
               <div id="markdown-editor">
                 <div class="toolbar">
                   <div class="group">
@@ -101,12 +103,12 @@
             </div>
           </div>
           <div class="form-content">
-            <label id="long_description_header" for="exampleFormControlSelect1">Server Invite <span style="color:#de4343">*</span></label>
+            <label id="long_description_header" for="exampleFormControlSelect1"><%=locals.language.dashboard.about.body.card.serverInvite.title%> <span style="color:#de4343">*</span></label>
       
             <div class="input-group">
               <input type="text" class="form-control" id="invites" aria-label="Text input with dropdown button" value="<%=data.invite%>" readonly>
               <div class="input-group-append">
-                <button id="invite-btn" class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false"><%if(data.invite){%><%=guild.channels.cache.get(data.inviteChannel).name%><%}else{%>Select Channel<%}%></button>
+                <button id="invite-btn" class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false"><%if(data.invite){%><%=guild.channels.cache.get(data.inviteChannel).name%><%}else{%><%=locals.language.dashboard.about.body.card.serverInvite.select%><%}%></button>
                 <div class="dropdown-menu">
                   <%var role = guild.roles.cache.find(role=> role.name === '@everyone')%>
                   <%guild.channels.cache.filter(channel=> channel.type === 'GUILD_TEXT' && channel.permissionsFor(role).has('VIEW_CHANNEL') && channel.id != data.inviteChannel ).forEach(channel=>{%>
@@ -119,14 +121,14 @@
 
             <div  id="wb-content" class="form-content">
                 <div class="form-group">
-                    <label for="exampleFormControlSelect1">Custom Url </label>
+                    <label for="exampleFormControlSelect1"><%=locals.language.dashboard.about.body.card.custom%></label>
                     <div  class="input-group mb-2">
                       <div class="input-group-prepend">
-                        <div class="input-group-text">discolounge.net/server/</div>
+                        <div class="input-group-text">discolounge.net/<%=locals.user_lang%>/server/</div>
                       </div>
                       <input type="text" class="form-control" value="<%=data.custom_url%>" id="url" placeholder="Name" name="custom_url">
                       <div class="input-group-append">
-                        <button class="btn btn-outline-secondary" onclick="customUrlChange()" onclicktype="button">Change</button>
+                        <button class="btn btn-outline-secondary" onclick="customUrlChange()" onclicktype="button"><%=locals.language.dashboard.about.body.card.change%></button>
                       </div>
                     
                 </div>
@@ -140,7 +142,7 @@
             <div class="form-group">
               <input id="s2d" type="checkbox" value="<%=data.NSFW%>" name="NSFW" value="false" onClick="if(this.value === 'false') {this.value = true }else {this.value =false}" class="switch" <%if(data.NSFW === true){%> checked<%}%> >
               <label for="s2d">NSFW</label>
-              <button style="float:right"  id="confirm-btn" onclick="confirm()">Save Changes</button>
+              <button style="float:right"  id="confirm-btn" onclick="confirm()"><%=locals.language.dashboard.about.body.card.save_changes%></button>
       
       
             </div>
@@ -158,7 +160,7 @@
           <div class="container ">
             <div class="row">
               <div class="col-md-7">
-                <h3 >News And Updates 🎉</h3>
+                <h3 ><%=locals.language.dashboard.about.body.news%></h3>
                 <div class="posts">
                   <template id="card-template">
       
@@ -185,26 +187,26 @@
               </div>
               <div class="col-md-5">
                 <div class="info">
-                  <h3 class="supporters-h3" onclick="location.href='/TOS';" >Warning ⚠️</h3>
+                  <h3 class="supporters-h3" onclick="location.href='/TOS';" ><%=locals.language.dashboard.about.body.warning.title%></h3>
                   <div class="info-content">
-                    <p>Before Adding your bot,please read all our <a href="/TOS">TOS</a>,make sure that everything is in accordance with our policy so that no type of penalty occurs</p>
+                    <p><%-locals.language.dashboard.about.body.warning.description%></p>
                   </div>
                 </div>
                 <div class="supporter">
-                  <h3 class="supporters-h3" onclick="location.href='/premium';" >Thanks to our supporters ❤️</h3>
+                  <h3 class="supporters-h3" onclick="location.href='/premium';" ><%=locals.language.dashboard.about.body.supporters.title%></h3>
                   <div class="our-supporters">
                     <div class="supporters">
                   </div>
-                    <p class="supporters-p">Wan't to be here and get more bonus,visits and so much more? try <a href="premium">Premium</a> </p>
+                    <p class="supporters-p">><%-locals.language.dashboard.about.body.supporters.description%> </p>
                   </div>
                 </div>
       
       
               </div>
             </div>
-      
+            <%- include('../partials/footer'); %>
+
             </div>
-              <%- include('../partials/footer'); %>
       
 
       
@@ -221,7 +223,7 @@
       <img class='supporters-more skeleton'>
       `)
       }
-          fetch(`/recentPosts`, { method: "GET",
+          fetch(`http://localhost:3000/recentPosts`, { method: "POST",
       headers: { "Content-Type": "application/json" },
       
       })
@@ -249,12 +251,13 @@
       })  
       
       
-      fetch(`/premiumSupporters`, { method: "GET",
+      fetch(`http://localhost:3000/premiumSupporters`, { method: "POST",
       headers: { "Content-Type": "application/json" },
       
       })
       .then(res => res.json())
       .then(async response => {
+        console.log(response)
         var users = response.users
         $('.supporters').empty()
         for(let i = 0; i < response.users.length; i++) {
@@ -430,3 +433,4 @@ $('#nav').toggleClass('active');
   margin-bottom:15px;
 }
     </style>
+    </html>

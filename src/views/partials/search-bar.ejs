@@ -77,7 +77,7 @@ for (let i = 0; i < 8; i++) {
               {src="https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png" 
             }
             $('#servers').append(`
-            <div onclick="location.href='/<%if(locals._locals.path_url.includes('bot')){ %>bot<%}else{%>server<%}%>/${server.id}';" class="mini-server">
+            <div onclick="location.href='/<%=locals.user_lang%>/<%if(locals._locals.path_url.includes('bot')){ %>bot<%}else{%>server<%}%>/${server.id}';" class="mini-server">
                 <div class="card">
                          <div class="row ">
                            <div class="col-md-2">
@@ -86,7 +86,7 @@ for (let i = 0; i < 8; i++) {
                              <div class="col-md-10 px-3">
                                <div class="card-block px-3">
                                  
-                                <h4 class="card-title"><a href="/server/${server.id}">${server.name} ${premium} ${partner} </a> 
+                                <h4 class="card-title"><a href="/<%=locals.user_lang%>/server/${server.id}">${server.name} ${premium} ${partner} </a> 
                                  <a href="/<%if(locals._locals.path_url.includes('bot')){ %>bot<%}else{%>server<%}%>/${server.id}#vote" style="float:right" class="btn btn-primary"><i class="fa-solid fa-caret-up"></i> Votes (1)</a>
                                </h4>
                                  </span>
@@ -101,7 +101,7 @@ for (let i = 0; i < 8; i++) {
             `)
         });
         $(".search-bar-see-more").removeClass("hidden");
-        $(".search-bar-see-more").attr("href", `<%if(locals._locals.path_url.includes('bot')){ %>/bots/search<%}else{%>/servers/search<%}%>?name=${$input.val()}`)
+        $(".search-bar-see-more").attr("href", `/<%=locals.user_lang%><%if(locals._locals.path_url.includes('bot')){ %>/bots/search<%}else{%>/servers/search<%}%>?name=${$input.val()}`)
     })
 })
 window.addEventListener('click', function(e){   
@@ -181,7 +181,7 @@ function doneTyping () {
               {src="https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png" 
             }
             $('#servers').append(`
-            <div onclick="location.href='/<%if(locals._locals.path_url.includes('bot')){ %>bot<%}else{%>server<%}%>/${server.id}';" class="mini-server">
+            <div onclick="location.href='/<%=locals.user_lang%>/<%if(locals._locals.path_url.includes('bot')){ %>bot<%}else{%>server<%}%>/${server.id}';" class="mini-server">
                 <div class="card">
                          <div class="row ">
                            <div class="col-md-2">
@@ -190,7 +190,7 @@ function doneTyping () {
                              <div class="col-md-10 px-3">
                                <div class="card-block px-3">
                                  
-                                <h4 class="card-title"><a href="/server/${server.id}">${server.name} ${premium} ${partner} </a> 
+                                <h4 class="card-title"><a href="/<%=locals.user_lang%>/server/${server.id}">${server.name} ${premium} ${partner} </a> 
                                  <a href="/<%if(locals._locals.path_url.includes('bot')){ %>bot<%}else{%>server<%}%>/${server.id}#vote" style="float:right" class="btn btn-primary"><i class="fa-solid fa-caret-up"></i> Votes (1)</a>
                                </h4>
                                  </span>
@@ -205,7 +205,7 @@ function doneTyping () {
             `)
         });
         $(".search-bar-see-more").removeClass("hidden");
-        $(".search-bar-see-more").attr("href", `/search?name=${$input.val()}`)
+        $(".search-bar-see-more").attr("href", `/<%=locals.user_lang%>/search?name=${$input.val()}`)
     })
 }
 

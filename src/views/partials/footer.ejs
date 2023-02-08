@@ -18,24 +18,20 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-6 col-md-6">
-        <h6>About</h6>
+        <h6><%=locals.language.footer.about.title%></h6>
         <p class="text-justify">
-          Discolounge is a discord list website connected with discord.
-          Discolounge is not an affiliate and does not belong to discord.com
+          <%=locals.language.footer.about.description%>
         </p>
       </div>
 
       <div class="col-xs-3 col-md-3">
-        <h6>Important Links</h6>
+        <h6><%=locals.language.footer.links.title%></h6>
         <ul class="footer-links">
-          <li><a href="/TOS">Terms of Service</a></li>
-          <li><a href="/PP">Privacy Policy</a></li>
+          <li><a href="/TOS"><%=locals.language.footer.links.dropdown.tos%></a></li>
+          <li><a href="/PP"><%=locals.language.footer.links.dropdown.pp%></a></li>
         </ul>
       </div>
-      <div class="col-xs-3 col-md-3">
-        <h6>Extra</h6>
-        <%- include('./translate'); %>
-      </div>
+
     </div>
     <div class="row">
       <div class="col-md-8 col-sm-6 col-xs-12">
@@ -62,14 +58,12 @@
     <div class="row">
       <div class="col-xs-6 col-md-6">
         <p>
-          Made with
-          <i style="color: #d36e6f" id="heart" class="fas fa-heart"></i> by
-          <a href="https://twitter.com/brunoRb19">Bruninho</a>
+          <%=locals.language.footer.links.made%>
         </p>
       </div>
       <div class="col-xs-6 col-md-6">
         <p>
-          Join us on
+          <%=locals.language.footer.links.join%>
           <i
             style="color: #7087d7"
             class="fab fa-discord"

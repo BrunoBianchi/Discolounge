@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<%=locals.user_lang%>">
 <head>
 <meta charset="utf-8">
 <%- include('../partials/favicon'); %>
@@ -8,20 +8,20 @@
 <meta name="apple-mobile-web-app-title" content="Discord">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="msapplication-TileColor" content="#8c72da">
-<title translate="no">Discolounge | <%if(locals.url.split('filter=')[1]){%>Serves sorted by <%=locals.url.split('filter=')[1]%> <%}else if(locals.url.split('premium=')[1]){%> Serves sorted by Premium<%}else if(locals.url.split('tags=')[1]){%>Servers tagged with <%=locals.url.split('tags=')[1].split('&page=')[0]%> <%}%> </title>
-<meta name="description" content=" <%if(locals.url.split('filter=')[1]){%>Serves sorted by <%=locals.url.split('filter=')[1]%> <%}else if(locals.url.split('premium=')[1]){%> Serves sorted by Premium<%}else if(locals.url.split('tags=')[1]){%>Servers tagged with <%=locals.url.split('tags=')[1].split('&page=')[0]%> <%}%>">
+<title translate="no"><%if(locals.url.split('filter=')[1]){%> <%=locals.language.search.filter.shorted%> <%=locals.url.split('filter=')[1]%> <%}else if(locals.url.split('premium=')[1]){%> <%=locals.language.search.filter.premium%><%}else if(locals.url.split('tags=')[1]){%> <%=locals.language.search.filter.tagged%> <%=locals.url.split('tags=')[1].split('&page=')[0]%> <%}%> | Discolounge.net </title>
+<meta name="description" content="<%if(locals.url.split('filter=')[1]){%> <%=locals.language.search.filter.shorted%> <%=locals.url.split('filter=')[1]%> <%}else if(locals.url.split('premium=')[1]){%> <%=locals.language.search.filter.premium%><%}else if(locals.url.split('tags=')[1]){%> <%=locals.language.search.filter.tagged%> <%=locals.url.split('tags=')[1].split('&page=')[0]%> <%}%>">
 <meta property="og:title" content="Discord Servers" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://discolounge.net/" />
-<meta property="og:description" content=" <%if(locals.url.split('filter=')[1]){%>Serves sorted by <%=locals.url.split('filter=')[1]%> <%}else if(locals.url.split('premium=')[1]){%> Serves sorted by Premium<%}else if(locals.url.split('tags=')[1]){%>Servers tagged with <%=locals.url.split('tags=')[1].split('&page=')[0]%> <%}%>" />
+<meta property="og:description" content="<%if(locals.url.split('filter=')[1]){%> <%=locals.language.search.filter.shorted%> <%=locals.url.split('filter=')[1]%> <%}else if(locals.url.split('premium=')[1]){%> <%=locals.language.search.filter.premium%><%}else if(locals.url.split('tags=')[1]){%> <%=locals.language.search.filter.tagged%> <%=locals.url.split('tags=')[1].split('&page=')[0]%> <%}%>" />
 <meta name="theme-color" content="#8c72da">
-<meta property="og:image:alt" content=" <%if(locals.url.split('filter=')[1]){%>Serves sorted by <%=locals.url.split('filter=')[1]%> <%}else if(locals.url.split('premium=')[1]){%> Serves sorted by Premium<%}else if(locals.url.split('tags=')[1]){%>Servers tagged with <%=locals.url.split('tags=')[1].split('&page=')[0]%> <%}%>" />
+<meta property="og:image:alt" content="<%if(locals.url.split('filter=')[1]){%> <%=locals.language.search.filter.shorted%> <%=locals.url.split('filter=')[1]%> <%}else if(locals.url.split('premium=')[1]){%> <%=locals.language.search.filter.premium%><%}else if(locals.url.split('tags=')[1]){%> <%=locals.language.search.filter.tagged%> <%=locals.url.split('tags=')[1].split('&page=')[0]%> <%}%>" />
 <meta property="og:site_name" content="Discolounge" />
 <link rel='canonical' href='https://discolounge.net/' />
 
 <meta property="twitter:url" content="https://discolounge.net/">
 <meta property="twitter:title" content="Discord Servers">
-<meta property="twitter:description" content=" <%if(locals.url.split('filter=')[1]){%>Serves sorted by <%=locals.url.split('filter=')[1]%> <%}else if(locals.url.split('premium=')[1]){%> Serves sorted by Premium<%}else if(locals.url.split('tags=')[1]){%>Servers tagged with <%=locals.url.split('tags=')[1].split('&page=')[0]%> <%}%>">
+<meta property="twitter:description" content="<%if(locals.url.split('filter=')[1]){%> <%=locals.language.search.filter.shorted%> <%=locals.url.split('filter=')[1]%> <%}else if(locals.url.split('premium=')[1]){%> <%=locals.language.search.filter.premium%><%}else if(locals.url.split('tags=')[1]){%> <%=locals.language.search.filter.tagged%> <%=locals.url.split('tags=')[1].split('&page=')[0]%> <%}%>">
 <script src="/jquery.js" ></script>
 <script src="/poper.js" ></script>
 <link rel="stylesheet" href="/boostrap.css" >

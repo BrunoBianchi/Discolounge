@@ -5,7 +5,7 @@ const moment = require("moment");
 const server = require("../modals/server");
 
 module.exports = function(app,url,client,nodecache) {
-app.get("/partners",functions.ensureAuthenticated,(req,res)=>{
+app.get("/:lang/partners",functions.languages,functions.ensureAuthenticated,(req,res)=>{
     var name = req.query.name
    Server.find({},(err,result)=>{
            var results = []

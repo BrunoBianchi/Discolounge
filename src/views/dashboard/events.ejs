@@ -36,17 +36,17 @@
       
           <div class="form-content" >
             <div class="form-group">
-              <label id="title_header" for="title">Title <span style="color:#de4343">*</span></label>
-              <input type="text" placeholder="Event Title" id="title"  class="form-control" name="title" required>
+              <label id="title_header" for="title"><%=locals.language.dashboard.events.title%> <span style="color:#de4343">*</span></label>
+              <input type="text" placeholder="<%=locals.language.dashboard.events.tPlace%> " id="title"  class="form-control" name="title" required>
             </div>
             <div class="form-group">
                     <div class="row">
                         <div class="col-md-6">
-                            <label id="title_header" for="title">Start Date<span style="color:#de4343">*</span></label>
+                            <label id="title_header" for="title"><%=locals.language.dashboard.events.start%> <span style="color:#de4343">*</span></label>
                             <input type="date"  id="startDate"  class="form-control" name="startDate" required>
                         </div>
                         <div class="col-md-6">
-                            <label id="title_header" for="title">End Date<span style="color:#de4343">*</span></label>
+                            <label id="title_header" for="title"><%=locals.language.dashboard.events.end%> <span style="color:#de4343">*</span></label>
                             <input type="date"  id="endDate"  class="form-control" name="endDate" required>
                         </div>
 
@@ -55,21 +55,21 @@
 
               </div>
             <div class="form-group">
-              <label id="content_header" for="content">Event Content <span style="color:#de4343">*</span></label>
-              <textarea name='content' style="height:150px" id="content"  placeholder="Write the content of your Event!" class="form-control" required></textarea>
+              <label id="content_header" for="content"><%=locals.language.dashboard.events.content%>  <span style="color:#de4343">*</span></label>
+              <textarea name='content' style="height:150px" id="content"  placeholder="<%=locals.language.dashboard.events.ePlace%> " class="form-control" required></textarea>
       
             </div>
             <div class="form-content">
               <div class="form-group">
       
-            <button style="float:right"  id="confirm-btn" onclick="confirm()">Add Event</button>
+            <button style="float:right"  id="confirm-btn" onclick="confirm()"><%=locals.language.dashboard.events.add%> </button>
       
           </div>
           </div>
           </div>
           <br>
           <div class="form-content">
-              <h1 style="padding:10px">Events</h1>
+              <h1 style="padding:10px"><%=locals.language.dashboard.events.events%> </h1>
               <div style="max-height:200px;
               overflow: auto;"  class="events-content">
                   <%data.events.sort((a,b)=>{new Date(b.createdAt) -  new Date(a.createdAt)}).forEach(event=>{%>

@@ -1,11 +1,14 @@
 const FormData = require("form-data");
 var CLIENT_ID = process.env.CLIENT_ID
 var  CLIENT_SECRET = process.env.CLIENT_SECRET
+const functions = require("../functions/functions")
+
 const { request } = require('undici');
 module.exports = async function(app,disc_url,redirect,nodecache) {
-app.get("/callback", async (req, res) => {
+app.get("/:lang/callback",functions.languages,async (req, res) => {
     var uri = req.query.state;
-    if (!req.query.code) return res.redirect('/login')
+    var lang = req.cookies.lang
+    if (!req.query.code) return res.redirect(`/${lang}/login`)
     const code = req.query.code;
     const creds = btoa(`${CLIENT_ID}:${CLIENT_SECRET}`);
     const response = await request('https://discord.com/api/oauth2/token', {
@@ -25,7 +28,7 @@ app.get("/callback", async (req, res) => {
       const json = await response.body.json();
       res.cookie('token',json.access_token, { maxAge:365*24*3600, httpOnly: true })
       if (uri && uri != "undefined") return res.redirect(`/${uri.split(';')[0]}`);
-      else return res.redirect("/dashboard");
+      else return res.redirect(`/${lang}/dashboard`);
 
 
   });

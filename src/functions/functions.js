@@ -3,27 +3,50 @@ const { EmbedBuilder, WebhookClient, CommandInteractionOptionResolver } = requir
 const Server = require("../modals/server");
 var paypal = require('paypal-rest-sdk');
 var fs = require('fs')
+const NodeCache = require( "node-cache" );
+
+const langCache = new NodeCache();
 module.exports = {
   ensureAuthenticated(req, res, next) {
     if (req.cookies.token &&  res.locals.user) {
       return next();
     }
     if (req.method === "GET" ) {
-      return res.redirect(`/login?uri=${encodeURI(req.path.slice(1))}`);
+      return res.redirect(`/${res.locals.user_lang}/login?uri=${encodeURI(req.path.slice(1))}`);
     } else if (req.method === "POST")
       return res.json({ icon: `error`, content: `you need to be logged in!` });
   },
   languages(req, res, next) {
     var lang = req.params.lang
+    
     if(!lang) {
-      return res.redirect(`/en${req.url}`)
+      if(!req.cookies.lang) {
+        res.cookie('lang','us', { maxAge:365*24*3600, httpOnly: true })
+      }
+      else {
+        return res.redirect(`/${req.cookies.lang}/${req.url}`)
+      }
     }else {
-      fs.readFile(`./src/languages/${lang}.json`,(err,data)=>{
-        if(err) return res.redirect(`/en${req.url.split(lang)[1]}`)
-        res.locals.language = JSON.parse(data)
+      if(!req.cookies.lang || lang != req.cookies.lang ){
+        res.cookie('lang',`${lang}`, { maxAge:365*24*3600, httpOnly: true })
+        res.locals.language = null
+      }
+      var cached = langCache.get(lang)
+      if(cached)  {
+        res.locals.language = cached
         res.locals.user_lang = lang
         return next()
-      })
+      }else {
+        fs.readFile(`./src/languages/${lang}.json`,(err,data)=>{
+          if(err) return res.redirect(`/us${req.url.split(lang)[1]}`)
+          var parse  = JSON.parse(data)
+          res.locals.language = parse
+          res.locals.user_lang = lang
+          langCache.set(lang, parse)
+          return next()
+        })
+      }
+
     }
 
   },

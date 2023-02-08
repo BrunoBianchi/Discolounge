@@ -36,18 +36,18 @@
       
           <div class="form-content" >
             <div class="form-group">
-              <label id="title_header" for="title">Name <span style="color:#de4343">*</span></label>
-              <input type="text" placeholder="Post Title" id="title"  class="form-control" name="title" required>
+              <label id="title_header" for="title"><%=locals.language.dashboard.posts.name%> <span style="color:#de4343">*</span></label>
+              <input type="text" placeholder="<%=locals.language.dashboard.posts.title%>" id="title"  class="form-control" name="title" required>
             </div>
             <div class="form-group">
-              <label id="content_header" for="content">Post Content <span style="color:#de4343">*</span></label>
-              <textarea name='content' style="height:150px" id="content"  placeholder="Write the content of your post!" class="form-control" required></textarea>
+              <label id="content_header" for="content"><%=locals.language.dashboard.posts.postContent%> <span style="color:#de4343">*</span></label>
+              <textarea name='content' style="height:150px" id="content"  placeholder="<%=locals.language.dashboard.posts.description%>" class="form-control" required></textarea>
       
             </div>
             <div class="form-content">
               <div class="form-group">
       
-            <button style="float:right"  id="confirm-btn" onclick="confirm()">Save Changes</button>
+            <button style="float:right"  id="confirm-btn" onclick="confirm()"><%=locals.language.dashboard.posts.save_changes%></button>
       
           </div>
           </div>

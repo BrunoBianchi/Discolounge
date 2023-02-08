@@ -15,11 +15,11 @@
               <a class="dropdown-item" onclick="addServer('<%=server.id%>','<%=server.name%>')"><img style="width:35px;height:35px;border-radius:50%" <%if(server.icon){%> src="https://cdn.discordapp.com/icons/<%=server.id%>/<%=server.icon%>.png" <%}else{%> src="https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png" <%}%>><%=server.name%></a>
               <%}})}%>
             </div>
-             <a style="color:white;width:182px;" id="bump-btn" onclick="bumpServer('<%=data.id%>')" class="nav-link  font-italic"> Bump Server</a>
-             <a style="color:white;width:182px" id="delete-btn" onclick="deleteServer('<%=data.id%>')" class="nav-link  font-italic"> Delete Server</a>
+             <a style="color:white;width:182px;" id="bump-btn" onclick="bumpServer('<%=data.id%>')" class="nav-link  font-italic"> <%=locals.language.vertical_nav.bump%></a>
+             <a style="color:white;width:182px" id="delete-btn" onclick="deleteServer('<%=data.id%>')" class="nav-link  font-italic"> <%=locals.language.vertical_nav.delete%></a>
             <%}else{%>
               <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Select a Server
+                  <%=locals.language.vertical_nav.select_server%>
                 </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
               <%if(locals.user.guilds){locals.user.guilds.forEach(server=>{%>
@@ -42,14 +42,14 @@
 
             <ul  class="nav flex-column  mb-0">
           <li class="nav-item">
-            <a href="/dashboard/server/<%=data.id%>" class="nav-link  font-italic">
+            <a href="/<%=locals.user_lang%>/dashboard/server/<%=data.id%>" class="nav-link  font-italic">
                       <i class="fa fa-address-card mr-1  fa-fw"></i>
-                      About
+                      <%=locals.language.vertical_nav.about%>
                   </a>
           </li>
           <li class="nav-item">
             <%if(data.premium === true) {%>
-            <a href="/dashboard/server/<%=data.id%>/background" class="nav-link  font-italic">
+            <a href="/<%=locals.user_lang%>/dashboard/server/<%=data.id%>/background" class="nav-link  font-italic">
               <i class="fa fa-id-badge  mr-1 fa-fw" aria-hidden="true"></i>
                       Background
                   </a>
@@ -61,43 +61,42 @@
                     <%}%>
           </li>
           <li class="nav-item">
-            <a href="/dashboard/server/<%=data.id%>/posts" class="nav-link  font-italic">
+            <a href="/<%=locals.user_lang%>/dashboard/server/<%=data.id%>/posts" class="nav-link  font-italic">
                 <i class="fas fa-file-alt   mr-1  fa-fw"></i>
                       Posts
                   </a>
           </li>
           <li class="nav-item">
-            <a href="/dashboard/server/<%=data.id%>/events" class="nav-link  font-italic">
+            <a href="/<%=locals.user_lang%>/dashboard/server/<%=data.id%>/events" class="nav-link  font-italic">
                 <i class="fas fa-gift   mr-1  fa-fw"></i>
-                      Events
+                <%=locals.language.vertical_nav.events%>
                   </a>
           </li>
           <li class="nav-item">
-            <a href="/dashboard/server/<%=data.id%>/api" class="nav-link  font-italic">
+            <a href="/<%=locals.user_lang%>/dashboard/server/<%=data.id%>/api" class="nav-link  font-italic">
                       <i class="fa fa-cubes  mr-1  fa-fw"></i>
                       Api & Webhooks
                   </a>
           </li>
           <li class="nav-item">
-            <a href="/dashboard/server/<%=data.id%>/socials" class="nav-link  font-italic">
+            <a href="/<%=locals.user_lang%>/dashboard/server/<%=data.id%>/socials" class="nav-link  font-italic">
                       <i class="fas fa-share-alt-square  mr-1  fa-fw"></i>
-                      Socials
+                      <%=locals.language.vertical_nav.socials%>
                   </a>
           </li>
           <li class="nav-item"></li>
-          <a href="/dashboard/server/<%=data.id%>/graph" class="nav-link  font-italic">
+          <a href="/<%=locals.user_lang%>/dashboard/server/<%=data.id%>/graph" class="nav-link  font-italic">
             <i class="fa fa-line-chart  mr-1  fa-fw"></i>
-            Server Statistics 
+            <%=locals.language.vertical_nav.serverStatistic%>
         </a>
       </li>
         </ul>
       
-        <p class="text-gray font-weight-bold text-uppercase px-3 small py-4 mb-0">Payments</p>
         <ul class="nav flex-column  mb-0">
           <li class="nav-item">
-            <a href="/dashboard/server/<%=data.id%>/payments" class="nav-link  font-italic">
+            <a href="/<%=locals.user_lang%>/dashboard/server/<%=data.id%>/payments" class="nav-link  font-italic">
               <i class="fas fa-money-bill-wave"></i>
-                      Payments
+              <%=locals.language.vertical_nav.payments%>
                   </a>  
           </li>
         </ul>
@@ -167,7 +166,7 @@ var then = moment('<%=data.lastBump%>').add(1, 'hours');
 if(moment().diff(moment('<%=data.lastBump%>'),'hours') < 1) {
   $("#bump-btn").css('cursor', ' not-allowed');
   (function timerLoop() {
-  $("#bump-btn").html(`Bump in <span style='font-size:11px'>${countdown(then).toString()}</span>`)
+  $("#bump-btn").html(`<%=locals.language.vertical_nav.bumpIn%> <span style='font-size:11px'>${countdown(then).toString()}</span>`)
   requestAnimationFrame(timerLoop);
 })();
   // Sidebar toggle behavior
@@ -277,14 +276,14 @@ headers: { "Content-Type": "application/json" },
   `
 }).then((result) => { 
   if (result.isConfirmed && result.value != 0) { 
-    return  window.location.href = `/dashboard/server/${id}`
+    return  window.location.href = `/<%=locals.user_lang%>/dashboard/server/${id}`
   }
    if(result.isDismissed){
     return
   }
 
 })
-  }else return  window.location.href = `/dashboard/server/${id}`
+  }else return  window.location.href = `/<%=locals.user_lang%>/dashboard/server/${id}`
 
 })
     }

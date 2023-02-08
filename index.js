@@ -5,8 +5,8 @@
     const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
     require("dotenv").config()
     var moment = require("moment")
-    const redirect = `https://discolounge.net/callback`;
-    const url = `https://discolounge.net/`
+    const redirect = `https://discolounge.net/en/callback`;
+    const url = `https://discolounge.net/en/`
     var cookies = require('cookie-parser');
     var bodyParser = require("body-parser");
     const fs = require("fs") 
@@ -99,7 +99,7 @@
         }
     
       })
-      .use('/callback',async (req, res, next) =>{
+      .use('/en/callback',async (req, res, next) =>{
         if(!req.cookies.token)  {
            res.locals.user = null
            return next();
@@ -142,7 +142,7 @@
             res.send(`error:${err.toString()}`)
         }) 
     })
-    .use('/callback',async (req, res, next) =>{
+    .use('/en/callback',async (req, res, next) =>{
       if(!req.cookies.token)  {
          res.locals.user = null
          return next();

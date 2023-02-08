@@ -6,44 +6,60 @@
   
     <div  class="container-fluid">
       <a translate="no" class="navbar-brand" href="<%if(!locals._locals.path_url.includes('bot')){ %> /<%=locals.user_lang%> <%}else{%> /<%=locals.user_lang%>/bots <%}%>" style="font-size:30px;text-transform: uppercase;
-      font-weight: 1000;">Discolounge</a>
+      font-weight: 1000;">Discolounge<small>.net</small></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
        <span class="navbar-toggler-icon"></span>
        </button> 
 
        <div class="collapse navbar-collapse" id="navbarsExample09">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
+        <ul id="ul"  class="navbar-nav mr-auto" >
+          <li id="discover" class="nav-item active">
             <a class="nav-link" href="<%if(locals._locals.path_url.includes('bot')){ %>/bots/search <%}else{%>/<%=locals.user_lang%>/servers/search <%}%>"><%=locals.language.navbar.search%></a>
           </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="/premium">Premium <small style="color:gold;"><sup><i class="fa-regular fa-star"></i></sup></small></a>
+          <li  id="premium2" class="nav-item active">
+            <a class="nav-link" href="/<%=locals.user_lang%>/premium">Premium <small style="color:gold;"><sup><i class="fa-regular fa-star"></i></sup></small></a>
           </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="<%if(locals._locals.path_url.includes('bot')){ %>/<%=locals.user_lang%> <%}else{%>/<%=locals.user_lang%>/bots <%}%>"><%if(locals._locals.path_url.includes('bot')){ %> Servers <%}else{%> Bots <sup style="color:white;padding:4px;background-color:#c772da;border-radius:5px;">Beta!</sup> <%}%></a>
+          <li id="server_bots" class="nav-item active">
+            <a class="nav-link" href="<%if(locals._locals.path_url.includes('bot')){ %>/<%=locals.user_lang%> <%}else{%>/<%=locals.user_lang%>/bots <%}%>"><%if(locals._locals.path_url.includes('bot')){ %> Servers <%}else{%> Bots  <%}%></a>
           </li>
-          <li class="nav-item dropdown">
+          <li id="more" class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <%=locals.language.navbar.more%>
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="/events"><%=locals.language.navbar.more_dropdown.events%></a>
-              <a class="dropdown-item" href="/market"><%=locals.language.navbar.more_dropdown.market%></a>
-              <a class="dropdown-item" href="/market">Api </a>
+              <a class="dropdown-item" href="/<%=locals.user_lang%>/events"><%=locals.language.navbar.more_dropdown.events%></a>
+              <a class="dropdown-item" href="/<%=locals.user_lang%>/market"><%=locals.language.navbar.more_dropdown.market%></a>
+              <a class="dropdown-item" href="/<%=locals.user_lang%>/market">Api </a>
 
             </div>
           </li>
+          <li id="lang" class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <img  src="https://flagcdn.com/<%=locals.user_lang%>.svg" width="20">
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/br/"> <img src="https://flagcdn.com/br.svg" width="20"> Portuguese</a>
+              <a class="dropdown-item" href="/us/"> <img src="https://flagcdn.com/us.svg" width="20"> English</a>
+
+            </div>
+          </li>
+
+          
           </ul>
-          <ul class="navbar-nav mr-auto ml-auto"  style="font-size: 20px;width:50%" >    
-            <div class="text-center" style="width:100%">
+          <ul id="searched" class="navbar-nav mr-auto ml-auto none"  style="font-size: 15px;" >    
+            <li id="search_bar" class="text-center" style="width:100%">
  
               <%- include('./search-bar'); %>
-  
-              </div>                                   
+             
+            </li>    
+ 
           </ul>
+
+
           <%if(!locals.user) {%>
+
             <li   id="drop" class="nav-item dropdown" style="display: initial;">
-              <a style="font-size:15px;" id="login" href="/login?uri=<%=encodeURIComponent(`${locals.url.slice(1)}`)%>">
+              <a style="font-size:15px;" id="login" href="http://<%=host%>/<%=locals.user_lang%>/login?uri=<%=encodeURIComponent(`${locals.url.slice(1)}`)%>">
                 <%=locals.language.navbar.login%>
              </a>   
             </li>
@@ -53,11 +69,10 @@
              <a class="dropdown-toggle" id="user_drop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
   <img style="border-radius:50%;width:40px;height:40px;    max-width: 100%;max-height: 100%;" <%if(user.avatar === null ){%>src="https://i.pinimg.com/736x/34/91/f3/3491f3e50ab6a4d51a348f9cc2419842.jpg"<%}else{%> src="https://images.discordapp.net/avatars/<%=user.id%>/<%=user.avatar%>.png?size=512" <%}%>> <%=user.username.match(/.{1,8}/)[0]%></a>
   <div class="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="navbarDropdownMenuLink-4" >
-  <a  class="dropdown-item" href="/dashboard" ><i class="far fa-user"></i> Dashboard</a>
-  <a  class="dropdown-item" href="/partners" ><i class="fa-solid fa-people-group"></i> Partners</a>
-  <a  class="dropdown-item" href="/referrals" ><i class="fa-solid fa-handshake-simple"></i> Referrals</a>
-  <a  class="dropdown-item" href="/servers/add" ><i class="fas fa-server"></i> Add Server</a>
-  <a  class="dropdown-item" href="/bots/add" ><i class="fas fa-robot"></i> Add Bot</a>
+  <a  class="dropdown-item" href="/<%=locals.user_lang%>/dashboard" ><i class="far fa-user"></i> Dashboard</a>
+  <a  class="dropdown-item" href="/<%=locals.user_lang%>/partners" ><i class="fa-solid fa-people-group"></i> Partners</a>
+  <a  class="dropdown-item" href="/<%=locals.user_lang%>/referrals" ><i class="fa-solid fa-handshake-simple"></i> Referrals</a>
+  <a  class="dropdown-item" href="/<%=locals.user_lang%>/bots/add" ><i class="fas fa-robot"></i> Add Bot</a>
   <div class="dropdown-divider"></div>  
   <%if(locals.user.guilds && locals.user.guilds.find(g=>g.id === '1042848358701736036') && locals.user.guilds.find(g=>g.id === '1042848358701736036').owner === true) {%>
     <a  class="dropdown-item" href="/blog/admin" ><i class="fas fa-blog"></i> Blog Admin</a>
@@ -80,14 +95,49 @@
 
   <script>
     const nav = document.querySelector('nav');
-
+    const search = document.getElementById('searched');
+    const ul = document.getElementById('ul')
+    const discover = document.getElementById('discover')
+    const premium = document.getElementById('premium2')
+    const more = document.getElementById('more')
+    const server_bots = document.getElementById("server_bots")
+    const lang2 = document.getElementById("lang")
+    var searched = false
 window.addEventListener('scroll', function() {
   const offset = window.pageYOffset;
   
-  if(offset > 25)
+  if(offset > 25) {
+    if(searched === false) {
+      ul.removeChild(lang2)
+    ul.appendChild(search)
+    ul.style.width = '80%'
+    search.classList.remove('none')
+    search.classList.add('animation')
+    ul.removeChild(discover)
+    ul.removeChild(premium)
+    ul.removeChild(more)
+    ul.removeChild(server_bots)
+    searched =  true
+    }
+
     nav.classList.add('scroll')
-  else 
+
+  }else {
+    ul.removeChild(search)
+    ul.appendChild(discover)
+    ul.appendChild(premium)
+    ul.appendChild(server_bots)
+    ul.appendChild(more)
+    ul.appendChild(lang2)
+
+    search.classList.add('none')
+    search.classList.remove('animation')
+    searched= false
+    
+
     nav.classList.remove('scroll')
+
+  }
 });
   </script>
 <style>
@@ -95,4 +145,24 @@ window.addEventListener('scroll', function() {
   color:rgb(109, 108, 114);
 
   }
+  #lang .dropdown-toggle::after{
+    display: none;
+  }
+  #more .dropdown-toggle::after{
+    display: none;
+  }
+  .none{
+    display: none;
+    width:-10%;
+  }
+
+  .animation{
+    width:90%;
+  animation-name: example;
+  animation-duration: 1s;
+  }
+  @keyframes example {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
 </style>

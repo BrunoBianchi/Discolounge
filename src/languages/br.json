@@ -1,69 +1,358 @@
 {
-    "navbar":{
-        "search":"Descubra",
-        "more":"Mais",
-        "search_for_server":"Pesquise por Servidores do Discord...",
-        "search_for_bot":"Pesquise por bots do Discord...",
-        "search_see_more":"Veja Mais ",
-        "login":"Entre com Discord",
-        "more_dropdown":{
-            "events":"Eventos",
-            "market":"Mercado"
-
+    "navbar": {
+        "search": "Descobrir",
+        "more": "Mais",
+        "search_for_server": "Procurar servidores do Discord...",
+        "search_for_bot": "Procurar bots do Discord...",
+        "login": "Entre com o Discord",
+        "search_see_more": "Ver mais ",
+        "more_dropdown": {
+            "events": "Eventos",
+            "market": "Loja"
         }
     },
-    "home":{
-        "body":{
-            "featured":{
-                "title":"Servidores em Destaque",
-                "description":"Servidores Premium Aleatórios"
+    "home": {
+        "header":{
+            "title":"Encontre o Servidor Perfeito | Discolounge.net",
+            "description":"Encontre os melhores servidores Discord em discolounge.net - o melhor site de listagem de servidores Discord. Pesquise novos servidores exclusivos por gênero, interesses, localização e muito mais. Junte-se a novas comunidades, aumente seu servidor ao infinito e expanda seu círculo social. Registe-se agora gratuitamente!"
+        },
+        "body": {
+            "featured": {
+                "title": "Servidores em Destaque",
+                "description": "Servidores que apoiam a Discolounge ❤️"
             },
-            "recently":{
-                "title":"Servidores Bumpados Recentemente",
-                "description":"Servidores Bumpados Recentemente."
+            "recently": {
+                "title": "Recentemente Impulsionados",
+                "description": "Servidores impulsionados recentemente"
             },
-            "new":{
-                "title":"Servidores Novos",
-                "description":"Servidores adicionados recentemente"
+            "new": {
+                "title": "Novos Servidores",
+                "description": "Servidores adicionados recentemente"
             },
-            "show_more":"Veja Mais",
-            "filter":{
-                "filters":"Filtros",
-                "memberCount":"Membros no Servidor",
-                "settings":"Configurações",
-                "filter_btn":"Aplicar"
+            "show_more": "Ver mais",
+            "filter": {
+                "filters": "Filtros",
+                "memberCount": "Quantidade de users",
+                "settings": "configurações",
+                "filter_btn": "Filtrar"
             },
-            "card":{
-                "votes":"Votos",
-                "join":"Entrar no servidor"
+            "card": {
+                "votes": "Votos",
+                "join": "Entre no server"
             }
-        }
-    },
-    "search":{
+        },
         "bots":{
-         "title":"Bots do Discord",
-         "description":"Explore milhões de bots para o Discord ",
-         "search":"Porcure Por Bots do Discord ..."
-         },
-         "servers":{
-             "title":"Servidores do Discord",
-             "description":"Explore milhões de Servidores do Discord ",
-             "search":"Porcure por Servidores do Discord  ..."
-             },
-             "filter":{
-                "title":"Selecione um Filtro",
-                "shorted":"Filtrado por",
-                "dropdown":{
-                    "voted":"Mais Votados",
-                    "new":"Adicionados Recentemente",
-                    "bumped":"Bumpados Recentemente",
-                    "members":"Membros no Servidor",
-                    "review":"Reviews"
+            "header":{
+                "title":"Encontre o Bot Perfeito para sua Comunidade | Discolounge.net",
+                "description":"Encontre o melhor bot Discord para o seu servidor em Discolounge.net - o melhor site de listagem de servidores Discord. Pesquise novos servidores exclusivos por gênero, interesses, localização e muito mais. Junte-se a novas comunidades, aumente seu servidor ao infinito e expanda seu círculo social. Registe-se agora gratuitamente!"
+            },
+            "body":{
+                "featured":{
+                    "title":"Bots em Destaque",
+                    "description":"Bots que apoiam a Discolounge ❤️"
+                },
+                "recently":{
+                    "title":"Verificados Recentemente",
+                    "description":"Bots Verificados Recentemente "
+                },
+                "new":{
+                    "title":"Novos Bots",
+                    "description":"Bots adicionados Recentemente."
+                },
+                "card":{
+                    "votes":"Votos",
+                    "invite":"Convidar o Bot",
+                    "serverCount":"Servidores",
+                    "showMore":"Ver Mais "
                 }
+                
             }
- 
-     }
+        }
+    },
+    "search": {
+        "bots": {
+            "title": "Discord Bots",
+            "description": "Explore milhares de bots para o Discord",
+            "search": "Procurar bots do Discord ..."
+        },
+        "servers": {
+            "title": "Discord Servers",
+            "description": "Explore milhares de servidores do Discord ",
+            "search": "Procurar servidores do Discord ..."
+        },
+        "filter": {
+            "title": "Selecione um filtro",
+            "shorted": "Classificar por",
+            "dropdown": {
+                "voted": "Mais votado",
+                "new": "Adicionado recentemente",
+                "bumped": "Recentemente impulsionado",
+                "members": "Quantidade de membros",
+                "review": "Avaliações"
+            }
+        }
+    },
+    "server": {
+        "overview": "Visão Geral",
+        "join":"Entre",
 
+        "warning":"Este Servidor Removeu nosso Bot, as Informações contidas poderão estar Desatualizadas!",
+        "reviews":{
+            "title":"Avaliações",
+            "warning":"Ninguém avaliou esse servidor ainda! Seja o primeiro!"
+        },
+        "insights": "Insights",
+        "news": {
+            "title": "Novidades",
+            "warning": "O servidor ainda não postou nenhuma novidade."
+        },
+        "events": {
+            "title": "Eventos",
+            "warning": "O servidor ainda não possuí nenhum evento."
+        },
+        "share": {
+            "title": "Compartilhar",
+            "direct": "Link Direto"
+        },
+        "details": {
+            "title":"Detalhes",
+            "bumped": "impulsionou",
+            "joined": "entrou",
+            "members": "membros",
+            "socials": "Sociais",
+            "share": {
+                "title": "Compartilhe nas Redes Sociais",
+                "facebook": "Compartilhe no facebook",
+                "twitter": "Compartilhe no Twitter",
+                "linkedIn": "Compartilhe no LinkedIn"
+            },
+            "categories": "Categorias",
+            "vote": "Votar"
+        },
+        "recommended_servers": {
+            "title": "Você pode gostar",
+            "description": "Servidores recomendados para você"
+        }
+    },
+    "footer": {
+        "about": {
+            "title": "Sobre",
+            "description": "Discolounge é um site de lista de servidores/bots do Discord. Discoloungue não é afiliada e nem pertence a Discord.com"
+        },
+        "links": {
+            "title": "Links Importantes",
+            "dropdown": {
+                "tos": "Termos de serviço",
+                "pp": "Politicas de privacidade"
+            },
+            "made": "Feito com amor, por Bruninho ❤️",
+            "join": "Entre no nosso servidor"
+        }
+    },
+    "premium":{
+        "title":"Cresça sua Comunidade",
+        "description":"Começando a crescer ao infinito com Discolounge Premimu Plan. Desbloqueie o verdadeiro potencial do seu servidor pagando menos que outras listas!",
+         "card_1":{
+            "title":"+ 30K ",
+            "description":"Impressões todo Mês"
+         },
+         "card_2":{
+            "title":"10",
+            "description":"Média de Crescimento por dia"
+         },
+         "card_3":{
+            "title":"Funções Únicas",
+            "description":"Desbloqueie Novas Funções"
+         },
+         "premium_card":{
+            "featured1":"Prioridade quando procurado ou filtrado",
+            "featured2":"Lugar Garantido ",
+            "featured3":"Aumente as Visitas de seu servidor",
+            "featured4":"Acesso às configurações de webhook",
+            "featured5":"Tag Premium:",
+            "featured6":"Auto Impulsionar",
+            "featured7":"Plano de Fundo",
+            "featured8":"Nos dê suporte com amor",
+            "warning":"Você precisa estar logado !",
+            "select_server":"Selecione um servidor",
+            "no_servers":"Você ainda não tem servidores adicionados"
+         },
+         "premium_monthly":"Mensal R$10.30/mês",
+         "premium_6months":"6 Meses<span> <s>R$61.00</s><sup>R$51.50/6 m</sup></span>",
+         "premium_year":"Anual<span> <s>R$123.60</s><sup>R$103.00/ano</sup></span>"
 
+    },
+    "partner":{
+        "header":{
+            "title":"Parceiros | Discolounge.net",
+            "description":"Seja um parceiro do Discolounge.net e Cresça seu Servidor ainda mais Rápido!"
+        },
+        "body":{
+            "title":"Programa de Parceiros",
+            "featured1":"Prioridade quando Filtrado",
+            "featured2":"Lugar Garantido na home",
+            "featured3":"Aumente as Visitas no seu Servidor",
+            "featured4":"Tag Customizada:",
+            "featured5":"Cargo em nosso Servidor",
+            "featured6":"Acesso para divulgar seu servidor em canais do nosso Discord ",
+            "featured7":"Nos dê suporte com Amor",
+            "select_server":"Selecione o Servidor que deseja receber as funções",
+            "no_servers":"Você não tem um Servidor adicionado ainda",
+            "select":"Selecione um Servidor",
+            "requirements":{
+                "title":"Ainda não é parceiro? 😭 Aplique para o programa agora!",
+                "requirements":"Nossos requisitos:",
+                "req1":"Pelo menos 50 membros",
+                "req2":"Precisa adicionar o Servidor no site",
+                "req3":"Precisa Seguir o Discord e nosso Site TOS",
+                "req4":"Precisa ser SFW",
+                "req5":"Sem Racismo e ou Homofobia",
+                "meet":"Possuí todos requesitos? Selecione o servidor que deseja se tornar parceiro"
+            }
+        }
+    },
+    "events":{
+        "header":{
+            "title":"Eventos de Servidores | Discolounge.net",
+            "description":" Descubra Eventos de servidores do Discord usando nosso recurso de descoberta de eventos. Explore centenas de eventos de Servidores"
+        },
+        "body":{
+            "title":"Eventos de Servidores ",
+            "description":"Descubra Eventos de servidores do Discord usando nosso recurso de descoberta de eventos. Explore centenas de eventos de Servidores",
+            "query":{
+                "recent":"Recentes",
+                "upcoming":"Por Vir"
+            },
+            "confirmed":"Confirmados",
+            "local":"em",
+            "startDate":"Começo",
+            "endDate":"Fim"
+        }
+    },
+    "referrals":{
+        "header":{
+            "title":"Programa de Afiliado | Discolounge.net",
+            "descripton":"Ganhe moedas por cada pessoa que convidar, troque essas moedas por discord nitro ,spotify premium entre outros... "
+        },
+        "body":{
+            "title":"Programa de Afiliado",
+            "inviteURL":"Seu Código de convite",
+            "how_does_it_works":"Como funciona ?",
+            "description1":"Nosso sistema de afiliados é um programa criado para nos ajudar e ajudar vocês",
+            "description2":"Para cada pessoa (que não tenha sido convidada ainda) que use seu código e adicione um servidor, você receberá <strong style='olor:rgb(224, 158, 26)'> moedas </strong>.",
+            "roles":{
+                "title":"Cargos:",
+                "role1":"2.5 moedas por convite",
+                "role2":"2 moedas por convite",
+                "role3":"1.75 moedas por convite",
+                "role4":"1.25 moedas por convite",
+                "role5":" 1 moedas por convite"
+            },
+            "description3":"Essas moedas podem ser trocadas por produtos em nosso <a href='/<%=locals.user_lang%>/market'>mercado</a>",
+            "user":{
+                "referred":"Total Convidado",
+                "coins":"Moedas"
+            }
+        }
+    },
+    "dashboard":{
+        "about":{
+            "header":{
+                "title":"Dashboard | Discolounge.net",
+                "description":"Encontre os melhores servidores Discord em discolounge.net - o melhor site de listagem de servidores Discord. Pesquise novos servidores exclusivos por gênero, interesses, localização e muito mais. Junte-se a novas comunidades, aumente seu servidor ao infinito e expanda seu círculo social. Registe-se agora gratuitamente!"
+            },
+            "body":{
+                "news":"Notícias e Updates 🎉",
+                "supporters":{
+                    "title":"Obrigado ao nossos supporters ❤️",
+                    "description":"Quer estar aqui e ganhar mais bônus, visitas e muito mais? experimente <a href='/<%=locals.user_lang%>/premium'>Premium</a> "
+                },
+                "warning":{
+                    "title":"Atenção ⚠️",
+                    "description":"Antes de adicionar seu bot, por favor, leia todos os nossos <a href='/TOS'>TOS</a>, certifique-se de que tudo está de acordo com nossa política para que não ocorra nenhum tipo de penalidade"
+                },
+                "card":{
+                    "tags":"Categorias",
+                    "short":{
+                        "title":"Descrição Pequena ",
+                        "description":"Escreva uma pequena descrição única para seu servidor"
+                    },
+                    "long":{
+                        "title":"Descrição Grande",
+                        "description":"Write a unique long description about your server"
+                    },
+                    "serverInvite":{
+                        "title":"Convite do Servidor",
+                        "select":"Selecione o Chat"
+                    },
+                    "custom":"URL Sua",
+                    "change":"Mudar",
+                    "save_changes":"Salvar Mudanças"
+                }
+                          
+
+            }
+        },
+        "posts":{
+            "name":"Nome",
+            "title":"Título do Post",
+            "postContent":"Conteúdo do Post",
+            "description":"Escreva um Conteúdo para seu  Post",
+            "save_changes":"Salvar Mudanças"
+        },
+        "socials":{
+            "name":"Nome",
+            "title":"Nome da Rede Social",
+            "url":"URL da Rede Social",
+            "save_changes":"Salvar Mudanças"
+        },
+        "chart":{
+            "joins":{
+                "title":"Clicks",
+                "label":"Usuários que Entraram"
+            },
+            "views":{
+                "title":"Visualizações da Página",
+                "label":"Visualizações da Página"
+            },
+            "report":{
+                "title":"Estatísicas de hoje ",
+                "select":"Selecione um Canal",
+                "channel":"Canal para Estatísicas de hoje"
+            }
+        },
+        "events":{
+            "title":"Título",
+            "tPlace":"Título do Evento",
+            "start":"Começa",
+            "end":"Termina",
+            "content":"Conteúdo do Evento",
+            "ePlace":"Escreva sobre o que será seu Evento",
+            "add":"Adicionar Evento",
+            "events":"Eventos"
+        },
+        "api":{
+            "variables":{
+                "title":"Variáveis:",
+                "user":"Usuário que votou",
+                "user_votes":"Quantidade de Votos que o Usuário tem",
+                "server_votes":"Total de Votos do Servidor",
+                "show_more":"Mostre mais Configurações",
+                "save":"Salvar Mudanças"
+            }
+        }
+        
+    },
+    "vertical_nav":{
+        "select_server":"Selecione um Servidor" ,
+        "about":"Sobre",
+        "events":"Eventos",
+        "socials":"Rede Sociais",
+        "serverStatistic":"Estatísicas do Servidor",
+        "payments":"Pagamentos",
+        "bump":"Impulsionar Servidor",
+        "bumpIn":"Impulsionar em ",
+        "delete":"Remover Servidor"
+    }
 
 }

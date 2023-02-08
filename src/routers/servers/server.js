@@ -240,7 +240,6 @@ module.exports= function(app,url,client,nodecache) {
         if(!id) return res.redirect("/")
         var date = new Date()
         var currMonthName = moment().format("MMMM");
-
         Server.findOne({id:id},(err,result)=>{
                 if(!result) return res.redirect('/')
                 if(!result.impressions.joinClicks.get(`${date.getUTCFullYear()}`)) {

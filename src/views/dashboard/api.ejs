@@ -38,32 +38,32 @@
           
           <div  id="wb-content" class="form-content">
               <div class="form-group">
-                <label for="exampleFormControlSelect1">Webhook <i data-toggle="tooltip" data-placement="top" title="Webhooks are automated messages sent from apps when something happens" class="fas fa-question-circle"></i></label>
+                <label for="exampleFormControlSelect1">Webhook </label>
                 <input style="margin-bottom:10px;" type="text" name="webhook" value="<%=data.webhook%>" placeholder="Webhook Url" id="webhook"  class="form-control" >
                 <%if(data.premium === true) {%>        
                 <a  class="btn-show collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                          <i class="fas fa-caret-right"></i> Show more settings 
+                          <i class="fas fa-caret-right"></i> <%=locals.language.dashboard.api.variables.show_more%>
                         </a>
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                       <div class="card-body">
                         <label id="webhook_msgheader" for="webhook_msg">Custom Webhook message </label>
                         <textarea name='webhook_msg' style="height:150px" id="webhook_msg"  placeholder="Write a unique custom webhook message " class="form-control" ><%=data.webhook_msg%></textarea>
                         <br>
-                        <p class="help-block">Variables: <br>
-                          - {user} : user that voted <br>
-                          - {user-votes}: amount of votes user has<br>
-                          - {server-votes}: total votes of the server </p>
+                        <p class="help-block"><%=locals.language.dashboard.api.variables.title%> <br>
+                          - {user} : <%=locals.language.dashboard.api.variables.user%> <br>
+                          - {user-votes}: <%=locals.language.dashboard.api.variables.user_votes%><br>
+                          - {server-votes}: <%=locals.language.dashboard.api.variables.server_votes%> </p>
                       </div>
                     </div>
                     <%}else{%>
                       <a  class="btn-show collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        <i class="fas fa-caret-right"></i> Show more settings <a style="text-decoration:none;" href="/premium"><sup><small id="premium">premium </small></sup></a>
+                        <i class="fas fa-caret-right"></i> <%=locals.language.dashboard.api.variables.show_more%> <a style="text-decoration:none;" href="/premium"><sup><small id="premium">premium </small></sup></a>
                       </a>
                 <%}%>
                 <div class="form-content">
                   <div class="form-group">
       
-                <button style="float:right"  id="confirm-btn" onclick="confirm()">Save Changes</button>
+                <button style="float:right"  id="confirm-btn" onclick="confirm()"><%=locals.language.dashboard.api.variables.save%></button>
       
               </div>
               </div>

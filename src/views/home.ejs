@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<%=locals.user_lang%>">
   <head>
     <meta charset="utf-8" />
 
@@ -9,22 +9,22 @@
     <meta name="apple-mobile-web-app-title" content="Discord" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="msapplication-TileColor" content="#8c72da" />
-    <title translate="no">Find The Perfect Discord Server | Discolounge.net</title>
+    <title translate="no"><%=locals.language.home.header.title%></title>
     <meta
       name="description"
-      content="Find the best Discord servers on discolounge.net - the ultimate Discord server listing website. Search for new unique servers by genre, interests, location and more. Join new communities, grow your server to the infinite and expand your social circle. Sign up now for free!"
+      content="<%=locals.language.home.header.description%>"
     />
     <meta property="og:title" content="Discord Servers" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://discolounge.net/" />
     <meta
       property="og:description"
-      content="Find the best Discord servers on discolounge.net - the ultimate Discord server listing website. Search for new unique servers by genre, interests, location and more. Join new communities, grow your server to the infinite and expand your social circle. Sign up now for free!"
+      content="<%=locals.language.home.header.description%>"
     />
     <meta name="theme-color" content="#8c72da" />
     <meta
       property="og:image:alt"
-      content="Find the best Discord servers on discolounge.net - the ultimate Discord server listing website. Search for new unique servers by genre, interests, location and more. Join new communities, grow your server to the infinite and expand your social circle. Sign up now for free!"
+      content="<%=locals.language.home.header.description%>"
     />
     <meta property="og:site_name" content="Discolounge" />
     <link rel="canonical" href="https://discolounge.net/" />
@@ -33,7 +33,7 @@
     <meta property="twitter:title" content="Discord Servers" />
     <meta
       property="twitter:description"
-      content="Find the best Discord servers on discolounge.net - the ultimate Discord server listing website. Search for new unique servers by genre, interests, location and more. Join new communities, grow your server to the infinite and expand your social circle. Sign up now for free!"
+      content="<%=locals.language.home.header.description%>"
     />
     <meta name="robots" content="index" />
     <meta property="twitter:image" content="https://cdn.discordapp.com/icons/1042848358701736036/637b11544bece733c840a8caed35d01e.png">
@@ -49,9 +49,9 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap"
       rel="stylesheet"
     />
-    <link rel="manifest" href="/pwa.webmanifest" />
-    <script src="/pwa.js"></script>
-    <script src="/status.js"></script>
+    <link rel="manifest" href="<%=locals.path_ur%>/pwa.webmanifest" />
+    <script src="<%=locals.path_ur%>/pwa.js"></script>
+    <script src="<%=locals.path_ur%>/status.js"></script>
   </head>
   <body>
     <%- include('partials/navbar'); %>
@@ -121,7 +121,7 @@
                   <div class="col-md-10 px-3">
                     <div class="card-block px-3">
                       <h4 class="card-title">
-                        <a translate="no" href="<%=locals.user_lang%>/server/<%=server.id%>"
+                        <a translate="no" href="/<%=locals.user_lang%>/server/<%=server.id%>"
                           ><%=server.name.slice(0,12)%> <%if(server.premium === true){%><i data-toggle="tooltip" data-html="true" data-placement="top" title="<strong>Premium Server</strong> "  style="font-size:17px;color:#d6b929" class="far fa-gem"></i><%}%>
                           <%if(server.partner === true){%><i data-toggle="tooltip" data-html="true" data-placement="top" title="<strong>Partner Server</strong> "  style="font-size:17px;color:rgb(41, 139, 214)" class="fas fa-handshake"></i><%}%>
                         </a>
@@ -133,7 +133,7 @@
                           ><%=locals.language.home.body.card.join%></a
                         >
                         <a
-                          href="<%=locals.user_lang%>/server/<%=server.id%>#vote"
+                          href="/<%=locals.user_lang%>/server/<%=server.id%>#vote"
                           style="float: right;margin-top:4px;"
                           class="btn btn-primary"
                           ><i class='fa-solid fa-caret-up'></i> <%=locals.language.home.body.card.votes%> (<%=server.votes%>)  </a
@@ -156,7 +156,7 @@
                           data-toggle="tooltip"
                           data-placement="top"
                           title="<%server.tags.slice(2,server.tags.length).forEach(tag=>{%> <%=tag.name%>, <%})%>"
-                          href="<%=locals.user_lang%>/server/<%=server.id%>"
+                          href="/<%=locals.user_lang%>/server/<%=server.id%>"
                           class="card-tags"
                           >+<%=parseInt(server.tags.length) - 2%></a
                         >
@@ -202,8 +202,8 @@
           </div>
           <div class="servers-cards">
             <div class="servers-cards-info">
-              <h2>Recently Bumped</h2>
-              <span>Recently Bumped Discord Servers.</span>
+              <h2><%=locals.language.home.body.recently.title%></h2>
+              <span><%=locals.language.home.body.recently.description%></span>
             </div>
             <div class="cards">
               <%if(data){data.sort((a,b)=>{ return (b.premium - a.premium) &&
@@ -222,7 +222,7 @@
                   <div class="col-md-10 px-3">
                     <div class="card-block px-3">
                       <h4 class="card-title">
-                        <a translate="no" href="<%=locals.user_lang%>/server/<%=server.id%>"
+                        <a translate="no" href="/<%=locals.user_lang%>/server/<%=server.id%>"
                           ><%=server.name.slice(0,12)%> <%if(server.premium === true){%><i data-toggle="tooltip" data-html="true" data-placement="top" title="<strong>Premium Server</strong> "  style="font-size:17px;color:#d6b929" class="far fa-gem"></i><%}%>
                           <%if(server.partner === true){%><i data-toggle="tooltip" data-html="true" data-placement="top" title="<strong>Partner Server</strong> "  style="font-size:17px;color:rgb(41, 139, 214)" class="fas fa-handshake"></i><%}%>
                         </a>
@@ -234,7 +234,7 @@
                           ><%=locals.language.home.body.card.join%></a
                         >
                         <a
-                          href="<%=locals.user_lang%>/server/<%=server.id%>#vote"
+                          href="/<%=locals.user_lang%>/server/<%=server.id%>#vote"
                           style="float: right;margin-top:4px;"
                           class="btn btn-primary"
                           ><i class="fa-solid fa-caret-up"></i> <%=locals.language.home.body.card.votes%>
@@ -258,7 +258,7 @@
                           data-toggle="tooltip"
                           data-placement="top"
                           title="<%server.tags.slice(2,server.tags.length).forEach(tag=>{%> <%=tag.name%>, <%})%>"
-                          href="<%=locals.user_lang%>/server/<%=server.id%>"
+                          href="/<%=locals.user_lang%>/server/<%=server.id%>"
                           class="card-tags"
                           >+<%=parseInt(server.tags.length) - 2%></a
                         >
@@ -295,8 +295,8 @@
      </script>
           <div class="servers-cards">
             <div class="servers-cards-info">
-              <h2>New Servers</h2>
-              <span>Recently Added Discord Servers.</span>
+              <h2><%=locals.language.home.body.new.title%></h2>
+              <span><%=locals.language.home.body.new.description%></span>
             </div>
             <div class="cards">
               <%if(data){data.sort((a,b)=>{ return new Date(b.createdAt) - new
@@ -314,7 +314,7 @@
                   <div class="col-md-10 px-3">
                     <div class="card-block px-3">
                       <h4 class="card-title">
-                        <a translate="no" href="<%=locals.user_lang%>/server/<%=server.id%>"
+                        <a translate="no" href="/<%=locals.user_lang%>/server/<%=server.id%>"
                           ><%=server.name.slice(0,12)%> <%if(server.premium === true){%><i data-toggle="tooltip" data-html="true" data-placement="top" title="<strong>Premium Server</strong> "  style="font-size:17px;color:#d6b929" class="far fa-gem"></i><%}%>
                           <%if(server.partner === true){%><i data-toggle="tooltip" data-html="true" data-placement="top" title="<strong>Partner Server</strong> "  style="font-size:17px;color:rgb(41, 139, 214)" class="fas fa-handshake"></i><%}%>
                         </a>
@@ -326,7 +326,7 @@
                           ><%=locals.language.home.body.card.join%></a
                         >
                         <a
-                          href="<%=locals.user_lang%>/server/<%=server.id%>#vote"
+                          href="/<%=locals.user_lang%>/server/<%=server.id%>#vote"
                           style="float: right;margin-top:4px;"
                           class="btn btn-primary"
                           ><i class="fa-solid fa-caret-up"></i> <%=locals.language.home.body.card.votes%>
@@ -350,7 +350,7 @@
                           data-toggle="tooltip"
                           data-placement="top"
                           title="<%server.tags.slice(2,server.tags.length).forEach(tag=>{%> <%=tag.name%>, <%})%>"
-                          href="<%=locals.user_lang%>/server/<%=server.id%>"
+                          href="/<%=locals.user_lang%>/server/<%=server.id%>"
                           class="card-tags"
                           >+<%=parseInt(server.tags.length) - 2%></a
                         >

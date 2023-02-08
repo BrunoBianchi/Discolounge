@@ -34,7 +34,7 @@ app.post("/participate/event",functions.ensureAuthenticated,(req,res)=>{
     })
 
 })
-app.get('/events',(req,res)=>{
+app.get('/:lang/events',functions.languages,(req,res)=>{
    Server.find({},(err,result)=>{
     var events = []
         result.filter(server=>{
