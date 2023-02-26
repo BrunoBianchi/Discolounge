@@ -1,6 +1,7 @@
 .scroll {
     transition: all ease-in-out 0.1s;
-    background-color: #111017
+    background-color: #111017;
+    border-bottom:2px solid #7289da61;
   }
  .dropdown-item{
     color:white;
